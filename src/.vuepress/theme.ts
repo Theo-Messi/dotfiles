@@ -13,7 +13,7 @@ export default hopeTheme({
   logo: "/logo.svg",
   repo: "vanhiupun/wiki",
   docsDir: "src",
-  darkmode: "toggle",
+  darkmode: "auto",
 
   locales: {
     "/": {
