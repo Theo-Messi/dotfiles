@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "https://cdn.jsdelivr.net/gh/vanhiupun/pic@master/img/galactic-system.webp",
 
-  repo: "vanhiupun/docs",
+  repo: "vanhiupun/wiki",
 
   docsDir: "src",
   darkmode: "auto",
