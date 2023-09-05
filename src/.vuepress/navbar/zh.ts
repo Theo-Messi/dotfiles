@@ -4,27 +4,9 @@ export const zhNavbar = navbar([
   "/zh/",
   "/zh/demo/",
   {
-    text: "指南",
+    text: "联系方式",
     icon: "lightbulb",
-    prefix: "/zh/guide/",
-    children: [
-      {
-        text: "Bar",
-        icon: "lightbulb",
-        prefix: "bar/",
-        children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
-      },
-      {
-        text: "Foo",
-        icon: "lightbulb",
-        prefix: "foo/",
-        children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
-      },
-    ],
-  },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    prefix: "/zh/Contact-information/",
+    children: ["Contact-information"],
   },
 ]);

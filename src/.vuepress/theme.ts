@@ -6,17 +6,19 @@ export default hopeTheme({
   hostname: "https://wk.theovan.xyz",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Theo",
+    url: "https://theovan.xyz",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "/logo.svg",
+  logo: "https://cdn.jsdelivr.net/gh/vanhiupun/pic@master/img/galactic-system.webp",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "vanhiupun/docs",
 
   docsDir: "src",
+  darkmode: "auto",
+  
 
   locales: {
     "/": {
