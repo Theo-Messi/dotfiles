@@ -1,17 +1,9 @@
 ---
-title: Features demo
+title: 配置
 index: false
 icon: laptop-code
 category:
-  - Guide
+  - 使用指南
 ---
 
-## Catalog
-
-- [Markdown Enhance](markdown.md)
-
-- [Page Config](page.md)
-
-- [Function Disable](disable.md)
-
-- [Encryption Demo](encrypt.md)
+## 目录

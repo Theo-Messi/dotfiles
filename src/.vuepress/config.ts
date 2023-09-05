@@ -5,20 +5,12 @@ export default defineUserConfig({
   base: "/",
   
   locales: {
-    "/zh/": {
+    "/": {
       lang: "zh-CN",
-      title: "文档",
+      title: "Wiki",
       description: "暂未定义文档内容",
     },
-    "/": {
-      lang: "en-US",
-      title: "Docs",
-      description: "The content of the document has not yet been defined",
-    },
   },
+theme,
 
-  theme,
-
-  // Enable it with pwa
-  // shouldPrefetch: false,
 });
