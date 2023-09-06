@@ -13,7 +13,7 @@ export default defineConfig({
       themeConfig: {
         lastUpdatedText: '上次更新',
         editLink: {
-          pattern: 'https://github.com/vanhiupun/wiki/edit/main/docs/:path',
+          pattern: 'https://github.com/vanhiupun/wiki/blob/master/docs/:path',
           text: '在GitHub中编辑',
         },
         nav: [
