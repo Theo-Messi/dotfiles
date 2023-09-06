@@ -42,12 +42,16 @@ export default defineConfig({
       }
     },
   },
-
-  themeConfig: {
+  
+  themeConfig: {logo:'https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/202309062332950.png',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vanhiupun/wiki' }
     ],
-
+    algolia: {
+      appId: 'CPGJUDZ25E',
+      apiKey: '44611905595e0fc11166ed11b1b48c99',
+      indexName: 'theo'
+    },
     footer: {
       message: 'This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License',
       copyright: 'Copyright © 2022-present Theo'
