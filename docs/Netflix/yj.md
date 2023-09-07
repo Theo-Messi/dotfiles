@@ -1,6 +1,7 @@
 ---
 outline: deep
 ---
+
 # Netflix 如何看 4K 高清
 
 ### 苹果 iOS 手机、iPad（最高 1080P）
@@ -98,4 +99,3 @@ CTRL + SHITF + OPTION + D
 ```
 
 其中的 `Playing bitrate (a/v): 128 / 4535 (1280x720)` 即为当前的**Netflix**码率。
-

@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: 奈飞观看指南  
+title: 奈飞观看指南
 titleTemplate: 使用文档
 
 hero:
@@ -10,7 +10,7 @@ hero:
   image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/20230906185904.png
   actions:
     - theme: brand
-      text: 开始 →  
+      text: 开始 →
       link: /Netflix/js
 
 features:
@@ -20,5 +20,4 @@ features:
     details: 想要在国内愉快都使用 Netflix 并获得最佳的观影体验，你需要做好以下几个方面的准备：Netflix 账号和科学上网环境
   - title: 解锁 Netflix
     details: 所谓解锁Netflix，即通过ShadowSocks、SSR、V2ray、Vmess等代理服务提供商提供的Netflix流媒体专用节点，解锁Netflix资源，也就是通常说的 Netflix机场。
-
 ---

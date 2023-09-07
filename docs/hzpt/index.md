@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: 流媒体合租平台  
+title: 流媒体合租平台
 titleTemplate: 使用指南
 
 hero:
@@ -11,6 +11,6 @@ hero:
   image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/The-explosion-of-streaming-services-in-Asia-Pacific-streaming-services-1.png
   actions:
     - theme: brand
-      text: 立即开始 →  
+      text: 立即开始 →
       link: /hzpt/mtsd
 ---
