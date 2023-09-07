@@ -10,7 +10,7 @@ hero:
   image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/20230906185904.png
   actions:
     - theme: brand
-      text: 开始 →
+      text: 立即开始 →
       link: /Netflix/js
 
 features:

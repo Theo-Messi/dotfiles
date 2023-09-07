@@ -10,7 +10,7 @@ hero:
   image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Shadowsocks-Logo.svg/753px-Shadowsocks-Logo.svg.png
   actions:
     - theme: brand
-      text: 开始 →
+      text: 立即开始 →
       link: /kx/ly
 
 features:
