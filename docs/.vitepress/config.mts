@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lastUpdated: true,
@@ -121,3 +121,4 @@ function getDeveloperSidebarZhCN() {
     },
   ];
 }
+
