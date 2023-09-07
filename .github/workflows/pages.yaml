@@ -52,20 +52,9 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/.vitepress/dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vitepress/dist
