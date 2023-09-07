@@ -1,6 +1,7 @@
 ---
 outline: deep
 ---
+
 ## Netflix 封杀普通代理
 
 如果你尝试用普通代理打开奈飞，很可能会看到这样一条提示：**“You seem to be using an unblocker or proxy”**，或者"**您似乎正在使用解除封鎖程式或 Proxy**"。这就意味着，当前代理 IP 已经被奈飞封杀，你需要换一个能正常观看奈飞视频的代理。
