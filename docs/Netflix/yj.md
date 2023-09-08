@@ -18,11 +18,11 @@ outline: deep
 
 2021 年起，Mac Safari 已开始支持 **Netflix 4K HDR**，具体要求为：
 
-> 带有 Apple T2 安全芯片的部分 2018 或更高版本的 Mac 笔记本。 所有外接显示器必须具有 60Hz 4K 功能和符合 HDCP 2.2 的连接
+>带有 Apple T2 安全芯片的部分 2018 或更高版本的 Mac 笔记本。 所有外接显示器必须具有 60Hz 4K 功能和符合 HDCP 2.2 的连接
 
 **软硬件要求：**
 
-使用苹果笔记本自带的**Safari 浏览器**，如果是上述硬件的话就可以支持** Netflix 4K HDR**，否则默认支持 **1080P** 和 **HDR。**
+使用苹果笔记本自带的**Safari 浏览器**，如果是上述硬件的话就可以支持**Netflix 4K HDR**，否则默认支持 **1080P** 和 **HDR。**
 
 **Chrome、Firefox**等浏览器默认最高支持到 720P，不过你可以通过使用 Chrome 插件**Super Netflix**，强行切换为 1080P 清晰度。但此类插件作者遭奈飞官方投诉而把 1080P 清晰度功能隐藏，操作上略显麻烦。建议直接使用官方 Safari 浏览器观看奈飞原生 1080P 视频。
 
@@ -88,13 +88,13 @@ Win10 的原生奈飞应用支持 4K 清晰度，但首先你需要把自己的 
 
 Windows 平台快捷键：
 
-```yaml
+```bash
 CTRL + SHIFT + ALT + D
 ```
 
 Mac 平台快捷键：
 
-```yaml
+```bash
 CTRL + SHITF + OPTION + D
 ```
 
