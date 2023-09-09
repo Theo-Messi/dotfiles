@@ -7,7 +7,7 @@ titleTemplate: 使用文档
 hero:
   name: 科学上网指南
   text: 毫无约束的在网上畅游
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Shadowsocks-Logo.svg/753px-Shadowsocks-Logo.svg.png
+  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/753px-Shadowsocks-Logo.svg.png
   actions:
     - theme: brand
       text: 立即开始 →

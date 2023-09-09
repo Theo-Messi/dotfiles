@@ -41,21 +41,15 @@ head: [
           {text: "流媒体合租平台",
             link: "/hzpt/index.html",
             activeMatch: "^/hzpt/",},
-          {text: "机场推荐",
-            items: [{
-                items: [
-                   {text: "一元机场",
-                    link: "https://一元机场.com/#/register?code=tFcXfJEu",},
-                   {text: "CNIX-薯条机场",
-                    link: "https://av1.wtf/auth/register?code=vb4p",},
-                   {text: "Bridge the Wise",
-                    link: "https://patriot.ninja/aff.php?aff=1471", },],
-                  },],},],
+          {text: "推荐机场",
+            link: "/jc/index.html",
+            activeMatch: "^/jc/",},],
         sidebar: {
           "/": getGuideSidebarZhCN(),
           "/Netflix/": getGuideSidebarZhCN(),
           "/kx/": getCaseSidebarZhCN(),
-          "/hzpt/": getDeveloperSidebarZhCN(),},
+          "/hzpt/": getDeveloperSidebarZhCN(),
+          "/jc/": getjcSidebarZhCN()},
       },},},
 
   themeConfig: {
@@ -112,3 +106,13 @@ function getDeveloperSidebarZhCN() {
         { text: "蜜糖商店", link: "/hzpt/mtsd.html" },
         { text: "奈飞小铺", link: "/hzpt/nfxp.html" },],
     },];}
+
+function getjcSidebarZhCN() {
+  return [
+    {
+       text: "推荐机场",
+       items: [
+         { text: "一元机场", link: "/jc/yy.html" },
+         { text: "薯条机场", link: "/jc/st.html" },
+         { text: "Bridge the Wise", link: "/jc/btw.html" }],
+     },];}
