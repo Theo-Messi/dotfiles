@@ -18,3 +18,5 @@ jobs:
                   API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
                   CONFIG: ${{ steps.algolia_config.outputs.config }}
 
+
+
