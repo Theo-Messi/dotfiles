@@ -71,8 +71,8 @@ head: [
       message: 'Released Under The MIT License.',
       copyright: 'Copyright © 2019 - Present Theo'},
     algolia: {
-      appId: "CPGJUDZ25E",
-      apiKey: "44611905595e0fc11166ed11b1b48c99",
+      appId: "TYNGRRG40E",
+      apiKey: "3572e7fe70a2a42683fe6534e44a98a6",
       indexName: "theo"},},
 });
 
