@@ -77,12 +77,18 @@ head: [
   },
   vite: {
     plugins: [pagefindPlugin({
-      // forceLanguage:'zh-cn',
-      customSearchQuery: 'chineseSearchOptimize',
+      forceLanguage:'zh-cn',
+      // customSearchQuery: 'chineseSearchOptimize',
       btnPlaceholder: '搜索',
       placeholder: '搜索文档',
       emptyText: '空空如也',
       heading: '共: {{searchResult}} 条结果',
+      customSearchQuery(input){
+        // 将搜索的每个中文单字两侧加上空格
+        return input.replace(/[\u4e00-\u9fa5]/g, ' $& ')
+        .replace(/\s+/g,' ')
+        .trim();
+      }
     })],
   },
 });
