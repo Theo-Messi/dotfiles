@@ -77,7 +77,7 @@ head: [
   },
   vite: {
     plugins: [pagefindPlugin({
-      forceLanguage:'zh-cn',
+      // forceLanguage:'zh-cn',
       customSearchQuery: 'chineseSearchOptimize',
       btnPlaceholder: '搜索',
       placeholder: '搜索文档',
