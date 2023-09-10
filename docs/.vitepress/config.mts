@@ -77,6 +77,11 @@ head: [
   },
   vite: {
     plugins: [pagefindPlugin({
+      resultOptimization: false,
+      filter(searchItem, idx, originArray) {
+        console.log(searchItem);
+        return !searchItem.route.includes('404') 
+      },
       forceLanguage:'zh-cn',
       // customSearchQuery: 'chineseSearchOptimize',
       btnPlaceholder: '搜索',
