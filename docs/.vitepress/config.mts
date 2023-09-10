@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 export default defineConfig({
   lang: "zh-CN",
@@ -6,7 +7,6 @@ export default defineConfig({
 
   lastUpdated: true,
   cleanUrls: true,
-
   sitemap: {
     hostname: 'https:/theovan.wiki',
     transformItems(items) {
@@ -70,10 +70,21 @@ head: [
     footer: {
       message: 'Released Under The MIT License.',
       copyright: 'Copyright © 2019 - Present Theo'},
-    algolia: {
-      appId: "TYNGRRG40E",
-      apiKey: "3572e7fe70a2a42683fe6534e44a98a6",
-      indexName: "theo"},},
+    // algolia: {
+    //   appId: "TYNGRRG40E",
+    //   apiKey: "3572e7fe70a2a42683fe6534e44a98a6",
+    //   indexName: "theo"},
+  },
+  vite: {
+    plugins: [pagefindPlugin({
+      forceLanguage:'zh-cn',
+      customSearchQuery: 'chineseSearchOptimize',
+      btnPlaceholder: '搜索',
+      placeholder: '搜索文档',
+      emptyText: '空空如也',
+      heading: '共: {{searchResult}} 条结果',
+    })],
+  },
 });
 
 function getGuideSidebarZhCN() {
