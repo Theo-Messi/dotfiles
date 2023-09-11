@@ -70,33 +70,34 @@ head: [
     footer: {
       message: 'Released Under The MIT License.',
       copyright: 'Copyright © 2019 - Present Theo'},
-    // algolia: {
-    //   appId: "TYNGRRG40E",
-    //   apiKey: "3572e7fe70a2a42683fe6534e44a98a6",
-    //   indexName: "theo"},
-  },
-  vite: {
-    plugins: [pagefindPlugin({
-      resultOptimization: false,
-      filter(searchItem, idx, originArray) {
-        console.log(searchItem);
-        return !searchItem.route.includes('404') 
-      },
-      forceLanguage:'zh-cn',
-      // customSearchQuery: 'chineseSearchOptimize',
-      btnPlaceholder: '搜索',
-      placeholder: '搜索文档',
-      emptyText: '空空如也',
-      heading: '共: {{searchResult}} 条结果',
-      customSearchQuery(input){
-        // 将搜索的每个中文单字两侧加上空格
-        return input.replace(/[\u4e00-\u9fa5]/g, ' $& ')
-        .replace(/\s+/g,' ')
-        .trim();
-      }
-    })],
-  },
-});
+    algolia: {
+      appId: "TFKQL3PYD7",
+      apiKey: "07180615367ee93252015ef2d522ea6f",
+      indexName: "theovan",
+      placeholder: '请输入关键词',
+      buttonText: '搜索',},
+  // vite: {
+  //   plugins: [pagefindPlugin({
+  //     resultOptimization: false,
+  //     filter(searchItem, idx, originArray) {
+  //       console.log(searchItem);
+  //       return !searchItem.route.includes('404') 
+  //     },
+  //     forceLanguage:'zh-cn',
+  //     // customSearchQuery: 'chineseSearchOptimize',
+  //     btnPlaceholder: '搜索',
+  //     placeholder: '搜索文档',
+  //     emptyText: '空空如也',
+  //     heading: '共: {{searchResult}} 条结果',
+  //     customSearchQuery(input){
+  //       // 将搜索的每个中文单字两侧加上空格
+  //       return input.replace(/[\u4e00-\u9fa5]/g, ' $& ')
+  //       .replace(/\s+/g,' ')
+  //       .trim();
+  //     }
+  //   })],
+  // },
+}});
 
 function getGuideSidebarZhCN() {
   return [
