@@ -7,7 +7,7 @@ titleTemplate: 使用文档
 hero:
   name: Netflix观看指南
   text: 获得最佳奈飞观影体验
-  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/%25E5%259B%25BE%25E7%2589%25878-5.x19049.png
+  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/Logonetflix.png
   actions:
     - theme: brand
       text: 立即开始 →

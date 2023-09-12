@@ -7,7 +7,7 @@ titleTemplate: 使用文档
 hero:
   name: 科学上网指南
   text: 毫无约束的在网上畅游
-  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/v2-9d5a6dcb0aeff32d8acb9b7c8f9263ed_720w.jpg
+  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/vyprvpn_china_bypass_hero.png
   actions:
     - theme: brand
       text: 立即开始 →
