@@ -8,7 +8,7 @@ hero:
   name: 机场推荐
   text: 为你选择最合适的机场
   tagline: 优质专线线路，完整流媒体解锁，月付/年付
-  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/1689822810-Dailijichang-icon.png
+  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/affiliate_bg_1.png
   actions:
     - theme: brand
       text: 立即开始 →
