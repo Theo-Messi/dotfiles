@@ -6,7 +6,8 @@ titleTemplate: 使用文档
 
 hero:
   name: Netflix 观看指南
-  text: 获得最佳奈飞观影体验
+  text: Viewing Guide
+  tagline: 获得最佳奈飞观影体验
   image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/Logonetflix.png
   actions:
     - theme: brand
@@ -21,10 +22,10 @@ features:
   - title: Netflix 解锁
     details: 所谓解锁Netflix，即通过ShadowSocks、SSR、V2ray、Vmess等代理服务提供商提供的Netflix流媒体专用节点，解锁Netflix资源，也就是通常说的 Netflix机场。
 ---
+
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-name-background: -webkit-linear-gradient(180deg,#ff0099 20%,#5433ff,#24c6dc);
 }
 </style>
-

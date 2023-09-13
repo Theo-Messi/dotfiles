@@ -17,8 +17,6 @@ Netflix、Disney+、HBO GO/MAX、Spotify、hulu
 
 [**点击进入蜜糖商店**](https://metshop.vip?referrerUserNo=MTU51076)
 
-
-
 ### [蜜糖商店定价](https://metshop.vip?referrerUserNo=MTU51076)
 
 | 账号类型        | 1 个月 | 3 个月 | 6 个月 | 12 个月 | 每月价格 |
@@ -31,6 +29,7 @@ Netflix、Disney+、HBO GO/MAX、Spotify、hulu
 | Hulu            | ¥ 25   | ¥ 75   | ¥ 148  | ¥ 288   | ¥ 24     |
 
 ### [蜜糖商店特点](https://metshop.vip?referrerUserNo=MTU51076)
+
 - 手机号登陆、微信登陆
 - 账号到期提醒、自动续费、密码修改等自动通知（短信通知、微信公众号通知）
 - 一键选车位
@@ -59,6 +58,5 @@ Netflix、Disney+、HBO GO/MAX、Spotify、hulu
 - 是否亲自使用过：是 ✅
 
 - 推荐度：❤ ❤ ❤ ❤ ❤
-
 
 ### [蜜糖商店注册链接](https://metshop.vip?referrerUserNo=MTU51076)

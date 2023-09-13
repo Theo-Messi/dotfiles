@@ -4,7 +4,6 @@ import { defineConfig } from "vitepress";
 //   pagefindPlugin,
 // } from "vitepress-plugin-pagefind";
 
-
 export default defineConfig({
   lang: "zh-CN",
   description:
@@ -24,9 +23,11 @@ export default defineConfig({
   // 网站头
   head: [
     ["link", { rel: "icon", href: "/logo-light.png" }],
-    ["meta", { name: "theme-color", content: "#5f67ee" }],
-    ["meta", { name: "og:type", content: "website" }],
+    ["meta", { name: "theme-color", content: "#3658d8" }],
+    ["meta", { name: "og:type", content: "#3658d8" }],
     ["meta", { name: "og:locale", content: "cn" }],
+    // ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    // ['link', { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }],
     [
       "script",
       {
@@ -45,9 +46,17 @@ export default defineConfig({
       themeConfig: {
         lastUpdatedText: "上次更新",
         nav: [
-          { text: "Netflix 观看指南", link: "/", activeMatch: "^/$|^/Netflix/" },
+          {
+            text: "Netflix 观看指南",
+            link: "/",
+            activeMatch: "^/$|^/Netflix/",
+          },
           { text: "科学上网指南", link: "/kx/index", activeMatch: "^/kx/" },
-          { text: "流媒体合租平台", link: "/hzpt/index", activeMatch: "^/hzpt/" },
+          {
+            text: "流媒体合租平台",
+            link: "/hzpt/index",
+            activeMatch: "^/hzpt/",
+          },
           { text: "推荐机场", link: "/jc/index", activeMatch: "^/jc/" },
         ],
         sidebar: {
@@ -92,51 +101,51 @@ export default defineConfig({
     },
     // algolia搜索
     search: {
-      provider: 'algolia',
+      provider: "algolia",
       options: {
-        appId: 'TFKQL3PYD7',
-        apiKey: '07180615367ee93252015ef2d522ea6f',
-        indexName: 'theovan',
+        appId: "TFKQL3PYD7",
+        apiKey: "07180615367ee93252015ef2d522ea6f",
+        indexName: "theovan",
         placeholder: "搜索文档",
         translations: {
           button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
+            buttonText: "搜索文档",
+            buttonAriaLabel: "搜索文档",
           },
           modal: {
             searchBox: {
-              resetButtonTitle: '清除查询条件',
-              resetButtonAriaLabel: '清除查询条件',
-              cancelButtonText: '取消',
-              cancelButtonAriaLabel: '取消'
+              resetButtonTitle: "清除查询条件",
+              resetButtonAriaLabel: "清除查询条件",
+              cancelButtonText: "取消",
+              cancelButtonAriaLabel: "取消",
             },
             startScreen: {
-              recentSearchesTitle: '搜索历史',
-              noRecentSearchesText: '没有搜索历史',
-              saveRecentSearchButtonTitle: '保存至搜索历史',
-              removeRecentSearchButtonTitle: '从搜索历史中移除',
-              favoriteSearchesTitle: '收藏',
-              removeFavoriteSearchButtonTitle: '从收藏中移除'
+              recentSearchesTitle: "搜索历史",
+              noRecentSearchesText: "没有搜索历史",
+              saveRecentSearchButtonTitle: "保存至搜索历史",
+              removeRecentSearchButtonTitle: "从搜索历史中移除",
+              favoriteSearchesTitle: "收藏",
+              removeFavoriteSearchButtonTitle: "从收藏中移除",
             },
             errorScreen: {
-              titleText: '无法获取结果',
-              helpText: '你可能需要检查你的网络连接'
+              titleText: "无法获取结果",
+              helpText: "你可能需要检查你的网络连接",
             },
             footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭',
-              searchByText: '搜索提供者'
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+              searchByText: "搜索提供者",
             },
             noResultsScreen: {
-              noResultsText: '无法找到相关结果',
-              suggestedQueryText: '你可以尝试查询',
-              reportMissingResultsText: '你认为该查询应该有结果？',
-              reportMissingResultsLinkText: '点击反馈'
-            }
-          }
-        }
-      }
+              noResultsText: "无法找到相关结果",
+              suggestedQueryText: "你可以尝试查询",
+              reportMissingResultsText: "你认为该查询应该有结果？",
+              reportMissingResultsLinkText: "点击反馈",
+            },
+          },
+        },
+      },
     },
   },
   // vite: {

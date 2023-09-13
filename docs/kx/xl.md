@@ -5,7 +5,7 @@ editLink: true
 head:
   - - meta
     - name: keywords
-      content: 科学上网 机场 VPN 服务器 
+      content: 科学上网 机场 VPN 服务器
 ---
 
 在选择翻墙服务器的时候，相信很多人都看到过 CN2 IPLC BGP 线路，这些都是专线的称呼，跨国公司、银行、数据中心使用的就是这类专线。但是，这些名字对于新手来说根本不理解是什么意思，怎么来做选择呢？本文来对 CN2 GIA 线路、IPLC 线路和 BGP 线路做一些介绍，让您大概知道选择那种线路更适合你。
