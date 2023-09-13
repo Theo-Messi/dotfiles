@@ -13,6 +13,9 @@ hero:
     - theme: brand
       text: 立即开始 →
       link: /Netflix/js
+    - theme: alt
+      text: GitHub
+      link: https://github.com/vanhiupun
 
 features:
   - title: Netflix 介绍
