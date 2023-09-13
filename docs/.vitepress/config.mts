@@ -45,17 +45,9 @@ export default defineConfig({
       themeConfig: {
         lastUpdatedText: "上次更新",
         nav: [
-          { text: "奈飞观看指南", link: "/", activeMatch: "^/$|^/Netflix/" },
-          {
-            text: "科学上网指南",
-            link: "/kx/index",
-            activeMatch: "^/kx/",
-          },
-          {
-            text: "流媒体合租平台",
-            link: "/hzpt/index",
-            activeMatch: "^/hzpt/",
-          },
+          { text: "Netflix 观看指南", link: "/", activeMatch: "^/$|^/Netflix/" },
+          { text: "科学上网指南", link: "/kx/index", activeMatch: "^/kx/" },
+          { text: "流媒体合租平台", link: "/hzpt/index", activeMatch: "^/hzpt/" },
           { text: "推荐机场", link: "/jc/index", activeMatch: "^/jc/" },
         ],
         sidebar: {
@@ -98,13 +90,13 @@ export default defineConfig({
       message: "Released Under The MIT License.",
       copyright: "Copyright © 2019 - Present Theo",
     },
-    //algolia搜索
+    // algolia搜索
     // search: {
     //   provider: 'algolia',
     //   options: {
-    //     appId: '8J64VVRP8K',
-    //     apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
-    //     indexName: 'vitepress'
+    //     appId: 'TFKQL3PYD7',
+    //     apiKey: '07180615367ee93252015ef2d522ea6f',
+    //     indexName: 'theovan'
     //   }
     // },
   },
@@ -118,7 +110,7 @@ export default defineConfig({
         },
         forceLanguage: "zh-cn",
         // customSearchQuery: 'chineseSearchOptimize',
-        btnPlaceholder: "搜索",
+        btnPlaceholder: "搜索文档",
         placeholder: "搜索文档",
         emptyText: "空空如也",
         heading: "共: {{searchResult}} 条结果",
@@ -137,14 +129,15 @@ export default defineConfig({
 function getGuideSidebarZhCN() {
   return [
     {
-      text: "奈飞观看指南",
+      text: "Netflix 观看指南",
+      collapsed: true,
       base: "/Netflix/",
       items: [
-        { text: "奈飞介绍", link: "js" },
-        { text: "Netflix如何看4K及适配硬件", link: "yj" },
+        { text: "Netflix 介绍", link: "js" },
+        { text: "Netflix 如何看4K及适配硬件", link: "yj" },
         { text: "Netflix 常见使用问题及答案", link: "wt" },
         { text: "Netflix 常见错误提示及解决方案", link: "cw" },
-        { text: "奈飞秘密分类的技巧", link: "dh" },
+        { text: "Netflix 秘密分类的技巧", link: "dh" },
       ],
     },
   ];
@@ -154,6 +147,7 @@ function getCaseSidebarZhCN() {
   return [
     {
       text: "科学上网指南",
+      collapsed: true,
       base: "/kx/",
       items: [
         { text: "路由器与客户端选择", link: "ly" },
@@ -168,6 +162,7 @@ function getDeveloperSidebarZhCN() {
   return [
     {
       text: "流媒体合租平台",
+      collapsed: true,
       base: "/hzpt/",
       items: [
         { text: "蜜糖商店", link: "mtsd" },
@@ -181,6 +176,7 @@ function getjcSidebarZhCN() {
   return [
     {
       text: "推荐机场",
+      collapsed: true,
       base: "/jc/",
       items: [
         { text: "一元机场", link: "yy" },
