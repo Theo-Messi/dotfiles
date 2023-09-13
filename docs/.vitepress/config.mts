@@ -1,8 +1,8 @@
 import { defineConfig } from "vitepress";
-import {
-  chineseSearchOptimize,
-  pagefindPlugin,
-} from "vitepress-plugin-pagefind";
+// import {
+//   chineseSearchOptimize,
+//   pagefindPlugin,
+// } from "vitepress-plugin-pagefind";
 
 
 export default defineConfig({
@@ -40,7 +40,7 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "Theo",
+      title: "Theo‘s WiKi",
       label: "简体中文",
       themeConfig: {
         lastUpdatedText: "上次更新",
@@ -66,7 +66,7 @@ export default defineConfig({
       light: "/logo-light.png",
       dark: "/logo-dark.png",
     },
-    siteTitle: false,
+    // siteTitle: false,
     editLink: {
       pattern: "https://github.com/vanhiupun/wiki/blob/master/docs/:path",
       text: "在GitHub中编辑",
@@ -91,39 +91,78 @@ export default defineConfig({
       copyright: "Copyright © 2019 - Present Theo",
     },
     // algolia搜索
-    // search: {
-    //   provider: 'algolia',
-    //   options: {
-    //     appId: 'TFKQL3PYD7',
-    //     apiKey: '07180615367ee93252015ef2d522ea6f',
-    //     indexName: 'theovan'
-    //   }
-    // },
-  },
-  vite: {
-    plugins: [
-      pagefindPlugin({
-        resultOptimization: false,
-        filter(searchItem, idx, originArray) {
-          console.log(searchItem);
-          return !searchItem.route.includes("404");
-        },
-        forceLanguage: "zh-cn",
-        // customSearchQuery: 'chineseSearchOptimize',
-        btnPlaceholder: "搜索文档",
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'TFKQL3PYD7',
+        apiKey: '07180615367ee93252015ef2d522ea6f',
+        indexName: 'theovan',
         placeholder: "搜索文档",
-        emptyText: "空空如也",
-        heading: "共: {{searchResult}} 条结果",
-        customSearchQuery(input) {
-          // 将搜索的每个中文单字两侧加上空格
-          return input
-            .replace(/[\u4e00-\u9fa5]/g, " $& ")
-            .replace(/\s+/g, " ")
-            .trim();
-        },
-      }),
-    ],
+        translations: {
+          button: {
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: '清除查询条件',
+              resetButtonAriaLabel: '清除查询条件',
+              cancelButtonText: '取消',
+              cancelButtonAriaLabel: '取消'
+            },
+            startScreen: {
+              recentSearchesTitle: '搜索历史',
+              noRecentSearchesText: '没有搜索历史',
+              saveRecentSearchButtonTitle: '保存至搜索历史',
+              removeRecentSearchButtonTitle: '从搜索历史中移除',
+              favoriteSearchesTitle: '收藏',
+              removeFavoriteSearchButtonTitle: '从收藏中移除'
+            },
+            errorScreen: {
+              titleText: '无法获取结果',
+              helpText: '你可能需要检查你的网络连接'
+            },
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+              searchByText: '搜索提供者'
+            },
+            noResultsScreen: {
+              noResultsText: '无法找到相关结果',
+              suggestedQueryText: '你可以尝试查询',
+              reportMissingResultsText: '你认为该查询应该有结果？',
+              reportMissingResultsLinkText: '点击反馈'
+            }
+          }
+        }
+      }
+    },
   },
+  // vite: {
+  //   plugins: [
+  //     pagefindPlugin({
+  //       resultOptimization: false,
+  //       filter(searchItem, idx, originArray) {
+  //         console.log(searchItem);
+  //         return !searchItem.route.includes("404");
+  //       },
+  //       forceLanguage: "zh-cn",
+  //       // customSearchQuery: 'chineseSearchOptimize',
+  //       btnPlaceholder: "搜索文档",
+  //       placeholder: "搜索文档",
+  //       emptyText: "空空如也",
+  //       heading: "共: {{searchResult}} 条结果",
+  //       customSearchQuery(input) {
+  //         // 将搜索的每个中文单字两侧加上空格
+  //         return input
+  //           .replace(/[\u4e00-\u9fa5]/g, " $& ")
+  //           .replace(/\s+/g, " ")
+  //           .trim();
+  //       },
+  //     }),
+  //   ],
+  // },
 });
 
 function getGuideSidebarZhCN() {
