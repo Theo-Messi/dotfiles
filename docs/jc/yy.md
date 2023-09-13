@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: 一元机场
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 机场 流媒体 解锁 线路 科学上网
 ---
 ### [一元机场 简介](https://xn--4gq62f52gdss.com/#/register?code=tFcXfJEu)
 [一元机场](https://xn--4gq62f52gdss.com/#/register?code=tFcXfJEu)是2022年创立的机场，由于价格便宜到「离谱」，现今风头正盛，可以说现在的名气不亚于当年跑路的速蛙云。甚至有好事者创立了「一元机场」的百度贴吧。

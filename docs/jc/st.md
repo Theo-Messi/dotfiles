@@ -1,6 +1,13 @@
 ---
 outline: deep
+title: 薯条机场
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 机场 流媒体 解锁 线路 科学上网
 ---
+
 
 ### [薯条机场 简介](https://av1.wtf/auth/register?code=vb4p)
 

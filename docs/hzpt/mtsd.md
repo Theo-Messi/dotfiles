@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: 蜜糖商店
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 机场 流媒体 解锁 线路 科学上网 Netflix Disney YouTube Premium HOB GO Spotify Hulu 奈飞小铺 蜜糖商店
 ---
 
 ### [蜜糖商店简介](https://metshop.vip?referrerUserNo=MTU51076)

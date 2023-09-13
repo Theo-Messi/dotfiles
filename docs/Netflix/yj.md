@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: Netflix 如何看4K及适配硬件
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: Netflix
 ---
 
 # Netflix 如何看 4K 高清

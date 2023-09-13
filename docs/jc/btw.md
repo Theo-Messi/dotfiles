@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: Bridge the Wise
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 机场 流媒体 解锁 线路 科学上网
 ---
 
 ### [Bridge The Wise 简介](https://patriot.ninja/aff.php?aff=1471)

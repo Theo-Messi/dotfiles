@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: 奈飞小铺
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 机场 流媒体 解锁 线路 科学上网 Netflix Disney YouTube Premium HOB GO Spotify Hulu 奈飞小铺 蜜糖商店
 ---
 
 ### [奈飞小铺简介](https://ihezu.love/UKTer6)

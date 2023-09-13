@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: 路由器与客户端选择
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: 科学上网 机场 VPN 服务器 
 ---
 
 ## 前言

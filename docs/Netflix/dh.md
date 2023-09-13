@@ -1,5 +1,11 @@
 ---
 outline: deep
+title: Netflix 秘密分类的技巧
+editLink: true
+head:
+  - - meta
+    - name: keywords
+      content: Netflix
 ---
 
 当奈飞的大门向你徐徐打开时，绝不仅仅只有你在**Netflix**首页看到的电视节目、电影两个默认类别。除了这些默认展示的节目信息之外，奈飞还有额外大约**2.7 万**部的隐藏影片，不过这些片源默认并不展示，需要一点特殊技巧才能解锁。
