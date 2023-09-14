@@ -1,18 +1,13 @@
 import { defineConfig } from "vitepress";
-// import {
-//   chineseSearchOptimize,
-//   pagefindPlugin,
-// } from "vitepress-plugin-pagefind";
-
 export default defineConfig({
   lang: "zh-CN",
   description:
-    "影视分享｜Netflix｜科学上网｜网络技术｜梅林｜OpenWrt｜Jekyll博客｜Git｜",
-
+    "引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域",
   lastUpdated: true,
-  cleanUrls: false,
+  cleanUrls: false,  // 开启后网址后缀无'html'
+  appearance: true,
+  //true强制开启深色模式 false强制开启浅色模式
   base: "/",
-
   sitemap: {
     hostname: "https:/theovan.wiki",
     transformItems(items) {
@@ -20,10 +15,12 @@ export default defineConfig({
     },
   },
 
+
   // 网站头
   head: [
     ["link", { rel: "icon", href: "/logo-light.svg" }],
     ["meta", { name: "og:locale", content: "cn" }],
+    ['script', {}, `document.documentElement.classList.add('dark')`],//强制开启为深色模式
     [
       "script",
       {
@@ -75,7 +72,7 @@ export default defineConfig({
       light: "/logo-light.svg",
       dark: "/logo-dark.svg",
     },
-    // siteTitle: false,
+    // siteTitle: false, //false去除网站标题 只显示logo
     editLink: {
       pattern: "https://github.com/vanhiupun/wiki/blob/master/docs/:path",
       text: "在GitHub中编辑",
@@ -148,30 +145,6 @@ export default defineConfig({
       },
     },
   },
-  // vite: {
-  //   plugins: [
-  //     pagefindPlugin({
-  //       resultOptimization: false,
-  //       filter(searchItem, idx, originArray) {
-  //         console.log(searchItem);
-  //         return !searchItem.route.includes("404");
-  //       },
-  //       forceLanguage: "zh-cn",
-  //       // customSearchQuery: 'chineseSearchOptimize',
-  //       btnPlaceholder: "搜索文档",
-  //       placeholder: "搜索文档",
-  //       emptyText: "空空如也",
-  //       heading: "共: {{searchResult}} 条结果",
-  //       customSearchQuery(input) {
-  //         // 将搜索的每个中文单字两侧加上空格
-  //         return input
-  //           .replace(/[\u4e00-\u9fa5]/g, " $& ")
-  //           .replace(/\s+/g, " ")
-  //           .trim();
-  //       },
-  //     }),
-  //   ],
-  // },
 });
 
 function getGuideSidebarZhCN() {
