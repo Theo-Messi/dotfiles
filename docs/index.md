@@ -5,10 +5,10 @@ title: Netflix 观看指南
 titleTemplate: 使用文档
 
 hero:
-  name: Netflix 观看指南
-  text: Viewing Guide
-  tagline: 获得最佳奈飞观影体验
-  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/Logonetflix.png
+  name: 全方位流媒体
+  text: 观影指南
+  tagline: 引领您进入 Netflix 的五彩斑斓的视听世界，并涵盖了 Disney+、Spotify会员 和 YouTube会员 的精彩领域
+  image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/home
   actions:
     - theme: brand
       text: 立即开始 →
@@ -18,12 +18,18 @@ hero:
       link: https://github.com/vanhiupun
 
 features:
-  - title: Netflix 介绍
-    details: Netflix 在全球190多个国家和地区开展运营（不包括中国、朝鲜、克里米亚、叙利亚等四个国家及地区），总计拥有 1.83 亿 名付费会员。据悉，目前奈飞平台的影视剧数量高达 1.3 万部。多个数据综合显示，奈飞是全球流媒体平台中当之无愧的 No.1
-  - title: Netflix 国内观看
-    details: 想要在国内愉快都使用 Netflix 并获得最佳的观影体验，你需要做好以下几个方面的准备：Netflix 账号和科学上网环境
-  - title: Netflix 解锁
-    details: 所谓解锁Netflix，即通过ShadowSocks、SSR、V2ray、Vmess等代理服务提供商提供的Netflix流媒体专用节点，解锁Netflix资源，也就是通常说的 Netflix机场。
+  - title: Netflix
+    details: 以其丰富的原创内容和电影库著称，是电影和电视剧爱好者的理想选择。
+    link: /Netflix/js
+  - title: Disney+
+    details: 以经典的迪士尼、漫威和星球大战系列为主打，适合所有年龄层的观众。
+    link: /Disney/js
+  - title: Spotify
+    details: 拥有庞大的音乐库，允许免费听歌，是音乐迷的天堂。
+    link: /Spotify/js
+  - title: YouTube会员
+    details: 提供无广告观看体验和独家内容，让您沉浸在丰富的视频世界中。
+    link: /YouTube/js
 ---
 
 <style>

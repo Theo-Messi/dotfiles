@@ -22,7 +22,7 @@ export default defineConfig({
 
   // 网站头
   head: [
-    ["link", { rel: "icon", href: "/logo-light.png" }],
+    ["link", { rel: "icon", href: "/logo-light.svg" }],
     ["meta", { name: "og:locale", content: "cn" }],
     [
       "script",
@@ -37,22 +37,26 @@ export default defineConfig({
 
   locales: {
     root: {
-      title: "Theo‘s WiKi",
+      title: "流媒体一站式服务",
       label: "简体中文",
       themeConfig: {
         lastUpdatedText: "上次更新",
         nav: [
           {
-            text: "Netflix 观看指南",
-            link: "/",
-            activeMatch: "^/$|^/Netflix/",
+            text: "全方位流媒体观影指南",
+            items: [
+              { text: "Netflix", link: "/Netflix/js" },
+              { text: "Disney+", link: "/Disney/js" },
+              { text: "Spotify会员", link: "/Spotify/js" },
+              { text: "YouTube会员", link: "/youtube/js" },
+            ],
           },
-          { text: "科学上网指南", link: "/kx/index", activeMatch: "^/kx/" },
           {
-            text: "流媒体合租平台",
+            text: "流媒体账号合租🔥",
             link: "/hzpt/index",
             activeMatch: "^/hzpt/",
           },
+          { text: "科学上网指南", link: "/kx/index", activeMatch: "^/kx/" },
           { text: "推荐机场", link: "/jc/index", activeMatch: "^/jc/" },
         ],
         sidebar: {
@@ -68,8 +72,8 @@ export default defineConfig({
 
   themeConfig: {
     logo: {
-      light: "/logo-light.png",
-      dark: "/logo-dark.png",
+      light: "/logo-light.svg",
+      dark: "/logo-dark.svg",
     },
     // siteTitle: false,
     editLink: {
@@ -175,13 +179,49 @@ function getGuideSidebarZhCN() {
     {
       text: "Netflix 观看指南",
       collapsed: true,
-      base: "/Netflix/",
       items: [
-        { text: "Netflix 介绍", link: "js" },
-        { text: "Netflix 如何看4K及适配硬件", link: "yj" },
-        { text: "Netflix 常见使用问题及答案", link: "wt" },
-        { text: "Netflix 常见错误提示及解决方案", link: "cw" },
-        { text: "Netflix 秘密分类的技巧", link: "dh" },
+        { text: "Netflix 介绍", base: "/Netflix/", link: "js" },
+        { text: "Netflix 如何看4K及适配硬件", base: "/Netflix/", link: "yj" },
+        { text: "Netflix 常见使用问题及答案", base: "/Netflix/", link: "wt" },
+        {
+          text: "Netflix 常见错误提示及解决方案",
+          base: "/Netflix/",
+          link: "cw",
+        },
+        { text: "Netflix 秘密分类的技巧", base: "/Netflix/", link: "dh" },
+      ],
+    },
+    {
+      text: "Disney+ 观看指南",
+      collapsed: true,
+      items: [
+        { text: "Disney+ 介绍", base: "/Disney/", link: "js" },
+        { text: "Disney+ 订阅指南", base: "/Disney/", link: "dy" },
+        { text: "Disney+ 合租介绍", base: "/Disney/", link: "hz" },
+        { text: "Disney+ 会员使用指南", base: "/Disney/", link: "hy" },
+        { text: "Disney+ 总结与建议", base: "/Disney/", link: "zj" },
+      ],
+    },
+    {
+      text: "Spotify Premium 指南",
+      collapsed: true,
+      items: [
+        {
+          text: "Spotify Premium 指南",
+          base: "/Spotify/",
+          link: "js",
+        },
+      ],
+    },
+    {
+      text: "YouTube Premium 会员权益及订阅指南",
+      collapsed: true,
+      items: [
+        {
+          text: "YouTube Premium 会员权益及订阅指南",
+          base: "/youtube/",
+          link: "js",
+        },
       ],
     },
   ];
