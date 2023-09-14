@@ -5,7 +5,7 @@ export default defineConfig({
     "引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域",
   lastUpdated: true,
   cleanUrls: false,  // 开启后网址后缀无'html'
-  appearance: true,
+  appearance: false,
   //true强制开启深色模式 false强制开启浅色模式
   base: "/",
   sitemap: {
