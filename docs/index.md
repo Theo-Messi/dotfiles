@@ -7,7 +7,7 @@ titleTemplate: 使用文档
 hero:
   name: 全方位流媒体
   text: 观影指南
-  tagline: 引领您进入 Netflix 的五彩斑斓的视听世界，并涵盖了 Disney+、Spotify会员 和 YouTube会员 的精彩领域
+  tagline: 引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域
   image: https://cdn.jsdelivr.net/gh/vanhiupun/pic@1.0/img/map.png
   actions:
     - theme: brand
