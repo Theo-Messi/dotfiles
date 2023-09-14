@@ -189,6 +189,9 @@ function getGuideSidebarZhCN() {
           link: "cw",
         },
         { text: "Netflix 秘密分类的技巧", base: "/Netflix/", link: "dh" },
+        { text: "Netflix 全球各国影视剧数量", base: "/Netflix/", link: "ys" },
+        { text: "Netflix 常用浏览器插件汇总", base: "/Netflix/", link: "cj" },
+        { text: "Netflix 总结", base: "/Netflix/", link: "zj" },
       ],
     },
     {

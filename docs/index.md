@@ -29,7 +29,7 @@ features:
     link: /Spotify/js
   - title: YouTube会员
     details: 提供无广告观看体验和独家内容，让您沉浸在丰富的视频世界中。
-    link: /YouTube/js
+    link: /youtube/js
 ---
 
 <style>
