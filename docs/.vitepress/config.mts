@@ -52,12 +52,12 @@ export default defineConfig({
             ],
           },
           {
-            text: "流媒体账号合租🔥",
-            link: "/hzpt/index",
+            text: "🔥流媒体账号合租",
+            link: "/hzpt/hz",
             activeMatch: "^/hzpt/",
           },
-          { text: "科学上网指南", link: "/kx/index", activeMatch: "^/kx/" },
-          { text: "推荐机场", link: "/jc/index", activeMatch: "^/jc/" },
+          { text: "科学上网指南", link: "/kx/ly", activeMatch: "^/kx/" },
+          { text: "推荐机场", link: "/jc/js", activeMatch: "^/jc/" },
         ],
         sidebar: {
           "/": { base: "/", items: getGuideSidebarZhCN() },
@@ -252,6 +252,7 @@ function getDeveloperSidebarZhCN() {
       collapsed: true,
       base: "/hzpt/",
       items: [
+        { text: "账号合租指南", link: "hz" },
         { text: "蜜糖商店", link: "mtsd" },
         { text: "奈飞小铺", link: "nfxp" },
       ],
@@ -266,6 +267,7 @@ function getjcSidebarZhCN() {
       collapsed: true,
       base: "/jc/",
       items: [
+        { text: "解锁奈飞：4K Netflix 机场指南", link: "js" },
         { text: "一元机场", link: "yy" },
         { text: "薯条机场", link: "st" },
         { text: "Bridge the Wise", link: "btw" },

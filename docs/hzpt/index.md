@@ -12,5 +12,5 @@ hero:
   actions:
     - theme: brand
       text: 立即开始 →
-      link: /hzpt/mtsd
+      link: /hzpt/hz
 ---
