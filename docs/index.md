@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: Netflix 观看指南
+title: 全方位流媒体观影指南
 titleTemplate: 使用文档
 
 hero:
