@@ -46,6 +46,8 @@ export default defineConfig({
               { text: "Disney+", link: "/Disney/js" },
               { text: "Spotify会员", link: "/Spotify/js" },
               { text: "YouTube会员", link: "/youtube/js" },
+              { text: "Hulu", link: "/hulu/js" },
+              { text: "HBO Max", link: "/hbo/js" },
             ],
           },
           {
@@ -196,6 +198,28 @@ function getGuideSidebarZhCN() {
         {
           text: "YouTube Premium 会员权益及订阅指南",
           base: "/youtube/",
+          link: "js",
+        },
+      ],
+    },
+    {
+      text: "Hulu 国内观看指南",
+      collapsed: true,
+      items: [
+        {
+          text: "Hulu 国内观看指南",
+          base: "/hulu/",
+          link: "js",
+        },
+      ],
+    },
+    {
+      text: "HBO Max 国内观看指南",
+      collapsed: true,
+      items: [
+        {
+          text: "HBO Max 国内观看指南",
+          base: "/hbo/",
           link: "js",
         },
       ],

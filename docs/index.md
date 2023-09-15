@@ -41,6 +41,18 @@ features:
      src: youtube-color.svg
     details: 提供无广告观看体验和独家内容，让您沉浸在丰富的视频世界中。
     link: /youtube/js
+  
+  - title: Hulu
+    icon:
+     src: Hulu_Logo.svg
+    details: 提供的影视作品包括你在 Netflix 以及其他流媒体平台上看到的所有内容，对于能够访问并在线观看的用户来说，Hulu是可选择的最佳的流媒体。
+    link: /hulu/js
+
+  - title: HBO Max
+    icon:
+     src: HBO_Max_Logo.svg
+    details: 提供的影视作品包括你在 Netflix 以及其他流媒体平台上看到的所有内容，对于能够访问并在线观看的用户来说，Hulu是可选择的最佳的流媒体。
+    link: /hbo/js
 
   - title: 蜜糖商店
     icon:
