@@ -73,7 +73,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/vanhiupun" }],
     footer: {
       message: "Released Under The MIT License.",
-      copyright: "Copyright © 2019 - Present Theo",
+      copyright: 'Copyright © 2019 - Present <a href="https://github.com/vanhiupun">Theo</a>',
     },
     // algolia搜索
     search: {
