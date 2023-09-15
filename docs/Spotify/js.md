@@ -7,6 +7,7 @@ head:
     - name: keywords
       content: Spotify
 ---
+
 # Spotify 简介
 
 ### 全球领先的音乐服务平台
@@ -52,9 +53,9 @@ Spotify Premium 会员不会遇到任何广告。免费版则包含以下三种�
 
 ### 切歌限制
 
-+   手机端：免费版只有 15 个热门歌单可供选择，其他歌单只能随机播放，每小时限制切歌 6 次。
-+   电脑端：免费版可无限次切歌，播放任意歌单内歌曲，不受限制。
-+   Spotify Premium 会员：在所有平台均无任何限制，可畅享 5000 万首歌曲。
+- 手机端：免费版只有 15 个热门歌单可供选择，其他歌单只能随机播放，每小时限制切歌 6 次。
+- 电脑端：免费版可无限次切歌，播放任意歌单内歌曲，不受限制。
+- Spotify Premium 会员：在所有平台均无任何限制，可畅享 5000 万首歌曲。
 
 ### 离线播放
 
@@ -74,16 +75,16 @@ Spotify 免费版与付费版在曲库方面没有差异。不过，不同地区
 
 ### 奈飞小铺：稳定的合租平台
 
-+   官网：[https://nf.ihezu.com](https://ihezu.love/UKTer6)
-+   支付方式：支付宝
-+   最高优惠码（8.9 折）： `theonf`
+- 官网：[https://nf.ihezu.com](https://ihezu.love/UKTer6)
+- 支付方式：支付宝
+- 最高优惠码（8.9 折）： `theonf`
 
 奈飞小铺作为较早的流媒体账号合租平台，提供包括 Spotify Premium、Netflix、Youtube 在内的多种服务。Spotify Premium 年付合租价格为 ¥118.8/年，使用优惠码 `theonf` 后仅需 ¥106.59/年，折合约 ¥8.9/月。此外，还有两年付的 Spotify Premium 为 ¥199.8/两年，折合约 ¥8.3/月。
 
 ### 蜜糖商店：多样化的会员时长选择
 
-+   官网：[https://metshop.vip](https://metshop.vip?referrerUserNo=MTU51076)
-+   支付方式：支付宝、微信
+- 官网：[https://metshop.vip](https://metshop.vip?referrerUserNo=MTU51076)
+- 支付方式：支付宝、微信
 
 蜜糖商店（Metshop）是一家知名的流媒体账号合租网站，提供 Spotify Premium、Netflix、HBO Go&Max、Prime Video、Hulu 等多种服务。
 

@@ -26,13 +26,13 @@ head:
 
 **软路由**
 
-主流的软路由目前有 R2S R2C R4S
+主流的软路由目前有 `R2S` `R2C` `R4S`
 
 具体可以在淘宝搜索以上的名字或者软路由
 
 **硬路由**
 
-主流的即是华硕/网件等
+主流的即是`华硕`/`网件`等
 
 查看具体机型： <https://hq450.github.io/fancyss/>
 
@@ -40,7 +40,7 @@ head:
 
 **iOS**
 
-使用**非中国区 Apple ID**从 App Store 购买 **Quantumult X** 或 **Shadowrocket**
+使用**非中国区 Apple ID**从 App Store 购买 **`Quantumult X`** 或 **`Shadowrocket`**
 
 新注册账号不能使用从淘宝上购买的礼品卡。
 注册时间短、无信用卡支付记录的账号使用礼品卡会触发苹果的风控措施，导致封号。
