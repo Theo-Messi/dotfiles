@@ -1,60 +1,72 @@
-export function lmt() {
+export function nav() {
+  return [
+    { text: "全方位流媒体观影指南", items: NavStreaming() },
+    { text: "🔥账号合租平台", items: NavSharing() },
+    { text: "科学上网指南", items: NavScientific() },
+    { text: "推荐 Netflix 机场", items: NavAirport() },
+    { text: "购买服务", items: NavServe() },
+    { text: "赞助", link: "https://github.com/sponsors/vanhiupun" },
+  ];
+}
+
+export function NavStreaming() {
   return [
     {
       // 全方位流媒体观影指南
       items: [
-        { text: "Netflix", link: "/Netflix/js" },
-        { text: "Disney+", link: "/Disney/js" },
-        { text: "Spotify会员", link: "/Spotify/js" },
-        { text: "YouTube会员", link: "/youtube/js" },
-        { text: "Hulu", link: "/hulu/js" },
-        { text: "HBO Max", link: "/hbo/js" },
+        { text: "Netflix", link: "/Streaming/Netflix-01" },
+        { text: "Disney+", link: "/Streaming/Disney-01" },
+        { text: "Spotify会员", link: "/Streaming/Spotify-01" },
+        { text: "YouTube会员", link: "/Streaming/YouTube-01" },
+        { text: "Hulu", link: "/Streaming/Hulu-01" },
+        { text: "HBO Max", link: "/Streaming/HBO-Max-01" },
       ],
     },
   ];
 }
 
-export function hz() {
+export function NavSharing() {
   return [
     {
       // 🔥流媒体账号合租
       items: [
-        { text: "账号合租指南", link: "/hzpt/hz" },
-        { text: "蜜糖商店", link: "/hzpt/mtsd" },
-        { text: "奈飞小铺", link: "/hzpt/nfxp" },
+        { text: "账号合租指南", link: "/Sharing/01" },
+        { text: "银河录像局 - AI服务", link: "/Sharing/02" },
+        { text: "蜜糖商店 - 流媒体账号", link: "/Sharing/03" },
+        { text: "奈飞小铺 - 流媒体账号", link: "/Sharing/04" },
       ],
     },
   ];
 }
 
-export function kx() {
+export function NavScientific() {
   return [
     {
       // 科学上网指南
       items: [
-        { text: "路由器与客户端选择", link: "/kx/ly" },
-        { text: "线路的区别与选择", link: "/kx/xl" },
-        { text: "关于机场常用服务器线路的科普", link: "/kx/kp" },
+        { text: "路由器与客户端选择", link: "/Guide/01" },
+        { text: "线路的区别与选择", link: "/Guide/02" },
+        { text: "关于机场常用服务器线路的科普", link: "/Guide/03" },
       ],
     },
   ];
 }
 
-export function jc() {
+export function NavAirport() {
   return [
     {
       // 推荐机场
       items: [
-        { text: "解锁 4K Netflix 机场指南", link: "/jc/js" },
-        { text: "一元机场", link: "/jc/yy" },
-        { text: "薯条机场", link: "/jc/st" },
-        { text: "Bridge the Wise", link: "/jc/btw" },
+        { text: "解锁 4K Netflix 机场指南", link: "/vpn/01" },
+        { text: "FlyingBird - 飞鸟机场", link: "/vpn/03" },
+        { text: "Bridge the Wise", link: "/vpn/04" },
+        { text: "一元机场", link: "/vpn/02" },
       ],
     },
   ];
 }
 
-export function fw() {
+export function NavServe() {
   return [
     // 推荐服务
     {
@@ -62,11 +74,11 @@ export function fw() {
       items: [
         {
           text: "一元机场",
-          link: "https://xn--4gq62f52gdss.com/#/register?code=tFcXfJEu",
+          link: "https://一元机场.click/#/register?code=tFcXfJEuu",
         },
         {
-          text: "薯条机场",
-          link: "https://av1.wtf/auth/register?code=vb4p",
+          text: "FlyingBird - 飞鸟机场",
+          link: "https://fbaff01.flyb-aff01.com/auth/register?code=RZP3",
         },
         {
           text: "Bridge the Wise",
@@ -76,13 +88,17 @@ export function fw() {
     },
 
     {
-      text: "流媒体合租平台",
+      text: "账号合租平台",
       items: [
         {
-          text: "蜜糖商店",
+          text: "银河录像局 - AI服务",
+          link: "https://nf.video/kaIuE",
+        },
+        {
+          text: "蜜糖商店 - 流媒体账号",
           link: "https://metshop.vip?referrerUserNo=MTU51076",
         },
-        { text: "奈飞小铺", link: "https://ihezu.love/UKTer6" },
+        { text: "奈飞小铺 - 流媒体账号", link: "https://ihezu.love/UKTer6" },
       ],
     },
     {

@@ -1,13 +1,10 @@
 {
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.13"
+    "vitepress": "^1.0.0-rc.20"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
-  },
-  "dependencies": {
-    "vitepress-plugin-pagefind": "^0.2.6"
   }
 }
