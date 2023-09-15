@@ -20,7 +20,7 @@ hero:
 features:
   - title: Netflix
     icon:
-     src: netflix-color.svg
+     src: netflix-color1.svg
     details: 以其丰富的原创内容和电影库著称，是电影和电视剧爱好者的理想选择。
     link: /Netflix/js
 
@@ -31,14 +31,14 @@ features:
     link: /Disney/js
 
   - title: Spotify
-    icon:
+    icon: 
      src: spotify-color.svg
     details: 拥有庞大的音乐库，允许免费听歌，是音乐迷的天堂。
     link: /Spotify/js
 
   - title: YouTube会员
     icon:
-     src: youtube-color.svg
+     src: youtube-color 2.svg
     details: 提供无广告观看体验和独家内容，让您沉浸在丰富的视频世界中。
     link: /youtube/js
   
