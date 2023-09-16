@@ -1,4 +1,4 @@
-export function getGuideSidebarZhCN() {
+export function Sidebartelevision() {
   return [
     {
       text: "Netflix 观看指南",
@@ -76,7 +76,7 @@ export function getGuideSidebarZhCN() {
   ];
 }
 
-export function getCaseSidebarZhCN() {
+export function SidebarScientific() {
   return [
     {
       text: "科学上网指南",
@@ -91,7 +91,7 @@ export function getCaseSidebarZhCN() {
   ];
 }
 
-export function getDeveloperSidebarZhCN() {
+export function SidebarSharing() {
   return [
     {
       text: "流媒体合租平台",
@@ -106,7 +106,7 @@ export function getDeveloperSidebarZhCN() {
   ];
 }
 
-export function getjcSidebarZhCN() {
+export function SidebarAirport() {
   return [
     {
       text: "推荐机场",

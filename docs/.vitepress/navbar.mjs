@@ -1,4 +1,4 @@
-export function lmt() {
+export function Navtelevision() {
   return [
     {
       // 全方位流媒体观影指南
@@ -14,7 +14,7 @@ export function lmt() {
   ];
 }
 
-export function hz() {
+export function NavSharing() {
   return [
     {
       // 🔥流媒体账号合租
@@ -27,7 +27,7 @@ export function hz() {
   ];
 }
 
-export function kx() {
+export function NavScientific() {
   return [
     {
       // 科学上网指南
@@ -40,7 +40,7 @@ export function kx() {
   ];
 }
 
-export function jc() {
+export function NavAirport() {
   return [
     {
       // 推荐机场
@@ -54,7 +54,7 @@ export function jc() {
   ];
 }
 
-export function fw() {
+export function NavServe() {
   return [
     // 推荐服务
     {

@@ -1,14 +1,19 @@
 import { defineConfig } from "vitepress";
 import {
-  getGuideSidebarZhCN,
-  getDeveloperSidebarZhCN,
-  getjcSidebarZhCN,
-  getCaseSidebarZhCN,
+  SidebarAirport,
+  SidebarScientific,
+  SidebarSharing,
+  Sidebartelevision,
 } from "./Sidebar.mjs";
-import { hz, lmt, kx, jc, fw } from "./navbar.mjs";
+import {
+  NavAirport,
+  NavScientific,
+  NavServe,
+  NavSharing,
+  Navtelevision,
+} from "./navbar.mjs";
 
 export default defineConfig({
-  lang: "zh-CN",
   description:
     "引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域",
   lastUpdated: true,
@@ -87,19 +92,19 @@ export default defineConfig({
     },
     // 导航栏
     nav: [
-      { text: "全方位流媒体观影指南", items: lmt() },
-      { text: "🔥流媒体账号合租", items: hz() },
-      { text: "科学上网指南", items: kx() },
-      { text: "推荐 Netflix 机场", items: jc() },
-      { text: "购买服务", items: fw() },
+      { text: "全方位流媒体观影指南", items: Navtelevision() },
+      { text: "🔥流媒体账号合租", items: NavSharing() },
+      { text: "科学上网指南", items: NavScientific() },
+      { text: "推荐 Netflix 机场", items: NavAirport() },
+      { text: "购买服务", items: NavServe() },
     ],
     // 侧边栏
     sidebar: {
-      "/": { base: "/", items: getGuideSidebarZhCN() },
-      "/Netflix/": { base: "/Netflix/", items: getGuideSidebarZhCN() },
-      "/kx/": { base: "/kx/", items: getCaseSidebarZhCN() },
-      "/hzpt/": { base: "/hzpt/", items: getDeveloperSidebarZhCN() },
-      "/jc/": { base: "/jc/", items: getjcSidebarZhCN() },
+      "/": { base: "/", items: Sidebartelevision() },
+      "/Netflix/": { base: "/Netflix/", items: Sidebartelevision() },
+      "/kx/": { base: "/kx/", items: SidebarScientific() },
+      "/hzpt/": { base: "/hzpt/", items: SidebarSharing() },
+      "/jc/": { base: "/jc/", items: SidebarAirport() },
     },
 
     // algolia搜索
