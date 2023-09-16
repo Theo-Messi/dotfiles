@@ -15,7 +15,7 @@ export default defineConfig({
 
   // 站点地图
   sitemap: {
-    hostname: "https:/theovan.wiki",
+    hostname: "https://theovan.wiki",
     transformItems(items) {
       return items.filter((item) => !item.url.includes("migration"));
     },
