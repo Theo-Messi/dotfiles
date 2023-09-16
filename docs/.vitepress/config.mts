@@ -27,6 +27,17 @@ export default defineConfig({
     },
   },
 
+  // markdown
+  markdown: {
+    theme: "material-theme-palenight",
+    lineNumbers: true,
+    anchor: {
+      slugify(str) {
+        return encodeURIComponent(str);
+      },
+    },
+  },
+
   // 网站头
   head: [
     ["link", { rel: "icon", href: "/logo-light.svg" }],
