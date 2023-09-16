@@ -1,17 +1,6 @@
 import { defineConfig } from "vitepress";
-import {
-  SidebarAirport,
-  SidebarScientific,
-  SidebarSharing,
-  Sidebartelevision,
-} from "./Sidebar.mjs";
-import {
-  NavAirport,
-  NavScientific,
-  NavServe,
-  NavSharing,
-  Navtelevision,
-} from "./navbar.mjs";
+import * as SidebarMjs from "./Sidebar.mjs";
+import * as navbarMjs from "./navbar.mjs";
 
 export default defineConfig({
   description:
@@ -92,19 +81,19 @@ export default defineConfig({
     },
     // 导航栏
     nav: [
-      { text: "全方位流媒体观影指南", items: Navtelevision() },
-      { text: "🔥流媒体账号合租", items: NavSharing() },
-      { text: "科学上网指南", items: NavScientific() },
-      { text: "推荐 Netflix 机场", items: NavAirport() },
-      { text: "购买服务", items: NavServe() },
+      { text: "全方位流媒体观影指南", items: navbarMjs.Navtelevision() },
+      { text: "🔥流媒体账号合租", items: navbarMjs.NavSharing() },
+      { text: "科学上网指南", items: navbarMjs.NavScientific() },
+      { text: "推荐 Netflix 机场", items: navbarMjs.NavAirport() },
+      { text: "购买服务", items: navbarMjs.NavServe() },
     ],
     // 侧边栏
     sidebar: {
-      "/": { base: "/", items: Sidebartelevision() },
-      "/Netflix/": { base: "/Netflix/", items: Sidebartelevision() },
-      "/kx/": { base: "/kx/", items: SidebarScientific() },
-      "/hzpt/": { base: "/hzpt/", items: SidebarSharing() },
-      "/jc/": { base: "/jc/", items: SidebarAirport() },
+      "/": { base: "/", items: SidebarMjs.Sidebartelevision() },
+      "/Netflix/": { base: "/Netflix/", items: SidebarMjs.Sidebartelevision() },
+      "/kx/": { base: "/kx/", items: SidebarMjs.SidebarScientific() },
+      "/hzpt/": { base: "/hzpt/", items: SidebarMjs.SidebarSharing() },
+      "/jc/": { base: "/jc/", items: SidebarMjs.SidebarAirport() },
     },
 
     // algolia搜索
