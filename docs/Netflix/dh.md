@@ -8,36 +8,33 @@ head:
       content: Netflix
 ---
 
-当奈飞的大门向你徐徐打开时，绝不仅仅只有你在**Netflix**首页看到的电视节目、电影两个默认类别。除了这些默认展示的节目信息之外，奈飞还有额外大约**2.7 万**部的隐藏影片，不过这些片源默认并不展示，需要一点特殊技巧才能解锁。
+当奈飞的大门向你徐徐打开时，绝不仅仅只有你在`Netflix`首页看到的电视节目、电影两个默认类别。除了这些默认展示的节目信息之外，奈飞还有额外大约**2.7 万**部的隐藏影片，不过这些片源默认并不展示，需要一点特殊技巧才能解锁。
 
-今天，我们就一同来学习如何一键解锁**Netflix**高级技能：奈飞秘密分类的技巧。
+今天，我们就一同来学习如何一键解锁`Netflix`高级技能：奈飞秘密分类的技巧。
 
-### Netflix 进阶
+进入 Netflix 的隐藏目录很简单，只需要修改对应的类别代码即可。把下面这个网址末尾的`xxxx`改成`10118`这个隐藏代码，就可以进入`漫威超级英雄目录`，改为`29281`就可以进入`大尺度成人浪漫片类目`，供老司机们享用。
 
-进入 Netflix 的隐藏目录很简单，只需要修改对应的类别代码即可。把下面这个网址末尾的**xxxx**改成**10118**这个隐藏代码，就可以进入**漫威超级英雄目录**，改为**29281**就可以进入**大尺度成人浪漫片类目**，供老司机们享用。
-
-- **<https://www.netflix.com/browse/genre/xxxxxx>**
+- <https://www.netflix.com/browse/genre/xxxxxx>
 
 ### Netflix 大尺度成人片
 
-- **<https://www.netflix.com/browse/genre/29281>**
+- <https://www.netflix.com/browse/genre/29281>
 
-影片内容：包括五十度灰、欲罢不能、全裸导演、性爱解密、禁室 365 天、黑暗的欲望、半老徐娘、色辱（主演是法鲨！）、寻欲之旅等。
+> 影片内容：包括五十度灰、欲罢不能、全裸导演、性爱解密、禁室 365 天、黑暗的欲望、半老徐娘、色辱（主演是法鲨！）、寻欲之旅等。
 
 ### Netflix 漫威电影
 
-- **<https://www.netflix.com/browse/genre/10118>**
+- <https://www.netflix.com/browse/genre/10118>
 
-影片内容：包括钢铁侠、蜘蛛侠、海王、X 战警、超人、绿巨人等。
+> 影片内容：包括钢铁侠、蜘蛛侠、海王、X 战警、超人、绿巨人等。
 
 ### Netflix 影视分类代码
 
 **为了便于大家查找自己喜欢的类型，这里分门别类帮大家整理了所有的 Netflix 影视分类代码，按照前面说的方式，直接修改网址后面的数字就能直接进入了。**
 
-<big><b>点开列表查看 👇</b></big>
+- 点开列表查看 👇
 
-<details>
-    <summary><big><b>Netflix主题分类</b></big></summary>
+::: details Netflix 主题分类
 
 - 电视节目（83）
 - 动画（7424）
@@ -62,10 +59,9 @@ head:
 - 大尺度成人浪漫片（29281）
 - 成人动画片（11881）
 - 成人（100040）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix国家地区分类</b></big></summary>
+::: details Netflix 国家地区分类
 
 - 台湾电影与节目（434295）
 - 华语电影与节目（100375）
@@ -81,10 +77,9 @@ head:
 - 北欧电影（9292）
 - 西班牙电影（58741）
 - 东南亚电影（9196）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix经典电影（31574）</b></big></summary>
+::: details Netflix 经典电影（31574）
 
 - 经典喜剧（31694）
 - 经典剧情片（29809）
@@ -96,10 +91,9 @@ head:
 - 经典外语片（32473）
 - 默片（53310）
 - 经典西部片（47465）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix喜剧片（6548）</b></big></summary>
+::: details Netflix 喜剧片（6548）
 
 - 黑色喜剧（869）
 - 外国喜剧（4426）
@@ -113,10 +107,9 @@ head:
 - 讽刺片（4922）
 - 浪漫喜剧片（5475）
 - 打闹喜剧（10256）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix纪录片（6839）</b></big></summary>
+::: details Netflix 纪录片（6839）
 
 - 传记片（3652）
 - 犯罪纪录片（9875）
@@ -130,10 +123,9 @@ head:
 - 宗教纪录片（10005）
 - 科学及自然纪录片（2595）
 - 社会文化纪录片（3675）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix剧情片（5763）</b></big></summary>
+::: details Netflix 剧情片（5763）
 
 - 传记剧情片（3179）
 - 经典剧情片（29809）
@@ -153,10 +145,9 @@ head:
 - 浪漫剧情片（1255）
 - 娱乐圈剧情片（5012）
 - 社会议题剧情片（3947）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix冒险动作片（1365）</b></big></summary>
+::: details Netflix 冒险动作片（1365）
 
 - 亚洲动作片（77232）
 - 经典冒险动作片（46576）
@@ -170,18 +161,16 @@ head:
 - 外国冒险动作片（11828）
 - 武术片（8985）
 - 军事冒险动作片（2125）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix信仰与灵学（26835）</b></big></summary>
+::: details Netflix 信仰与灵学（26835）
 
 - 信仰与灵学电影（52804）
 - 灵学纪录片（2760）
 - 儿童信仰与灵学电影（751423）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix动画（7424）</b></big></summary>
+::: details Netflix 动画（7424）
 
 - 成人动画（11881）
 - 动画动作片（2653）
@@ -192,10 +181,9 @@ head:
 - 动画恐怖片（10695）
 - 动画奇幻片（11146）
 - 动画影集（6721）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix亲子片（783）</b></big></summary>
+::: details Netflix 亲子片（783）
 
 - 0 到 2 岁（6796）
 - 3 到 4 岁（6218）
@@ -210,10 +198,9 @@ head:
 - 儿童节目（27346）
 - 儿童音乐节目（52843）
 - 动物电影 （5507）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix多元性别题材电影（5977）</b></big></summary>
+::: details Netflix 多元性别题材电影（5977）
 
 - 非异性恋族群喜剧（7120）
 - 非异性恋族群剧情片（500）
@@ -221,10 +208,9 @@ head:
 - 外国非异性恋族群（8243）
 - 非异性恋族群纪录片（4720）
 - 男女同志、双性恋及跨性别人士节目（65263）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix惊悚片（8933）</b></big></summary>
+::: details Netflix 惊悚片（8933）
 
 - 动作惊悚片（43048）
 - 惊悚片经典（46588）
@@ -239,10 +225,9 @@ head:
 - 间谍惊悚片（9147）
 - 火热惊悚片（972）
 - 超自然惊悚片（11140）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix恐怖片（8711）</b></big></summary>
+::: details Netflix 恐怖片（8711）
 
 - B 级恐怖片（8195）
 - 怪物长片（6895）
@@ -258,10 +243,9 @@ head:
 - 狼人恐怖片（75930）
 - 僵尸恐怖电影（75405）
 - 恶魔故事（6998）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix科幻片（1492）</b></big></summary>
+::: details Netflix 科幻片（1492）
 
 - 动作科幻／奇幻片（1568）
 - 外星科幻（3327）
@@ -273,10 +257,9 @@ head:
 - 科幻恐怖片（1694）
 - 科幻惊悚片（11014）
 - 外国科幻／奇幻片（6485）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix音乐（1701）</b></big></summary>
+::: details Netflix 音乐（1701）
 
 - 儿童音乐节目（52843）
 - 乡村与西部／民谣（1105）
@@ -285,19 +268,17 @@ head:
 - 都会音乐及舞曲演奏会（9472）
 - 世界音乐会（2856）
 - 摇滚及流行演唱会（3278）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix音乐剧（13335）</b></big></summary>
+::: details Netflix 音乐剧（13335）
 
 - 经典音乐剧（32392）
 - 迪士尼音乐剧（59433）
 - 娱乐圈音乐剧（13573）
 - 舞台音乐剧（55774）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix外语片（7462）</b></big></summary>
+::: details Netflix 外语片（7462）
 
 - 艺术电影（29764）
 - 外国冒险动作片（11828）
@@ -332,10 +313,9 @@ head:
 - 印度电影（10463）
 - 华语电影（3960）
 - 英国电影（10757）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix欧美独立电影（7077）</b></big></summary>
+::: details Netflix 欧美独立电影（7077）
 
 - 实验电影（11079）
 - 独立冒险动作片（11804）
@@ -343,10 +323,9 @@ head:
 - 浪漫独立电影（9916）
 - 独立喜剧（4195）
 - 独立剧情片（384）
-</details>
+  :::
 
-<details>
-    <summary><big><b>Netflix电视节目（83）</b></big></summary>
+::: details Netflix 电视节目（83）
 
 - 英国节目（52117）
 - 经典节目（46553）
@@ -367,4 +346,4 @@ head:
 - 科幻节目（1372）
 - 实境节目（9833）
 - 青少年节目（60951）
-</details>
+  :::
