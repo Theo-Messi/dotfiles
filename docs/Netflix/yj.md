@@ -92,17 +92,18 @@ Win10 的原生奈飞应用支持 4K 清晰度，但首先你需要把自己的 
 
 使用浏览器的快捷键查看 Netflix 的分辨率等数据信息，再次按下快捷键可取消显示。
 
-Windows 平台快捷键：
+::: code-group
 
-```bash
-CTRL + SHIFT + ALT + D
+```sh [Windows]
+ CTRL + SHIFT + ALT + D
 ```
 
-Mac 平台快捷键：
-
-```bash
-CTRL + SHITF + OPTION + D
+```sh [Mac]
+ CTRL + SHITF + OPTION + D
 ```
+
+:::
+
 
 其中的 `Playing bitrate (a/v): 128 / 4535 (1280x720)` 即为当前的**Netflix**码率。
 
