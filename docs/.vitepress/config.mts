@@ -25,11 +25,6 @@ export default defineConfig({
   markdown: {
     theme: "material-theme-palenight",
     lineNumbers: true,
-    // anchor: {
-    //   slugify(str) {
-    //     return encodeURIComponent(str);
-    //   },
-    // },
   },
 
   // 网站头
@@ -82,7 +77,7 @@ export default defineConfig({
     // 导航栏
     nav: [
       { text: "全方位流媒体观影指南", items: navbarMjs.Navtelevision() },
-      { text: "🔥流媒体账号合租", items: navbarMjs.NavSharing() },
+      { text: "🔥账号合租平台", items: navbarMjs.NavSharing() },
       { text: "科学上网指南", items: navbarMjs.NavScientific() },
       { text: "推荐 Netflix 机场", items: navbarMjs.NavAirport() },
       { text: "购买服务", items: navbarMjs.NavServe() },

@@ -66,6 +66,14 @@ features:
     details: 根据AT＆T的数据，至2021 年6 月30 日为止，HBO Max在全球已经有6750万名付费用户，在美国的HBO Max用户则为4350 万，其中包含350万名HBO付费电视客户
     link: /hbo/js
 
+  - title: 银河录像局
+    icon:
+      src: yh.png
+      width: 80
+      height: 80
+    details: 国内可靠的智能奈飞合租平台，提供 Netflix Spotify YouTube Disney+ HBO 等流媒体服务以及 ChatGPT Plus(OpenAI)、MidJourney 等AI服务
+    link: /hzpt/yh
+
   - title: 蜜糖商店
     icon:
       src: https://metshop.vip/img/simpLogo.1b5c58e1.png
@@ -94,6 +102,7 @@ features:
     details: 其名字来源于 People’s Daily 的名言：智者建桥，愚者建墙，他们最开始接触的中国电影并不好看，同时也很理解下载资源很不方便的奈飞，所以他们就建立了一个中转机场，只为了能够给国内的同胞们提供便捷的观看服务。
     link: /jc/btw
 ---
+
 <style>
 :root {
   --vp-home-hero-name-color: transparent;

@@ -20,8 +20,9 @@ export function NavSharing() {
       // 🔥流媒体账号合租
       items: [
         { text: "账号合租指南", link: "/hzpt/hz" },
-        { text: "蜜糖商店", link: "/hzpt/mtsd" },
-        { text: "奈飞小铺", link: "/hzpt/nfxp" },
+        { text: "银河录像局 - AI服务", link: "/hzpt/yh" },
+        { text: "蜜糖商店 - 流媒体账号", link: "/hzpt/mtsd" },
+        { text: "奈飞小铺 - 流媒体账号", link: "/hzpt/nfxp" },
       ],
     },
   ];
@@ -76,13 +77,17 @@ export function NavServe() {
     },
 
     {
-      text: "流媒体合租平台",
+      text: "账号合租平台",
       items: [
         {
-          text: "蜜糖商店",
+          text: "银河录像局 - AI服务",
+          link: "https://nf.video/kaIuE",
+        },
+        {
+          text: "蜜糖商店 - 流媒体账号",
           link: "https://metshop.vip?referrerUserNo=MTU51076",
         },
-        { text: "奈飞小铺", link: "https://ihezu.love/UKTer6" },
+        { text: "奈飞小铺 - 流媒体账号", link: "https://ihezu.love/UKTer6" },
       ],
     },
     {

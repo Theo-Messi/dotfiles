@@ -94,13 +94,14 @@ export function SidebarScientific() {
 export function SidebarSharing() {
   return [
     {
-      text: "流媒体合租平台",
+      text: "账号合租平台",
       collapsed: true,
       base: "/hzpt/",
       items: [
         { text: "账号合租指南", link: "hz" },
-        { text: "蜜糖商店", link: "mtsd" },
-        { text: "奈飞小铺", link: "nfxp" },
+        { text: "银河录像局 - AI服务", link: "yh" },
+        { text: "蜜糖商店 - 流媒体账号", link: "mtsd" },
+        { text: "奈飞小铺 - 流媒体账号", link: "nfxp" },
       ],
     },
   ];
