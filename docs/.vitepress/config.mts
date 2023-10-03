@@ -1,8 +1,13 @@
 import { defineConfig } from "vitepress";
-import * as SidebarMjs from "./Sidebar.mjs";
-import * as navbarMjs from "./navbar.mjs";
+import * as Sidebar from "./Sidebar.js";
+import * as navbar from "./navbar.js";
 
 export default defineConfig({
+  vite: {
+    ssr: {
+      noExternal: ["@nolebase/vitepress-plugin-enhanced-readabilities"],
+    },
+  },
   description:
     "引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域",
   lastUpdated: true,
@@ -68,17 +73,17 @@ export default defineConfig({
 
     outline: { label: "本页目录" }, //目录
     lastUpdated: { text: "上次更新" }, //上次更新
-    nav: navbarMjs.nav(), // 导航栏
+    nav: navbar.nav(), // 导航栏
 
     sidebar: {
       // 侧边栏
-      "/": { base: "/", items: SidebarMjs.SidebarStreaming() },
-      "/Guide/": { base: "/Guide/", items: SidebarMjs.SidebarScientific() },
-      "/Sharing/": { base: "/Sharing/", items: SidebarMjs.SidebarSharing() },
-      "/vpn/": { base: "/vpn/", items: SidebarMjs.SidebarAirport() },
+      "/": { base: "/", items: Sidebar.SidebarStreaming() },
+      "/Guide/": { base: "/Guide/", items: Sidebar.SidebarScientific() },
+      "/Sharing/": { base: "/Sharing/", items: Sidebar.SidebarSharing() },
+      "/vpn/": { base: "/vpn/", items: Sidebar.SidebarAirport() },
       "/Streaming/": {
         base: "/Streaming/",
-        items: SidebarMjs.SidebarStreaming(),
+        items: Sidebar.SidebarStreaming(),
       },
     },
 
