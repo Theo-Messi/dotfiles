@@ -1,6 +1,6 @@
 export function nav() {
   return [
-    { text: "全方位流媒体观影指南", items: NavStreaming() },
+    { text: "流媒体观影指南", items: NavStreaming() },
     { text: "🔥账号合租平台", items: NavSharing() },
     { text: "科学上网指南", items: NavScientific() },
     { text: "推荐 Netflix 机场", items: NavAirport() },

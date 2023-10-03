@@ -3,16 +3,17 @@ import * as Sidebar from "./Sidebar.js";
 import * as navbar from "./navbar.js";
 
 export default defineConfig({
-  vite: {
-    ssr: {
-      noExternal: ["@nolebase/vitepress-plugin-enhanced-readabilities"],
-    },
-  },
+  title: "流媒体森林",
+  lang: "cn",
   description:
-    "引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域",
+    "Netflix,Disney+,Spotify会员,YouTube会员,HBO MAX,Hulu,Vitepress,Premium,奈飞小铺,蜜糖商店,银河录像局,一元机场,FlyingBird,飞鸟机场,Bridge the Wise,",
   lastUpdated: true,
   cleanUrls: true, // 开启后网址后缀无'html'
+  srcDir: "src",
   // appearance: false,  //true强制开启深色模式 false强制开启浅色模式
+  vite: {
+    ssr: { noExternal: ["@nolebase/vitepress-plugin-enhanced-readabilities"] },
+  },
 
   sitemap: {
     // ------------站点地图-------------
@@ -33,7 +34,7 @@ export default defineConfig({
 
   // 网站头
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "https://theovan.wiki/favicon.ico" }],
     // ["script", {}, `document.documentElement.classList.add('dark')`],    //强制开启为深色模式
     [
       //谷歌分析
@@ -53,21 +54,13 @@ export default defineConfig({
     ],
   ],
 
-  locales: {
-    root: {
-      title: "流媒体森林",
-      label: "中文",
-      lang: "cn",
-    },
-  },
-
   themeConfig: {
-    logo: { light: "/favicon.ico", dark: "/favicon.ico" }, // logo
+    logo: "/favicon.ico", // logo
     socialLinks: [{ icon: "github", link: "https://github.com/vanhiupun" }], // 社交链接
     //  siteTitle: false,    false去除网站标题 只显示logo
     editLink: {
       // GitHub编辑页面
-      pattern: "https://github.com/vanhiupun/wiki/blob/master/docs/:path",
+      pattern: "https://github.com/vanhiupun/wiki/blob/master/docs/src/:path",
       text: "为此页提供修改建议",
     },
 
