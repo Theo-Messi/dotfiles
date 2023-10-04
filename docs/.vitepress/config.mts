@@ -137,7 +137,7 @@ export default defineConfig({
       // 底部信息
       message: "Released Under The MIT License.",
       copyright:
-        'Copyright © 2019 - Present <a href="https://github.com/vanhiupun">Theo</a>',
+        'Copyright © 2019 - 2023 <a href="https://github.com/vanhiupun" target="_blank">Theo</a> . All Rights Reserved.',
     },
   },
 });
