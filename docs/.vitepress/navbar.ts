@@ -1,3 +1,4 @@
+// 导航栏设置
 export function nav() {
   return [
     { text: "流媒体观影指南", items: NavStreaming() },
@@ -9,10 +10,10 @@ export function nav() {
   ];
 }
 
+// 流媒体观影指南
 export function NavStreaming() {
   return [
     {
-      // 全方位流媒体观影指南
       items: [
         { text: "Netflix", link: "/Streaming/Netflix-01" },
         { text: "Disney+", link: "/Streaming/Disney-01" },
@@ -25,10 +26,10 @@ export function NavStreaming() {
   ];
 }
 
+// 🔥账号合租平台
 export function NavSharing() {
   return [
     {
-      // 🔥流媒体账号合租
       items: [
         { text: "账号合租指南", link: "/Sharing/01" },
         { text: "银河录像局 - AI服务", link: "/Sharing/02" },
@@ -39,10 +40,10 @@ export function NavSharing() {
   ];
 }
 
+// 科学上网指南
 export function NavScientific() {
   return [
     {
-      // 科学上网指南
       items: [
         { text: "路由器与客户端选择", link: "/Guide/01" },
         { text: "线路的区别与选择", link: "/Guide/02" },
@@ -52,10 +53,10 @@ export function NavScientific() {
   ];
 }
 
+// 推荐 Netflix 机场
 export function NavAirport() {
   return [
     {
-      // 推荐机场
       items: [
         { text: "解锁 4K Netflix 机场指南", link: "/vpn/01" },
         { text: "FlyingBird - 飞鸟机场", link: "/vpn/03" },
@@ -66,11 +67,13 @@ export function NavAirport() {
   ];
 }
 
+// 购买服务
 export function NavServe() {
   return [
-    // 推荐服务
     {
+      // 分组名称
       text: "推荐机场",
+      //分组页面
       items: [
         {
           text: "一元机场",
@@ -88,7 +91,9 @@ export function NavServe() {
     },
 
     {
+      // 分组名称
       text: "账号合租平台",
+      // 分组页面
       items: [
         {
           text: "银河录像局 - AI服务",
@@ -102,7 +107,9 @@ export function NavServe() {
       ],
     },
     {
+      // 分组名称
       text: "其他服务",
+      // 分组页面
       items: [
         {
           text: "SMS 海外接码平台",

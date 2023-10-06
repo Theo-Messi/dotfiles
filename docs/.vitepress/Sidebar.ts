@@ -1,9 +1,16 @@
+// 侧边栏设置
+
+// 流媒体观影指南
 export function SidebarStreaming() {
   return [
     {
+      // 分组名称
       text: "Netflix 观看指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [
         { text: "Netflix 介绍", link: "Netflix-01" },
         { text: "Netflix 如何看4K及适配硬件", link: "Netflix-02" },
@@ -16,9 +23,13 @@ export function SidebarStreaming() {
       ],
     },
     {
+      // 分组名称
       text: "Disney+ 观看指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [
         { text: "Disney+ 介绍", link: "Disney-01" },
         { text: "Disney+ 订阅指南", link: "Disney-02" },
@@ -28,55 +39,61 @@ export function SidebarStreaming() {
       ],
     },
     {
+      // 分组名称
       text: "Spotify Premium 指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [{ text: "Spotify Premium 指南", link: "Spotify-01" }],
     },
     {
+      // 分组名称
       text: "YouTube Premium 会员权益及订阅指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [
         { text: "YouTube Premium 会员权益及订阅指南", link: "YouTube-01" },
       ],
     },
     {
+      // 分组名称
       text: "Hulu 国内观看指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [{ text: "Hulu 国内观看指南", link: "Hulu-01" }],
     },
     {
+      // 分组名称
       text: "HBO Max 国内观看指南",
+      // 下拉菜单
       collapsed: true,
+      // 分组路径
       base: "/Streaming/",
+      // 分组页面
       items: [{ text: "HBO Max 国内观看指南", link: "HBO-Max-01" }],
     },
   ];
 }
 
-export function SidebarScientific() {
-  return [
-    {
-      text: "科学上网指南",
-      collapsed: true,
-      base: "/Guide/",
-      items: [
-        { text: "路由器与客户端选择", link: "01" },
-        { text: "线路的区别与选择", link: "02" },
-        { text: "关于机场常用服务器线路的科普", link: "03" },
-      ],
-    },
-  ];
-}
-
+// 账号合租平台
 export function SidebarSharing() {
   return [
     {
-      text: "账号合租平台",
-      collapsed: true,
+      // 分组名称
+      // text: "账号合租平台",
+      // 下拉菜单
+      // collapsed: true,
+      // 分组路径
       base: "/Sharing/",
+      // 分组页面
       items: [
         { text: "账号合租指南", link: "01" },
         { text: "银河录像局 - AI服务", link: "02" },
@@ -87,12 +104,37 @@ export function SidebarSharing() {
   ];
 }
 
+// 科学上网指南
+export function SidebarScientific() {
+  return [
+    {
+      // 分组名称
+      // text: "科学上网指南",
+      // 下拉菜单
+      // collapsed: true,
+      // 分组路径
+      base: "/Guide/",
+      // 分组页面
+      items: [
+        { text: "路由器与客户端选择", link: "01" },
+        { text: "线路的区别与选择", link: "02" },
+        { text: "关于机场常用服务器线路的科普", link: "03" },
+      ],
+    },
+  ];
+}
+
+// 推荐 Netflix 机场
 export function SidebarAirport() {
   return [
     {
-      text: "推荐机场",
-      collapsed: true,
+      // 分组名称
+      // text: "推荐机场",
+      // 下拉菜单
+      // collapsed: true,
+      // 分组路径
       base: "/vpn/",
+      // 分组页面
       items: [
         { text: "解锁 4K Netflix 机场指南", link: "01" },
         { text: "FlyingBird - 飞鸟机场", link: "03" },

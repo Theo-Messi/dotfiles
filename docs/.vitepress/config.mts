@@ -96,10 +96,13 @@ export default defineConfig({
 
     // 侧边栏
     sidebar: {
-      "/": { base: "/", items: Sidebar.SidebarStreaming() },
+      // 科学上网指南
       "/Guide/": { base: "/Guide/", items: Sidebar.SidebarScientific() },
+      // 账号合租平台
       "/Sharing/": { base: "/Sharing/", items: Sidebar.SidebarSharing() },
+      // 推荐 Netflix 机场
       "/vpn/": { base: "/vpn/", items: Sidebar.SidebarAirport() },
+      // 流媒体观影指南
       "/Streaming/": {
         base: "/Streaming/",
         items: Sidebar.SidebarStreaming(),
