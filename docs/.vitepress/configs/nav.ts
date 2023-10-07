@@ -1,14 +1,14 @@
+import type { DefaultTheme } from "vitepress";
+
 // 导航栏设置
-export function nav() {
-  return [
-    { text: "流媒体观影指南", items: NavStreaming() },
-    { text: "🔥账号合租平台", items: NavSharing() },
-    { text: "科学上网指南", items: NavScientific() },
-    { text: "推荐 Netflix 机场", items: NavAirport() },
-    { text: "购买服务", items: NavServe() },
-    { text: "赞助", link: "https://github.com/sponsors/vanhiupun" },
-  ];
-}
+export const nav: DefaultTheme.Config["nav"] = [
+  { text: "流媒体观影指南", items: NavStreaming() },
+  { text: "🔥账号合租平台", items: NavSharing() },
+  { text: "科学上网指南", items: NavScientific() },
+  { text: "推荐 Netflix 机场", items: NavAirport() },
+  { text: "购买服务", items: NavServe() },
+  { text: "赞助", link: "https://github.com/sponsors/vanhiupun" },
+];
 
 // 流媒体观影指南
 export function NavStreaming() {

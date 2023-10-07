@@ -1,4 +1,19 @@
-// 侧边栏设置
+import type { DefaultTheme } from "vitepress";
+
+// 侧边栏配置
+export const sidebar: DefaultTheme.Config["sidebar"] = {
+  // 科学上网指南
+  "/Guide/": { base: "/Guide/", items: SidebarScientific() },
+  // 账号合租平台
+  "/Sharing/": { base: "/Sharing/", items: SidebarSharing() },
+  // 推荐 Netflix 机场
+  "/vpn/": { base: "/vpn/", items: SidebarAirport() },
+  // 流媒体观影指南
+  "/Streaming/": {
+    base: "/Streaming/",
+    items: SidebarStreaming(),
+  },
+};
 
 // 流媒体观影指南
 export function SidebarStreaming() {
