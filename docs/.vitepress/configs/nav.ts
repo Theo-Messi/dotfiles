@@ -30,8 +30,10 @@ export function NavStreaming() {
 export function NavSharing() {
   return [
     {
+      items: [{ text: "账号合租指南", link: "/Sharing/01" }],
+    },
+    {
       items: [
-        { text: "账号合租指南", link: "/Sharing/01" },
         { text: "银河录像局 - AI服务", link: "/Sharing/02" },
         { text: "蜜糖商店 - 流媒体账号", link: "/Sharing/03" },
         { text: "奈飞小铺 - 流媒体账号", link: "/Sharing/04" },
@@ -57,8 +59,10 @@ export function NavScientific() {
 export function NavAirport() {
   return [
     {
+      items: [{ text: "解锁 4K Netflix 机场指南", link: "/vpn/01" }],
+    },
+    {
       items: [
-        { text: "解锁 4K Netflix 机场指南", link: "/vpn/01" },
         { text: "FlyingBird - 飞鸟机场", link: "/vpn/03" },
         { text: "Bridge the Wise", link: "/vpn/04" },
         { text: "一元机场", link: "/vpn/02" },
