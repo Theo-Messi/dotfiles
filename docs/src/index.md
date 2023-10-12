@@ -7,7 +7,7 @@ hero:
   text: 观影指南
   tagline: 引领您进入五彩斑斓的视听世界，并涵盖了 Netflix 、Disney+ 、Spotify会员 和 YouTube会员 的精彩领域
   image:
-    src: "home.png"
+    src: 'home.png'
     alt: 全方位流媒体观影指南
   actions:
     - theme: brand
