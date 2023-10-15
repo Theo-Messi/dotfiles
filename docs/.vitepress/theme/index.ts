@@ -3,7 +3,9 @@ import DefaultTheme from 'vitepress/theme'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
+import { inject } from '@vercel/analytics'
 
+inject()
 import './index.css'
 import './custom.css'
 import './custom-blocks.css'

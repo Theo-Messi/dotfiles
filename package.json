@@ -10,6 +10,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "medium-zoom": "^1.0.8",
     "vue": "^3.3.4"
   }
