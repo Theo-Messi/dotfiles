@@ -2,16 +2,16 @@ import type { DefaultTheme } from 'vitepress'
 
 // 导航栏设置
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '流媒体观影指南', items: NavStreaming() },
-  { text: '🔥账号合租平台', items: NavSharing() },
-  { text: '科学上网指南', items: NavScientific() },
-  { text: '推荐 Netflix 机场', items: NavAirport() },
-  { text: '购买服务', items: NavServe() },
+  { text: '流媒体观影指南', items: Nav_Streaming() },
+  { text: '🔥账号合租平台', items: Nav_Sharing() },
+  { text: '科学上网指南', items: Nav_Scientific() },
+  { text: '推荐 Netflix 机场', items: Nav_Airport() },
+  { text: '购买服务', items: Nav_Serve() },
   { text: '赞助', link: 'https://github.com/sponsors/vanhiupun' }
 ]
 
 // 流媒体观影指南
-export function NavStreaming() {
+export function Nav_Streaming() {
   return [
     {
       items: [
@@ -27,7 +27,7 @@ export function NavStreaming() {
 }
 
 // 🔥账号合租平台
-export function NavSharing() {
+export function Nav_Sharing() {
   return [
     {
       items: [{ text: '账号合租指南', link: '/Sharing/01' }]
@@ -43,36 +43,36 @@ export function NavSharing() {
 }
 
 // 科学上网指南
-export function NavScientific() {
+export function Nav_Scientific() {
   return [
     {
       items: [
-        { text: '路由器与客户端选择', link: '/Guide/01' },
-        { text: '线路的区别与选择', link: '/Guide/02' },
-        { text: '关于机场常用服务器线路的科普', link: '/Guide/03' }
+        { text: '路由器与客户端选择', link: '/Scientific/01' },
+        { text: '线路的区别与选择', link: '/Scientific/02' },
+        { text: '关于机场常用服务器线路的科普', link: '/Scientific/03' }
       ]
     }
   ]
 }
 
 // 推荐 Netflix 机场
-export function NavAirport() {
+export function Nav_Airport() {
   return [
     {
-      items: [{ text: '解锁 4K Netflix 机场指南', link: '/vpn/01' }]
+      items: [{ text: '解锁 4K Netflix 机场指南', link: '/Airport/01' }]
     },
     {
       items: [
-        { text: 'FlyingBird - 飞鸟机场', link: '/vpn/03' },
-        { text: 'Bridge the Wise', link: '/vpn/04' },
-        { text: '一元机场', link: '/vpn/02' }
+        { text: 'FlyingBird - 飞鸟机场', link: '/Airport/03' },
+        { text: 'Bridge the Wise', link: '/Airport/04' },
+        { text: '一元机场', link: '/Airport/02' }
       ]
     }
   ]
 }
 
 // 购买服务
-export function NavServe() {
+export function Nav_Serve() {
   return [
     {
       // 分组名称
