@@ -3,20 +3,17 @@ import type { DefaultTheme } from 'vitepress'
 // 侧边栏配置
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   // 科学上网指南
-  '/Guide/': { base: '/Guide/', items: SidebarScientific() },
+  '/Scientific/': { base: '/Scientific/', items: Sidebar_Scientific() },
   // 账号合租平台
-  '/Sharing/': { base: '/Sharing/', items: SidebarSharing() },
+  '/Sharing/': { base: '/Sharing/', items: Sidebar_Sharing() },
   // 推荐 Netflix 机场
-  '/vpn/': { base: '/vpn/', items: SidebarAirport() },
+  '/Airport/': { base: '/Airport/', items: Sidebar_Airport() },
   // 流媒体观影指南
-  '/Streaming/': {
-    base: '/Streaming/',
-    items: SidebarStreaming()
-  }
+  '/Streaming/': { base: '/Streaming/', items: Sidebar_Streaming() }
 }
 
 // 流媒体观影指南
-export function SidebarStreaming() {
+export function Sidebar_Streaming() {
   return [
     {
       // 分组名称
@@ -99,7 +96,7 @@ export function SidebarStreaming() {
 }
 
 // 账号合租平台
-export function SidebarSharing() {
+export function Sidebar_Sharing() {
   return [
     {
       // 分组名称
@@ -120,7 +117,7 @@ export function SidebarSharing() {
 }
 
 // 科学上网指南
-export function SidebarScientific() {
+export function Sidebar_Scientific() {
   return [
     {
       // 分组名称
@@ -128,7 +125,7 @@ export function SidebarScientific() {
       // 下拉菜单
       // collapsed: true,
       // 分组路径
-      base: '/Guide/',
+      base: '/Scientific/',
       // 分组页面
       items: [
         { text: '路由器与客户端选择', link: '01' },
@@ -140,7 +137,7 @@ export function SidebarScientific() {
 }
 
 // 推荐 Netflix 机场
-export function SidebarAirport() {
+export function Sidebar_Airport() {
   return [
     {
       // 分组名称
@@ -148,7 +145,7 @@ export function SidebarAirport() {
       // 下拉菜单
       // collapsed: true,
       // 分组路径
-      base: '/vpn/',
+      base: '/Airport/',
       // 分组页面
       items: [
         { text: '解锁 4K Netflix 机场指南', link: '01' },
