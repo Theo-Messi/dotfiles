@@ -15,7 +15,7 @@ hero:
       link: /Streaming/Netflix-01
     - theme: alt
       text: GitHub
-      link: https://github.com/vanhiupun
+      link: https://github.com/Theo-messi
 
 features:
   - title: FlyingBird - 飞鸟机场

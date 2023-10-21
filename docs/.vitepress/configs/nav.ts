@@ -7,7 +7,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '科学上网指南', items: Nav_Scientific() },
   { text: '推荐 Netflix 机场', items: Nav_Airport() },
   { text: '购买服务', items: Nav_Serve() },
-  { text: '赞助', link: 'https://github.com/sponsors/vanhiupun' }
+  { text: '赞助', link: 'https://github.com/sponsors/Theo-messi' }
 ]
 
 // 流媒体观影指南
