@@ -39,15 +39,12 @@ export default defineConfig({
     }
   },
 
-  // true强制开启深色模式 false强制开启浅色模式
-  // appearance: false,
+  //'force-dark'强制开启深色模式 false强制开启浅色模式
+  // appearance: 'force-dark',
 
   // 站点地图
   sitemap: {
-    hostname: 'https://theovan.wiki',
-    transformItems(items) {
-      return items.filter((item) => !item.url.includes('migration'))
-    }
+    hostname: 'https://theovan.wiki'
   },
 
   themeConfig: {
@@ -62,7 +59,8 @@ export default defineConfig({
 
     // GitHub编辑页面
     editLink: {
-      pattern: 'https://github.com/Theo-messi/Streaming-Media-Forest/blob/main/docs/src/:path',
+      pattern:
+        'https://github.com/Theo-messi/Streaming-Media-Forest/blob/main/docs/src/:path',
       text: '为此页提供修改建议'
     },
 
