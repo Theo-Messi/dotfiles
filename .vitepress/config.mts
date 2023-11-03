@@ -60,7 +60,7 @@ export default defineConfig({
     // GitHub编辑页面
     editLink: {
       pattern:
-        'https://github.com/Theo-messi/Streaming-Media-Forest/blob/main/docs/src/:path',
+        'https://github.com/Theo-messi/Streaming-Media-Forest/blob/main/src/:path',
       text: '为此页提供修改建议'
     },
 
