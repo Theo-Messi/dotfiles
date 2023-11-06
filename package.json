@@ -11,6 +11,6 @@
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "medium-zoom": "^1.0.8",
-    "vue": "^3.3.7"
+    "vue": "^3.3.8"
   }
 }
