@@ -1,0 +1,13 @@
+{
+  "name": "own-rules",
+  "version": "1.0.0",
+  "scripts": {
+    "release": "bumpp -r"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bumpp": "^9.4.1"
+  }
+}
