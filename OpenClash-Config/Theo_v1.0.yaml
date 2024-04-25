@@ -1,0 +1,379 @@
+###########################注意:该配置文件为meta内核专用,不适合其他clash内核
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: debug
+external-controller: 127.0.0.1:9090
+secret: "123456"
+ipv6: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+proxy-providers:
+  ✈️ 我的机场:
+    type: http
+    url: "机场订阅"  #####双引号内修改成订阅链接
+    interval: 86400
+    path: ./airport/clash.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  nameserver:
+      - tls://119.29.29.29
+      - tls://223.5.5.5
+  default-nameserver:
+    - 223.5.5.5
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  nameserver-policy:
+    "rule-set:geolocation-!cn":
+      - "https://dns.google/dns-query#🚀 节点选择"
+      - "https://dns.cloudflare.com/dns-query#🚀 节点选择"
+
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - "+.qq.com"
+    - "+.tencent.com"
+    - "+.srv.nintendo.net"
+    - "*.n.n.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - "+.battlenet.com.cn"
+    - "+.wotgame.cn"
+    - "+.wggames.cn"
+    - "+.wowsgame.cn"
+    - "+.wargaming.net"
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - na.b.g-tun.com
+    - "+.nflxvideo.net"
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - "+.media.dssott.com"
+    - shark007.net
+    - Mijia Cloud
+    - "+.cmbchina.com"
+    - "+.cmbimg.com"
+    - local.adguard.org
+    - "+.sandai.net"
+    - "+.n0808.com"
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    use:
+      - ✈️ 我的机场
+    proxies:
+      - ♻️ 自动选择
+
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    lazy: false
+    use:
+      - ✈️ 我的机场
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 中国香港
+      - 🇹🇼 中国台湾
+
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+    use:
+      - ✈️ 我的机场
+
+  - name: 📡 下载平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🚀 节点选择
+    use:
+      - ✈️ 我的机场
+
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+    use:
+      - ✈️ 我的机场
+
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+    use:
+      - ✈️ 我的机场
+
+  - name: 🇭🇰 中国香港
+    type: select
+    use:
+      - ✈️ 我的机场
+    filter: "(?i)港|hk|hongkong|hong kong"
+
+  - name: 🇹🇼 中国台湾
+    type: select
+    use:
+      - ✈️ 我的机场
+    filter: "(?i)湾|tw|taiwan|tai wan"
+    
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+    use:
+      - ✈️ 我的机场
+
+rule-providers:
+  geolocation-!cn:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"
+    path: ./ruleset/geolocation-!cn.yaml
+    interval: 86400
+
+  Private-Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/danta926/Clash-Rules/main/Private-Proxy.txt"
+    path: ./ruleset/Private-Proxy.yaml
+    interval: 86400
+  
+  Download:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml"
+    path: ./ruleset/Download.yaml
+    interval: 86400
+  
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    path: ./ruleset/LocalAreaNetwork.yaml
+    interval: 86400
+
+  Unban:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    path: ./ruleset/Unban.yaml
+    interval: 86400
+
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+    path: ./ruleset/ChinaDomain.yaml
+    interval: 86400
+
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml"
+    path: ./ruleset/ChinaMedia.yaml
+    interval: 86400
+
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+    path: ./ruleset/BanEasyListChina.yaml
+    interval: 86400
+
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/BanAD.yaml
+    interval: 86400
+
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
+    path: ./ruleset/BanEasyList.yaml
+    interval: 86400
+
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
+    path: ./ruleset/BanEasyPrivacy.yaml
+    interval: 86400
+
+  ChinaCompany-IP:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+    path: ./ruleset/ChinaCompany-IP.yaml
+    interval: 86400
+
+  China-IP:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml"
+    path: ./ruleset/China-IP.yaml
+    interval: 86400
+
+  Proxy-List:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/danta926/Clash-Rules/main/Proxy-List.txt"
+    path: ./ruleset/Proxy-List.yaml
+    interval: 86400
+
+  telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
+  OpenAi:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
+    path: ./ruleset/OpenAi.yaml
+    interval: 86400
+
+rules:
+  - GEOSITE,category-ads-all,🛑 全球拦截
+  - DOMAIN-SUFFIX,steamcommunity.com,🚀 节点选择
+  - GEOSITE,category-games,🎮 游戏平台
+  - GEOSITE,bilibili,📺 哔哩哔哩
+  - RULE-SET,telegram,📲 电报信息
+  - RULE-SET,Download,📡 下载平台
+  - RULE-SET,Proxy-List,🚀 节点选择
+  - RULE-SET,Private-Proxy,🚀 节点选择
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,Unban,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,ChinaMedia,🎯 全球直连
+  - GEOSITE,cn,🎯 全球直连
+  - GEOSITE,private,🎯 全球直连
+  - RULE-SET,BanEasyListChina,🛑 全球拦截
+  - RULE-SET,BanAD,🛑 全球拦截
+  - RULE-SET,BanEasyList,🛑 全球拦截
+  - RULE-SET,BanEasyPrivacy,🛑 全球拦截
+  - RULE-SET,ChinaCompany-IP,🎯 全球直连
+  - RULE-SET,China-IP,🎯 全球直连
+  - GEOIP,LAN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
