@@ -4,9 +4,6 @@
   "scripts": {
     "release": "bumpp -r"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bumpp": "^9.4.1"
   }
