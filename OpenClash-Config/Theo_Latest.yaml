@@ -55,12 +55,8 @@ proxy-groups:
   - {name: 💠 其他地区, type: select, include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
 
 rules:
-  - DOMAIN-SUFFIX,theovan.cn,🚀 节点选择
-  - DOMAIN,tail9a8bbe.ts.net,🎯 全球直连
-  - DOMAIN,metshop.vip,🎯 全球直连
-  - DOMAIN,op.theovan.xyz,🎯 全球直连
-  - DOMAIN,cloud.ugnas.com,🎯 全球直连
-  - DOMAIN,cloud.ugreengroup.com,🎯 全球直连
+  - RULE-SET,Theo_DIRECT,🎯 全球直连
+  - RULE-SET,Theo_Node_selection,🚀 节点选择
   - DOMAIN,search.iscrv.com,🎯 全球直连
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
@@ -97,6 +93,12 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 rule-providers:
+  Theo_DIRECT:
+    <<: *pc
+    url: "https://raw.githubusercontent.com/Theo-messi/own-rules/main/rules/Theo_DIRECT.yaml"
+  Theo_Node_selection:
+    <<: *pc
+    url: "https://raw.githubusercontent.com/Theo-messi/own-rules/main/rules/Theo_Node_selection.yaml"
   Geolocation-!cn:
     <<: *pd
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"  
