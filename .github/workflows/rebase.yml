@@ -1,0 +1,55 @@
+name: Update File Time Info
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_file_time_info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # 获取完整的提交历史
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Get current date
+        id: current_date
+        run: echo "::set-output name=date::$(TZ="Asia/Shanghai" date +"%Y-%m-%d-%H:%M")"
+
+      - name: Update files with commit info
+        run: |
+          current_date="${{ steps.current_date.outputs.date }}"
+          files_to_update="clash/TheoDirect.yaml clash/TheoDiversion.yaml"
+
+          for file in $files_to_update; do
+            if [ -f "$file" ]; then
+              # Read original file content
+              original_content=$(cat "$file")
+
+              # Replace existing update time information (if present)
+              updated_content=$(echo "$original_content" | sed -E 's/^# Updated on .*/# Updated on '"$current_date"'/')
+
+              # Write updated content back to the file
+              echo "$updated_content" > "$file"
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          git add clash/TheoDirect.yaml clash/TheoDiversion.yaml
+          git diff --quiet || git commit -m "updated on ${{ steps.current_date.outputs.date }}"
+          git reset --soft HEAD~2  # 重置索引并保留更改
+          git commit -m "updated on ${{ steps.current_date.outputs.date }}"
+          git push -f origin main
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
