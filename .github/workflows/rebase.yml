@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0  # 获取完整的提交历史
@@ -23,32 +23,50 @@ jobs:
 
       - name: Get current date
         id: current_date
-        run: echo "::set-output name=date::$(TZ="Asia/Shanghai" date +"%Y-%m-%d-%H:%M")"
-
-      - name: Update files with commit info
+        run: echo "DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+    
+      - name: Update files with commit info  # 第四步：更新文件中的提交信息
         run: |
-          current_date="${{ steps.current_date.outputs.date }}"
-          files_to_update="clash/TheoDirect.yaml clash/TheoDiversion.yaml"
-
-          for file in $files_to_update; do
-            if [ -f "$file" ]; then
-              # Read original file content
-              original_content=$(cat "$file")
-
-              # Replace existing update time information (if present)
-              updated_content=$(echo "$original_content" | sed -E 's/^# Updated on .*/# Updated on '"$current_date"'/')
-
-              # Write updated content back to the file
-              echo "$updated_content" > "$file"
+          # current_date="${{ env.DATE }}"  # 读取环境变量中的当前日期
+      
+          # 需要更新的文件
+          files_to_update="clash/TheoDirect.yaml clash/TheoDiversion.yaml clash/clash.meta.config.yaml"  
+      
+          # 遍历每个文件
+          for file in $files_to_update; do 
+            if [ -f "$file" ]; then 
+              # 前置条件：检查上一次提交中是否有这些文件的变动
+              if git diff HEAD~1 HEAD -- "$file" | grep -q "$file"; then
+                # 读取原始文件内容
+                original_content=$(cat "$file")  # 读取原始文件内容
+                # 替换现有的更新时间信息（如果存在）
+                updated_content=$(echo "$original_content" | sed -E 's/^# Updated: .*/# Updated: '"${{ env.DATE }}"'/')  
+      
+                # 将更新后的内容写入临时文件
+                echo "$updated_content" > "$file.tmp" 
+      
+                # 检查文件是否有改动
+                if ! cmp -s "$file" "$file.tmp"; then  # 使用 cmp -s 比较文件内容
+                  # 如果文件有改动，则替换原文件
+                  mv "$file.tmp" "$file"  # 替换原文件
+                else
+                  # 如果文件没有改动，则删除临时文件
+                  rm "$file.tmp"  # 删除临时文件
+                fi
+              else
+                echo "$file has no changes in the last commit."
+              fi
             fi
           done
 
+
+
       - name: Commit and push changes
         run: |
-          git add clash/TheoDirect.yaml clash/TheoDiversion.yaml
-          git diff --quiet || git commit -m "updated on ${{ steps.current_date.outputs.date }}"
-          git reset --soft HEAD~2  # 重置索引并保留更改
-          git commit -m "updated on ${{ steps.current_date.outputs.date }}"
+          git add clash/TheoDirect.yaml clash/TheoDiversion.yaml clash/clash.meta.config.yaml
+          git diff --quiet || git commit -m "${{ env.DATE }}"          
+          git reset --soft HEAD^  #重置索引并保留更改
+          git commit -m "${{ env.DATE }}"
           git push -f origin main
 
         env:
