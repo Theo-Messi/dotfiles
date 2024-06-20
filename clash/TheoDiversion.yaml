@@ -1,11 +1,19 @@
-# Updated: 2024-06-19 20:37:09
+# Updated: 2024-06-21 00:58:27
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
 payload:
-  - DOMAIN,theovan.cn
-  - DOMAIN,theojs.cn
-  - DOMAIN,panel.theovan.cn
-  - DOMAIN,data.theovan.cn
+  # DOMAIN-KEYWORD
+  - DOMAIN-KEYWORD,theovan
+  - DOMAIN-KEYWORD,theojs
+  
+  # DOMAIN
   - DOMAIN,oracle.com
   - DOMAIN,alibabacloud.com
+  
+  # DOMAIN-SUFFIX
+  - DOMAIN-SUFFIX,theovan.cn
+  - DOMAIN-SUFFIX,theovan.xyz
+  - DOMAIN-SUFFIX,theovan.wiki
+  - DOMAIN-SUFFIX,theojs.cn
+  

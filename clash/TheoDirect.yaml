@@ -1,12 +1,20 @@
-# Updated: 2024-06-19 20:37:09
+# Updated: 2024-06-21 00:58:27
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
 payload:
+  # DOMAIN
   - DOMAIN,tail9a8bbe.ts.net
   - DOMAIN,metshop.vip
   - DOMAIN,cloud.ugnas.com
   - DOMAIN,cloud.ugreengroup.com
   - DOMAIN,api.xhofe.top
+  - DOMAIN,i.theovan.cn
+  - DOMAIN,router.theovan.cn
+  
+  # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
   - DOMAIN-SUFFIX,tntmax.top
+  
+  # PROCESS-NAME
+  - PROCESS-NAME,tailscale
