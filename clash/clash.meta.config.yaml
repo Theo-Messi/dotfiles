@@ -1,4 +1,4 @@
-# Updated: 2024-06-21 10:10:08
+# Updated: 2024-06-21 22:21:53
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -34,7 +34,7 @@ proxy-groups:
   - {name: ♻️ 自动选择, type: url-test, interval: 600, tolerance: 100, lazy: true, url: https://www.gstatic.com/generate_204, include-all-providers: true}
   - {name: 📲 电报信息, <<: *o1}
   - {name: 📱 Twitter, <<: *o1}
-  - {name: 💬 OpenAi, <<: *o1}
+  - {name: ☣️ AI平台, <<: *o1}
   - {name: 🎬 油管视频, <<: *o1}
   - {name: 🎥 奈飞视频, <<: *o1}
   - {name: 🏰 Disney, <<: *o1}
@@ -42,7 +42,6 @@ proxy-groups:
   - {name: 📺 哔哩哔哩, type: select, proxies: [🎯 全球直连, 🇨🇳 台湾节点, 🇭🇰 香港节点]}
   - {name: 🌎 国外媒体, <<: *o1}
   - {name: 🌏 国内媒体, type: select, proxies: [🎯 全球直连, 🇨🇳 台湾节点, 🇭🇰 香港节点, 🚀 节点选择]}
-  - {name: ☣️ Copilot, <<: *o1}
   - {name: Ⓜ️ 微软服务, <<: *o2}
   - {name: 🍎 苹果服务, <<: *o2}
   - {name: 🎮 游戏平台, <<: *o2}
@@ -65,14 +64,16 @@ rules:
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,Unban,🎯 全球直连
+  # - RULE-SET,Unban,🎯 全球直连
   # - RULE-SET,BanEasyListChina,🍃 广告拦截
   # - RULE-SET,BanAD,🍃 广告拦截
   # - RULE-SET,BanEasyList,🍃 广告拦截
   # - RULE-SET,BanEasyPrivacy,🍃 广告拦截
   - RULE-SET,Telegram,📲 电报信息
   - RULE-SET,Twitter,📱 Twitter
-  - RULE-SET,OpenAi,💬 OpenAi
+  - RULE-SET,OpenAI,☣️ AI平台
+  - RULE-SET,Copilot,☣️ AI平台
+  - RULE-SET,Gemini,☣️ AI平台
   - RULE-SET,YouTube,🎬 油管视频
   - RULE-SET,Disney,🏰 Disney
   - RULE-SET,Netflix,🎥 奈飞视频
@@ -82,8 +83,6 @@ rules:
   - RULE-SET,Bilibili,📺 哔哩哔哩
   - RULE-SET,Download,🔰 下载平台
   - RULE-SET,ChinaMedia,🌏 国内媒体
-  - RULE-SET,Copilot,☣️ Copilot
-  - DOMAIN,sydney.bing.com,☣️ Copilot
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,Geosite_cn,🎯 全球直连
@@ -110,9 +109,9 @@ rule-providers:
   LocalAreaNetwork:
     <<: *pc
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
-  Unban:
-    <<: *pc
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml" 
+  # Unban:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml" 
   # BanEasyListChina:
   #   <<: *pc
   #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
@@ -131,9 +130,15 @@ rule-providers:
   Twitter:
     <<: *pc
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml"
-  OpenAi:
+  OpenAI:
     <<: *pc
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml"
+  Copilot:
+    <<: *pc
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml"
+  Gemini:
+    <<: *pc
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml"
   YouTube:
     <<: *pc
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml"
@@ -167,9 +172,6 @@ rule-providers:
   Microsoft:
     <<: *pc
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
-  Copilot:
-    <<: *pc
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml"
   Apple:
     <<: *pc
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml"
