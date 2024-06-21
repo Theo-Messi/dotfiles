@@ -1,4 +1,4 @@
-# Updated: 2024-06-19 20:37:09
+# Updated: 2024-06-21 10:10:08
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -89,7 +89,7 @@ rules:
   - RULE-SET,Geosite_cn,🎯 全球直连
   - RULE-SET,Geosite_private,🎯 全球直连
   - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,Geolocation-!cn,🚀 节点选择
+  - RULE-SET,Geolocation-!cn,🚀 节点选择,no-resolve
   - RULE-SET,Geoip_cn,🎯 全球直连,no-resolve
   - RULE-SET,Geoip_private,🎯 全球直连,no-resolve
   - RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve
