@@ -43,16 +43,10 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # 如果您想禁用标记未跟踪的文件，请取消注释以下行
-# 在 VCS 下为脏。这使得大型存储库的存储库状态检查
-# 快得多、快得多。
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# 如果要更改命令执行时间，请取消注释以下行
-# 历史命令输出中显示的标记。
-# 您可以设置可选的三种格式之一：
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# 或者使用 strftime 函数格式规范设置自定义格式，
-# 有关详细信息，请参阅“man strftime”。
+
+# eg:"mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # 您想使用 $ZSH/custom 之外的其他自定义文件夹吗？
@@ -60,7 +54,13 @@ COMPLETION_WAITING_DOTS="true"
 
 
 # 插件设置
-plugins=(git autojump zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(
+          git 
+          autojump 
+          zsh-syntax-highlighting 
+          zsh-autosuggestions 
+          zsh-completions
+        )
 
 source $ZSH/oh-my-zsh.sh
 
