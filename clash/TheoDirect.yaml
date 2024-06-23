@@ -1,16 +1,16 @@
-# Updated: 2024-06-21 00:58:27
+# Updated: 2024-06-23 23:34:43
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
 payload:
   # DOMAIN
-  - DOMAIN,tail9a8bbe.ts.net
-  - DOMAIN,metshop.vip
+  - DOMAIN,api.xhofe.top
   - DOMAIN,cloud.ugnas.com
   - DOMAIN,cloud.ugreengroup.com
-  - DOMAIN,api.xhofe.top
   - DOMAIN,i.theovan.cn
+  - DOMAIN,metshop.vip
   - DOMAIN,router.theovan.cn
+  - DOMAIN,tail9a8bbe.ts.net
   
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
