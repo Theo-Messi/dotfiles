@@ -1,4 +1,4 @@
-# Updated: 2024-06-23 23:34:43
+# Updated: 2024-06-24 15:05:38
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -17,4 +17,4 @@ payload:
   - DOMAIN-SUFFIX,tntmax.top
   
   # PROCESS-NAME
-  - PROCESS-NAME,tailscale
+  - PROCESS-NAME,tailscaled
