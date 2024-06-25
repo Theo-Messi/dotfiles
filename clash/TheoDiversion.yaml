@@ -1,4 +1,4 @@
-# Updated: 2024-06-23 23:34:43
+# Updated: 2024-06-25 23:51:25
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -15,3 +15,4 @@ payload:
   - DOMAIN-SUFFIX,oracle.com
   - DOMAIN-SUFFIX,oraclecloud.com
   - DOMAIN-SUFFIX,alibabacloud.com
+  - DOMAIN-SUFFIX,igoutu.cn
