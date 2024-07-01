@@ -1,0 +1,22 @@
+name: Test sh
+
+on:
+  push:
+    paths:
+      - '_install/setup_linux.sh'
+      - '_install/setup_zsh.sh'
+  workflow_dispatch:
+
+jobs:
+  setup_environment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run setup_linux.sh
+        run: curl -o- https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/_install/setup_linux.sh | bash
+
+      - name: Run setup_zsh.sh
+        run: curl -o- https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/_install/setup_zsh.sh | bash
