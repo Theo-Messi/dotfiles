@@ -93,11 +93,7 @@ echo -e "\n\e[1;34m系统自带软件删除完成!\e[0m"
 
 # ============================= 卸载桌面环境 =============================
 echo -e "\n\e[1;34m正在卸载桌面环境...\e[0m"
-sudo apt remove -y gnome-shell gnome
-sudo apt autoremove -y
-sudo apt purge -y gnome
-sudo apt autoclean
-sudo apt clean
+sudo apt purge -y gnome-shell gnome
 echo -e "\n\e[1;34m桌面环境卸载完成!\e[0m"
 
 # ========================= 自动卸载不需要的依赖 =========================
@@ -107,8 +103,8 @@ echo -e "\n\e[1;34m不需要的依赖卸载完成!\e[0m"
 
 # ============================== 清理缓存 ==============================
 echo -e "\n\e[1;34m正在清理缓存...\e[0m"
-sudo apt-get autoclean
-sudo apt-get clean
+sudo apt autoclean
+sudo apt clean
 echo -e "\n\e[1;34m缓存清理完成!\e[0m"
 
 # ============================== 提示重启系统 ==============================
