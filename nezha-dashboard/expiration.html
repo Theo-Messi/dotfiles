@@ -1,0 +1,60 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addHeader = () => {
+      document.querySelectorAll('th.node-cell.name.center').forEach((cell) => {
+        const newTh = document.createElement('th')
+        newTh.className = 'node-cell downtime center'
+        newTh.textContent = 'Expiration'
+        cell.parentNode.insertBefore(newTh, cell.nextSibling)
+      })
+    }
+
+    const affLinks = {
+      2: { expiration: '2024-09-30', content: ' ' },
+      13: { content: 'Free' },
+      16: { content: 'Free' },
+      1: { content: 'Free' },
+      15: { content: 'Free' },
+      17: { expiration: '2024-09-01', content: ' ' },
+      18: { expiration: '2024-09-01', content: ' ' },
+      19: { expiration: '2024-09-01', content: ' ' },
+      20: { expiration: '2024-08-11', content: ' ' },
+      21: { expiration: '2024-08-11', content: ' ' },
+      22: { expiration: '2025-06-13', content: ' ' },
+      12: { expiration: '2024-08-27T22:14:55', content: ' ' },
+      14: { expiration: '2025-05-28T23:44:09', content: ' ' },
+      11: { expiration: '2024-06-22T01:13:00', content: ' ' },
+      4: { expiration: '2025-06-17', content: ' ' },
+      5: { expiration: '2025-06-17', content: ' ' },
+      24: { expiration: '2025-06-17', content: ' ' }
+    }
+
+    const createCountdown = (expirationDate) => {
+      const countdown = document.createElement('span')
+      const update = () => {
+        const diff = new Date(expirationDate).getTime() - Date.now()
+        countdown.textContent = diff <= 0 ? 'Expired' : `${Math.floor(diff / (1000 * 60 * 60 * 24))} Days`
+      }
+      update()
+      setInterval(update, 1000)
+      return countdown
+    }
+
+    const addDowntimeCells = () => {
+      document.querySelectorAll('tr').forEach((row) => {
+        const osCell = row.querySelector('td.node-cell.name.center')
+        if (!osCell) return
+        const nodeId = row.id.substring(1)
+        const affLink = affLinks[nodeId] || { content: 'Always' }
+        const downtimeCell = document.createElement('td')
+        downtimeCell.className = 'node-cell downtime center'
+        downtimeCell.textContent = affLink.content
+        if (affLink.expiration) downtimeCell.appendChild(createCountdown(affLink.expiration))
+        osCell.parentNode.insertBefore(downtimeCell, osCell.nextSibling)
+      })
+    }
+
+    addHeader()
+    addDowntimeCells()
+  })
+</script>
