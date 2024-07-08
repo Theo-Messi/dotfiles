@@ -1,4 +1,4 @@
-# Updated: 2024-06-28 13:34:47
+# Updated: 2024-07-08 14:27:13
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -11,16 +11,16 @@ payload:
   - DOMAIN,metshop.vip
   - DOMAIN,router.theovan.cn
   - DOMAIN,tail9a8bbe.ts.net
-  
+
   # IP TEST
   # - DOMAIN,api.myip.la
   # - DOMAIN,api.ip.sb
   # - DOMAIN,ipapi.co
   # - DOMAIN,Ip-api.com
-  
+
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
   - DOMAIN-SUFFIX,tntmax.top
-  
+
   # PROCESS-NAME
   - PROCESS-NAME,tailscaled

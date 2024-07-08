@@ -20,12 +20,12 @@ jobs:
 
       - name: Run setup_zsh.sh
         run: curl -o- https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/_install/setup_zsh.sh | bash
-        
-  ## Brak通知流程运行状态
+
+      ## Brak通知流程运行状态
       - name: Get current date
         id: current_date
         run: echo "DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
-        
+
       - name: Translate job status to Chinese
         id: translate-status
         run: |
@@ -40,7 +40,7 @@ jobs:
           fi
 
       - name: Notify job status
-        if: always()  # 确保这一步始终运行，不管之前的步骤是否成功
+        if: always() # 确保这一步始终运行，不管之前的步骤是否成功
         run: |
           curl -X "POST" "${{ secrets.BARK_KEY }}" \
              -H 'Content-Type: application/json; charset=utf-8' \
