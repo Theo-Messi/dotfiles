@@ -1,4 +1,4 @@
-# Updated: 2024-07-08 14:27:13
+# Updated: 2024-07-11 01:48:08
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -54,8 +54,8 @@ proxy-groups:
   - { name: 💠 其他地区, type: select, include-all-providers: true, filter: '(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*' }
 
 rules:
-  - RULE-SET,TheoDirect,🎯 全球直连
-  - RULE-SET,TheoDiversion,🚀 节点选择
+  - RULE-SET,T-Direct,🎯 全球直连
+  - RULE-SET,T-Global,🚀 节点选择
   - DOMAIN,search.iscrv.com,🎯 全球直连
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
@@ -93,12 +93,12 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 rule-providers:
-  TheoDirect:
+  T-Direct:
     <<: *pc
-    url: 'https://raw.githubusercontent.com/Theo-messi/dotfiles/main/clash/TheoDirect.yaml'
-  TheoDiversion:
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/clash/T-DirectList.yaml'
+  T-Global:
     <<: *pc
-    url: 'https://raw.githubusercontent.com/Theo-messi/dotfiles/main/clash/TheoDiversion.yaml'
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/clash/T-GlobalList.yaml'
   Geolocation-!cn:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml'
