@@ -1,4 +1,4 @@
-# Updated: 2024-07-11 01:48:08
+# Updated: 2024-07-13 10:15:23
 # Author: Theo-Messi
 # Homepage: https://github.com/Theo-messi
 
@@ -202,7 +202,7 @@ external-controller: 0.0.0.0:9090
 secret: '123456'
 find-process-mode: strict
 global-client-fingerprint: chrome
-global-ua: clash-verge/v1.5.10
+global-ua: clash-verge/v1.7.3
 profile:
   store-selected: true
   store-fake-ip: true
