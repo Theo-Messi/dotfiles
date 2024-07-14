@@ -95,10 +95,10 @@ rules:
 rule-providers:
   T-Direct:
     <<: *pc
-    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/clash/T-DirectList.yaml'
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/Clash/T-DirectList.yaml'
   T-Global:
     <<: *pc
-    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/clash/T-GlobalList.yaml'
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/Clash/T-GlobalList.yaml'
   Geolocation-!cn:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml'

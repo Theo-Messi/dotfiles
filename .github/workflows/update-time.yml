@@ -30,7 +30,7 @@ jobs:
           # current_date="${{ env.DATE }}"  # 读取环境变量中的当前日期
 
           # 需要更新的文件
-          files_to_update="clash/*.yaml QuantumultX/*.conf"  
+          files_to_update="Clash/*.yaml QuantumultX/*.conf"  
 
           # 遍历每个文件
           for file in $files_to_update; do 
@@ -61,7 +61,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add clash/*.yaml QuantumultX/*.conf
+          git add Clash/*.yaml QuantumultX/*.conf
           git diff --quiet || git commit -m "${{ env.DATE }}"          
           git reset --soft HEAD^  #重置索引并保留更改
           git commit -m "${{ env.DATE }}"
