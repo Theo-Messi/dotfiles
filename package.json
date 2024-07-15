@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "prettier": "^3.3.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 200,
+    "trailingComma": "none"
+  }
+}

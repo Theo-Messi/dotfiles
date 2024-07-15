@@ -1,0 +1,353 @@
+# Updated: CST 2024-07-15 13:08:13
+# Author: Theo-Messi
+# GitHub Source: https://github.com/Theo-Messi/dotfiles
+
+pp: &pp { type: http, benchmark-url: 'https://www.gstatic.com/generate_204', interval: 86400, format: yaml }
+pc: &pc { type: http, behavior: classical, interval: 86400, format: yaml }
+pd: &pd { type: http, behavior: domain, interval: 86400, format: yaml }
+pi: &pi { type: http, behavior: ipcidr, interval: 86400, format: yaml }
+o1: &o1 { type: select, proxies: [节点选择, 自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区, 全球直连], include-all-providers: true }
+o2: &o2 { type: select, proxies: [全球直连, 节点选择, 自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区] }
+
+# 首页订阅流量详情
+subscribe-url: #eg. https://example.com/sub?token=abcdefg
+
+#订阅名称
+proxy-providers:
+  sub1:
+    !!merge <<: *pp
+    url: '' #eg. 'https://example.com/sub?token=abcdefg'
+  sub2:
+    !!merge <<: *pp
+    url: ''
+  sub3:
+    !!merge <<: *pp
+    url: ''
+
+proxy-groups:
+  - {
+      name: 节点选择,
+      type: select,
+      proxies: [自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区],
+      include-all-providers: true,
+      icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png'
+    }
+  - {
+      name: 自动选择,
+      type: url-test,
+      interval: 600,
+      tolerance: 100,
+      lazy: true,
+      url: 'https://www.gstatic.com/generate_204',
+      icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png',
+      include-all: true
+    }
+  - { name: 电报信息, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png' }
+  - { name: Twitter, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png' }
+  - { name: AI平台, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/OpenAI.png' }
+  - { name: 油管视频, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png' }
+  - { name: 奈飞视频, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png' }
+  - { name: Disney, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png' }
+  - { name: 巴哈姆特, type: select, proxies: [台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png' }
+  - { name: 哔哩哔哩, type: select, proxies: [全球直连, 台湾节点, 香港节点], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png' }
+  - { name: 国外媒体, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png' }
+  - { name: 国内媒体, type: select, proxies: [全球直连, 台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingCN.png' }
+  - { name: 微软服务, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png' }
+  - { name: 苹果服务, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png' }
+  - { name: 游戏平台, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png' }
+  - { name: 下载平台, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png' }
+  - { name: 全球直连, type: select, proxies: [DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png' }
+  - { name: 漏网之鱼, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png' }
+  #地区策略组
+  - { name: 香港节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)港|hk|hongkong|hong kong', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png' }
+  - { name: 台湾节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)台|tw|taiwan|tai wan', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png' }
+  - { name: 狮城节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)新加坡|sg|singapore|狮城', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png' }
+  - { name: 日本节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)日|jp|japan', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png' }
+  - {
+      name: 美国节点,
+      type: select,
+      include-all-providers: true,
+      include-all: true,
+      filter: '(?i)美|us|unitedstates|united states',
+      icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png'
+    }
+  - {
+      name: 其他地区,
+      type: select,
+      include-all-providers: true,
+      include-all: true,
+      filter: '(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|hong kong|台|tw|taiwan|tai wan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*',
+      icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png'
+    }
+
+rules:
+  - RULE-SET,T-GlobalList,全球直连
+  - RULE-SET,T-GlobalList,节点选择
+  - DOMAIN,search.iscrv.com,全球直连
+  - DOMAIN-SUFFIX,googleapis.cn,节点选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择
+  - RULE-SET,LocalAreaNetwork,全球直连
+  - RULE-SET,Telegram,电报信息
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,OpenAI,AI平台
+  - RULE-SET,Copilot,AI平台
+  - RULE-SET,Gemini,AI平台
+  - RULE-SET,YouTube,油管视频
+  - RULE-SET,Disney,Disney
+  - RULE-SET,Netflix,奈飞视频
+  - RULE-SET,Bahamut,巴哈姆特
+  - RULE-SET,ProxyMedia,国外媒体
+  - RULE-SET,Category-games,游戏平台
+  - RULE-SET,Bilibili,哔哩哔哩
+  - RULE-SET,Download,下载平台
+  - RULE-SET,ChinaMedia,国内媒体
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Geosite_cn,全球直连
+  - RULE-SET,Geosite_private,全球直连
+  - RULE-SET,ChinaDomain,全球直连
+  - RULE-SET,Geolocation-!cn,节点选择,no-resolve
+  - RULE-SET,Geoip_cn,全球直连,no-resolve
+  - RULE-SET,Geoip_private,全球直连,no-resolve
+  - RULE-SET,ChinaCompanyIp,全球直连,no-resolve
+  - RULE-SET,ChinaIp,全球直连,no-resolve
+  - DST-PORT,22,香港节点
+  - MATCH,漏网之鱼
+
+rule-providers:
+  T-DirectList:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/Clash/T-DirectList.yaml'
+  T-GlobalList:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/Theo-Messi/dotfiles/main/Clash/T-GlobalList.yaml'
+  Geolocation-!cn:
+    !!merge <<: *pd
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml'
+  LocalAreaNetwork:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml'
+  # Unban:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+  # BanEasyListChina:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+  # BanAD:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+  # BanEasyList:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
+  # BanEasyPrivacy:
+  #   <<: *pc
+  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
+  Telegram:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml'
+  Twitter:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml'
+  OpenAI:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml'
+  Copilot:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml'
+  Gemini:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml'
+  YouTube:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml'
+  Netflix:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Netflix.yaml'
+  Disney:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml'
+  Bahamut:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml'
+  ProxyMedia:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml'
+  Category-games:
+    !!merge <<: *pd
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games.yaml'
+  Bilibili:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml'
+  Download:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml'
+  ChinaMedia:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml'
+  GoogleFCM:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml'
+  Microsoft:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml'
+  Apple:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml'
+  Geosite_cn:
+    !!merge <<: *pd
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml'
+  Geosite_private:
+    !!merge <<: *pd
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml'
+  ChinaDomain:
+    !!merge <<: *pc
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml'
+  Geoip_cn:
+    !!merge <<: *pi
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml'
+  Geoip_private:
+    !!merge <<: *pi
+    url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml'
+  ChinaCompanyIp:
+    !!merge <<: *pi
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml'
+  ChinaIp:
+    !!merge <<: *pi
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml'
+
+mixed-port: 7890
+allow-lan: true
+ipv6: true ###开启ipv6
+mode: rule
+log-level: debug
+external-controller: 0.0.0.0:9090
+secret: '123456'
+find-process-mode: strict
+global-client-fingerprint: chrome
+global-ua: clash-verge/v1.7.3
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  ipv6: true ###关闭IPV6 dns解析
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:53
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - '*.music.163.com'
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - '*.y.qq.com'
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - music.migu.cn
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.qq.com
+    - +.tencent.com
+    - +.srv.nintendo.net
+    - '*.n.n.srv.nintendo.net'
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - '*.*.xboxlive.com'
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - heartbeat.belkin.com
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - na.b.g-tun.com
+    - +.nflxvideo.net
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.ff14.sdo.com'
+    - ff.dorado.sdo.com
+    - '*.mcdn.bilivideo.cn'
+    - +.media.dssott.com
+    - shark007.net
+    - Mijia Cloud
+    - +.cmbchina.com
+    - +.cmbimg.com
+    - local.adguard.org
+    - +.sandai.net
+    - +.n0808.com
+    - controlplane.tailscale.com
+    - log.tailscale.io
