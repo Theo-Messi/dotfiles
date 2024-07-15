@@ -1,0 +1,18 @@
+# Updated: CST 2024-07-18 10:36:54
+# Author: Theo-Messi
+# GitHub Source: https://github.com/Theo-Messi/dotfiles
+
+payload:
+  # DOMAIN-KEYWORD 规则
+  - DOMAIN-KEYWORD,theovan
+  - DOMAIN-KEYWORD,theojs
+
+  # DOMAIN-SUFFIX 规则
+  - DOMAIN-SUFFIX,theojs.cn
+  - DOMAIN-SUFFIX,theovan.cn
+  - DOMAIN-SUFFIX,theovan.wiki
+  - DOMAIN-SUFFIX,theovan.xyz
+  - DOMAIN-SUFFIX,oracle.com
+  - DOMAIN-SUFFIX,oraclecloud.com
+  - DOMAIN-SUFFIX,alibabacloud.com
+  - DOMAIN-SUFFIX,igoutu.cn

@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "prettier": "prettier --write .",
+    "pull": "git fetch origin && git reset --hard origin/main",
+    "push": "git add . && git commit -m 'update'",
+    "soft": "git reset --soft HEAD^ && git add . && git commit -m 'update' && git push -f origin main",
+    "ps": "pnpm run push && pnpm run soft"
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 300,
+    "trailingComma": "none"
+  }
+}
