@@ -1,18 +1,31 @@
 {
   "scripts": {
     "prettier": "prettier --write .",
+    "check": "prettier . --check",
     "pull": "git fetch origin && git reset --hard origin/main",
     "push": "git add . && git commit -m 'update'",
     "soft": "git reset --soft HEAD^ && git add . && git commit -m 'update' && git push -f origin main",
     "ps": "pnpm run push && pnpm run soft"
   },
-  "dependencies": {
+  "devDependencies": {
     "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "lint-staged": "^15.2.7",
+    "simple-git-hooks": "^2.11.1"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "printWidth": 300,
     "trailingComma": "none"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
   }
 }
