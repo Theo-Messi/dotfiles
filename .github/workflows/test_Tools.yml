@@ -29,15 +29,13 @@ jobs:
       - name: Translate job status to Chinese
         id: translate-status
         run: |
-          if [ "${{ job.status }}" == "success" ]; then
-            echo "translated_status=成功" >> $GITHUB_ENV
-          elif [ "${{ job.status }}" == "failure" ]; then
-            echo "translated_status=失败" >> $GITHUB_ENV
-          elif [ "${{ job.status }}" == "cancelled" ]; then
-            echo "translated_status=取消" >> $GITHUB_ENV
-          else
-            echo "translated_status=未知" >> $GITHUB_ENV
-          fi
+          case "${{ job.status }}" in
+            success) translated_status="成功" ;;
+            failure) translated_status="失败" ;;
+            cancelled) translated_status="取消" ;;
+            *) translated_status="未知" ;;
+          esac
+          echo "translated_status=$translated_status" >> $GITHUB_ENV
 
       - name: Notify job status
         if: always() # 确保这一步始终运行，不管之前的步骤是否成功
