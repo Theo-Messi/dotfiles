@@ -22,3 +22,9 @@ https://dot.theovan.cn/Proxy/Shadowrocket/T-Config.conf
 ```sh
 https://dot.theovan.cn/Proxy/Stash/T-Config.yaml
 ```
+
+**Loon**
+
+```sh
+https://dot.theovan.cn/Proxy/Loon/T-Config.conf
+```
