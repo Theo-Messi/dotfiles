@@ -233,7 +233,7 @@ setup_zsh_environment() {
 
     # 复制 .zshrc 文件
     echo -e "\n\e[1;34m正在复制 .zshrc 文件到本地...\e[0m"
-    curl -fsSL https://dot.theovan.cn/zshrc/linux-debian.zshrc -o ~/.zshrc
+    curl -fsSL https://dot.theojs.cn/zshrc/linux-debian.zshrc -o ~/.zshrc
     echo -e "\n\e[1;34m.zshrc 文件复制完成!\e[0m"
 
     # 完成提示

@@ -1,4 +1,4 @@
-# Updated: CST 2024-07-18 10:36:54
+# Updated: CST 2024-07-31 15:41:42
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -89,10 +89,10 @@ rules:
 rule-providers:
   T-DirectList:
     !!merge <<: *pc
-    url: 'https://dot.theovan.cn/Proxy/Rules/T-DirectList.yaml'
+    url: 'https://dot.theojs.cn/Proxy/Rules/T-DirectList.yaml'
   T-GlobalList:
     !!merge <<: *pc
-    url: 'https://dot.theovan.cn/Proxy/Rules/T-GlobalList.yaml'
+    url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
   GitHub:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml'

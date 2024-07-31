@@ -2,29 +2,29 @@
 
 ```sh
 # Meta + fakeip 模式
-https://dot.theovan.cn/Proxy/Clash/T-MetaConfig.yaml
+https://dot.theojs.cn/Proxy/Clash/T-MetaConfig.yaml
 ```
 
 **QuantumultX**
 
 ```sh
-https://dot.theovan.cn/Proxy/QuantumultX/T-Config.conf
+https://dot.theojs.cn/Proxy/QuantumultX/T-Config.conf
 ```
 
 **Shadowrocket**
 
 ```sh
-https://dot.theovan.cn/Proxy/Shadowrocket/T-Config.conf
+https://dot.theojs.cn/Proxy/Shadowrocket/T-Config.conf
 ```
 
 **Stash**
 
 ```sh
-https://dot.theovan.cn/Proxy/Stash/T-Config.yaml
+https://dot.theojs.cn/Proxy/Stash/T-Config.yaml
 ```
 
 **Loon**
 
 ```sh
-https://dot.theovan.cn/Proxy/Loon/T-Config.conf
+https://dot.theojs.cn/Proxy/Loon/T-Config.conf
 ```
