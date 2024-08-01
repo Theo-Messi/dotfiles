@@ -1,4 +1,4 @@
-# Updated: CST 2024-07-31 15:41:42
+# Updated: CST 2024-08-01 20:31:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -214,9 +214,9 @@ profile:
 dns:
   enable: true
   ipv6: true
-  enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:7874
+  enhanced-mode: fake-ip
   nameserver:
     - 119.29.29.29
     - 223.5.5.5

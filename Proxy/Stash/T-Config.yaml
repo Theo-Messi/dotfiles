@@ -1,4 +1,4 @@
-# Updated: CST 2024-07-31 15:41:42
+# Updated: CST 2024-08-01 20:31:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -15,34 +15,36 @@ subscribe-url: #eg. https://example.com/sub?token=abcdefg
 #订阅名称
 proxy-providers:
   sub1:
-    !!merge <<: *pp
+    <<: *pp
     url: '' #eg. 'https://example.com/sub?token=abcdefg'
+
   sub2:
-    !!merge <<: *pp
+    <<: *pp
     url: ''
+
   sub3:
-    !!merge <<: *pp
+    <<: *pp
     url: ''
 
 proxy-groups:
   - { name: 节点选择, type: select, proxies: [自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区], include-all-providers: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png' }
   - { name: 自动选择, type: url-test, interval: 600, tolerance: 100, lazy: true, url: 'https://www.gstatic.com/generate_204', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png', include-all: true }
-  - { name: 电报信息, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png' }
-  - { name: Twitter, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png' }
-  - { name: AI平台, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/OpenAI.png' }
-  - { name: 油管视频, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png' }
-  - { name: 奈飞视频, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png' }
-  - { name: Disney, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png' }
+  - { name: 电报信息, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png' }
+  - { name: Twitter, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png' }
+  - { name: AI平台, <<: *o1, icon: 'https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/OpenAI.png' }
+  - { name: 油管视频, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png' }
+  - { name: 奈飞视频, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png' }
+  - { name: Disney, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png' }
   - { name: 巴哈姆特, type: select, proxies: [台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png' }
   - { name: 哔哩哔哩, type: select, proxies: [全球直连, 台湾节点, 香港节点], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png' }
-  - { name: 国外媒体, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png' }
+  - { name: 国外媒体, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png' }
   - { name: 国内媒体, type: select, proxies: [全球直连, 台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingCN.png' }
-  - { name: 微软服务, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png' }
-  - { name: 苹果服务, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png' }
-  - { name: 游戏平台, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png' }
-  - { name: 下载平台, !!merge <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png' }
+  - { name: 微软服务, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png' }
+  - { name: 苹果服务, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png' }
+  - { name: 游戏平台, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png' }
+  - { name: 下载平台, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png' }
   - { name: 全球直连, type: select, proxies: [DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png' }
-  - { name: 漏网之鱼, !!merge <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png' }
+  - { name: 漏网之鱼, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png' }
   #地区策略组
   - { name: 香港节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)港|hk|hong\s?kong', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png' }
   - { name: 台湾节点, type: select, include-all-providers: true, include-all: true, filter: '(?i)台|tw|tai\s?wan', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png' }
@@ -88,19 +90,19 @@ rules:
 
 rule-providers:
   T-DirectList:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://dot.theojs.cn/Proxy/Rules/T-DirectList.yaml'
   T-GlobalList:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
   GitHub:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml'
   Geolocation-!cn:
-    !!merge <<: *pd
+    <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml'
   LocalAreaNetwork:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml'
   # Unban:
   #   <<: *pc
@@ -118,76 +120,76 @@ rule-providers:
   #   <<: *pc
   #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
   Telegram:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml'
   Twitter:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Twitter.yaml'
   OpenAI:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml'
   Copilot:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml'
   Gemini:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml'
   YouTube:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml'
   Netflix:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Netflix.yaml'
   Disney:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml'
   Bahamut:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bahamut.yaml'
   ProxyMedia:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml'
   Category-games:
-    !!merge <<: *pd
+    <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games.yaml'
   Bilibili:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml'
   Download:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml'
   ChinaMedia:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml'
   GoogleFCM:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml'
   Microsoft:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml'
   Apple:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml'
   Geosite_cn:
-    !!merge <<: *pd
+    <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml'
   Geosite_private:
-    !!merge <<: *pd
+    <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml'
   ChinaDomain:
-    !!merge <<: *pc
+    <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml'
   Geoip_cn:
-    !!merge <<: *pi
+    <<: *pi
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml'
   Geoip_private:
-    !!merge <<: *pi
+    <<: *pi
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml'
   ChinaCompanyIp:
-    !!merge <<: *pi
+    <<: *pi
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml'
   ChinaIp:
-    !!merge <<: *pi
+    <<: *pi
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml'
 
 mixed-port: 7890
@@ -206,10 +208,10 @@ profile:
 
 dns:
   enable: true
-  ipv6: true ###关闭IPV6 dns解析
-  enhanced-mode: fake-ip
+  ipv6: true
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
