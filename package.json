@@ -11,7 +11,7 @@
     "prettier": "3.3.3"
   },
   "dependencies": {
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.8",
     "simple-git-hooks": "^2.11.1"
   },
   "prettier": {
