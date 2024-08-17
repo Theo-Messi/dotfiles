@@ -1,4 +1,4 @@
-# Updated: CST 2024-08-01 20:31:46
+# Updated: CST 2024-08-17 17:54:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -42,7 +42,6 @@ proxy-groups:
   - { name: 🎮 游戏平台, <<: *o2 }
   - { name: 🔰 下载平台, <<: *o2 }
   - { name: 🎯 全球直连, type: select, proxies: [DIRECT, REJECT] }
-  #- {name: 🍃 广告拦截, type: select, proxies: [REJECT,DIRECT]}
   - { name: 🐟 漏网之鱼, <<: *o1 }
 
   #地区策略组
@@ -60,11 +59,6 @@ rules:
   - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  # - RULE-SET,Unban,🎯 全球直连
-  # - RULE-SET,BanEasyListChina,🍃 广告拦截
-  # - RULE-SET,BanAD,🍃 广告拦截
-  # - RULE-SET,BanEasyList,🍃 广告拦截
-  # - RULE-SET,BanEasyPrivacy,🍃 广告拦截
   - RULE-SET,Telegram,📲 电报信息
   - RULE-SET,Twitter,📱 Twitter
   - RULE-SET,OpenAI,☣️ AI平台
@@ -90,7 +84,7 @@ rules:
   - RULE-SET,Geoip_private,🎯 全球直连,no-resolve
   - RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve
   - RULE-SET,ChinaIp,🎯 全球直连,no-resolve
-  - DST-PORT,22,🇭🇰 香港节点
+  - DST-PORT,22,🇸🇬 狮城节点
   - MATCH,🐟 漏网之鱼
 
 rule-providers:
@@ -100,6 +94,9 @@ rule-providers:
   T-Global:
     <<: *pc
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
+  T-FakeIpFilter:
+    <<: *pd
+    url: 'https://dot.theojs.cn/Proxy/Clash/T-FakeIpFilter.yaml'
   GitHub:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml'
@@ -109,21 +106,6 @@ rule-providers:
   LocalAreaNetwork:
     <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml'
-  # Unban:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
-  # BanEasyListChina:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
-  # BanAD:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
-  # BanEasyList:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
-  # BanEasyPrivacy:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
   Telegram:
     <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml'
@@ -200,7 +182,7 @@ rule-providers:
 mixed-port: 7890
 allow-lan: true
 ipv6: true
-mode: Rule
+mode: rule
 log-level: debug
 external-controller: 0.0.0.0:9090
 secret: '123456'
@@ -225,121 +207,12 @@ dns:
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
-  #nameserver-policy:
-  #  'rule-set:Bahamut':
-  #    - 'https://dns.google/dns-query#📽️ 巴哈姆特'
-  #    - 'https://dns.cloudflare.com/dns-query#📽️ 巴哈姆特'
-  #  'rule-set:Geolocation-!cn':
-  #    - 'https://dns.google/dns-query#🚀 节点选择'
-  #    - 'https://dns.cloudflare.com/dns-query#🚀 节点选择'
 
   fake-ip-filter:
-    - '*.lan'
-    - '*.localdomain'
-    - '*.example'
-    - '*.invalid'
-    - '*.localhost'
-    - '*.test'
-    - '*.local'
-    - '*.home.arpa'
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time-ios.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '+.pool.ntp.org'
-    - time1.cloud.tencent.com
-    - music.163.com
-    - '*.music.163.com'
-    - '*.126.net'
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - '*.kuwo.cn'
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - y.qq.com
-    - '*.y.qq.com'
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - '*.xiami.com'
-    - '*.music.migu.cn'
-    - music.migu.cn
-    - '+.msftconnecttest.com'
-    - '+.msftncsi.com'
-    - localhost.ptlogin2.qq.com
-    - localhost.sec.qq.com
-    - '+.qq.com'
-    - '+.tencent.com'
-    - '+.srv.nintendo.net'
-    - '*.n.n.srv.nintendo.net'
-    - '+.stun.playstation.net'
-    - xbox.*.*.microsoft.com
-    - '*.*.xboxlive.com'
-    - xbox.*.microsoft.com
-    - xnotify.xboxlive.com
-    - '+.battlenet.com.cn'
-    - '+.wotgame.cn'
-    - '+.wggames.cn'
-    - '+.wowsgame.cn'
-    - '+.wargaming.net'
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - '+.stun.*.*'
-    - '+.stun.*.*.*'
-    - '+.stun.*.*.*.*'
-    - '+.stun.*.*.*.*.*'
-    - heartbeat.belkin.com
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    - '*.router.asus.com'
-    - mesu.apple.com
-    - swscan.apple.com
-    - swquery.apple.com
-    - swdownload.apple.com
-    - swcdn.apple.com
-    - swdist.apple.com
-    - lens.l.google.com
-    - stun.l.google.com
-    - na.b.g-tun.com
-    - '+.nflxvideo.net'
-    - '*.square-enix.com'
-    - '*.finalfantasyxiv.com'
-    - '*.ffxiv.com'
-    - '*.ff14.sdo.com'
-    - ff.dorado.sdo.com
-    - '*.mcdn.bilivideo.cn'
-    - '+.media.dssott.com'
-    - shark007.net
-    - Mijia Cloud
-    - '+.cmbchina.com'
-    - '+.cmbimg.com'
-    - local.adguard.org
-    - '+.sandai.net'
-    - '+.n0808.com'
-    - controlplane.tailscale.com
-    - log.tailscale.io
+    - RULE-SET,T-FakeIpFilter
+    - RULE-SET,Geosite_cn
+    - RULE-SET,Geosite_private
+    - RULE-SET,Geoip_cn
+    - RULE-SET,Geoip_private
+    - RULE-SET,ChinaCompanyIp
+    - RULE-SET,ChinaIp

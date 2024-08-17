@@ -1,4 +1,4 @@
-# Updated: CST 2024-08-01 20:31:46
+# Updated: CST 2024-08-17 17:54:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -54,8 +54,8 @@ proxy-groups:
   - { name: 其他地区, type: select, include-all-providers: true, include-all: true, filter: '(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hong\s?kong|台|tw|tai\s?wan|日|jp|japan|新|sg|singapore|狮城|美|us|united\s?states)).*', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png' }
 
 rules:
-  - RULE-SET,T-GlobalList,全球直连
-  - RULE-SET,T-GlobalList,节点选择
+  - RULE-SET,T-Direct,全球直连
+  - RULE-SET,T-Global,节点选择
   - DOMAIN,search.iscrv.com,全球直连
   - DOMAIN-SUFFIX,googleapis.cn,节点选择
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择
@@ -89,12 +89,15 @@ rules:
   - MATCH,漏网之鱼
 
 rule-providers:
-  T-DirectList:
+  T-Direct:
     <<: *pc
     url: 'https://dot.theojs.cn/Proxy/Rules/T-DirectList.yaml'
-  T-GlobalList:
+  T-Global:
     <<: *pc
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
+  T-FakeIpFilter:
+    <<: *pd
+    url: 'https://dot.theojs.cn/Proxy/Clash/T-FakeIpFilter.yaml'
   GitHub:
     <<: *pd
     url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.yaml'
@@ -104,21 +107,6 @@ rule-providers:
   LocalAreaNetwork:
     <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml'
-  # Unban:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
-  # BanEasyListChina:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
-  # BanAD:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
-  # BanEasyList:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
-  # BanEasyPrivacy:
-  #   <<: *pc
-  #   url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
   Telegram:
     <<: *pc
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml'
@@ -194,7 +182,7 @@ rule-providers:
 
 mixed-port: 7890
 allow-lan: true
-ipv6: true ###开启ipv6
+ipv6: true
 mode: rule
 log-level: debug
 external-controller: 0.0.0.0:9090
