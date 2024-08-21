@@ -1,4 +1,4 @@
-# Updated: CST 2024-07-18 10:36:54
+# Updated: CST 2024-08-21 20:14:23
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -7,7 +7,6 @@ HOST-KEYWORD,theojs,T-GlobalList
 HOST-SUFFIX,theojs.cn,T-GlobalList
 HOST-SUFFIX,theovan.cn,T-GlobalList
 HOST-SUFFIX,theovan.wiki,T-GlobalList
-HOST-SUFFIX,theovan.xyz,T-GlobalList
 HOST-SUFFIX,oracle.com,T-GlobalList
 HOST-SUFFIX,oraclecloud.com,T-GlobalList
 HOST-SUFFIX,alibabacloud.com,T-GlobalList
