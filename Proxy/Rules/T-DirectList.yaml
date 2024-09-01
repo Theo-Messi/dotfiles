@@ -1,4 +1,4 @@
-# Updated: CST 2024-08-03 20:41:06
+# Updated: CST 2024-09-01 18:44:54
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -13,6 +13,7 @@ payload:
   - DOMAIN,router.theovan.cn
   - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
+  - DOMAIN,nf.video
 
   # IP TEST
   # - DOMAIN,api.myip.la
