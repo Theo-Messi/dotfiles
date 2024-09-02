@@ -8,7 +8,7 @@
     "prettier": "3.3.3"
   },
   "dependencies": {
-    "lint-staged": "^15.2.9",
+    "lint-staged": "^15.2.10",
     "simple-git-hooks": "^2.11.1"
   },
   "prettier": {
@@ -25,5 +25,5 @@
       "prettier --write --ignore-unknown"
     ]
   },
-  "packageManager": "pnpm@9.7.1"
+  "packageManager": "pnpm@9.9.0"
 }
