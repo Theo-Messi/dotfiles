@@ -1,4 +1,4 @@
-# Updated: CST 2024-09-02 12:34:19
+# Updated: CST 2024-09-04 13:27:25
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -6,8 +6,7 @@ pp: &pp { type: http, interval: 86400, health-check: { enable: true, url: http:/
 pc: &pc { type: http, behavior: classical, interval: 86400, format: yaml }
 pd: &pd { type: http, behavior: domain, interval: 86400, format: yaml }
 pdm: &pdm { type: http, behavior: domain, interval: 86400, format: mrs }
-pi: &pi { type: http, behavior: ipcidr, interval: 86400, format: yaml }
-pim: &pim { type: http, behavior: ipcidr, interval: 86400, format: mrs }
+pi: &pi { type: http, behavior: ipcidr, interval: 86400, format: mrs }
 o1: &o1 { type: select, proxies: [🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区, 🎯 全球直连], include-all-providers: true }
 o2: &o2 { type: select, proxies: [🎯 全球直连, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区] }
 
@@ -169,16 +168,16 @@ rule-providers:
     <<: *pc
     url: 'https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ChinaDomain.yaml'
   Geoip_cn:
-    <<: *pim
+    <<: *pi
     url: 'https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/cn.mrs'
   Geoip_private:
-    <<: *pim
+    <<: *pi
     url: 'https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/private.mrs'
   # ChinaCompanyIp:
   #   <<: *pi
   #   url: 'https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ChinaCompanyIp.yaml'
   ChinaIp:
-    <<: *pim
+    <<: *pi
     url: 'https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/cn.mrs'
 
 mixed-port: 7890
@@ -190,7 +189,7 @@ external-controller: 0.0.0.0:9090
 secret: '123456'
 find-process-mode: strict
 global-client-fingerprint: chrome
-global-ua: clash-verge-rev/v1.7.5
+global-ua: clash-verge-rev/v1.7.7
 profile:
   store-selected: true
   store-fake-ip: true
@@ -202,10 +201,11 @@ dns:
   listen: 0.0.0.0:7874
   enhanced-mode: fake-ip
   nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
   default-nameserver:
     - 223.5.5.5
+    - 223.6.6.6
   proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://dns.pub/dns-query
