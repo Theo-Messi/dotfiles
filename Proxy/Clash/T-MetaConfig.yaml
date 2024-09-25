@@ -1,4 +1,4 @@
-# Updated: CST 2024-09-04 13:27:25
+# Updated: CST 2024-09-25 18:20:07
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -180,7 +180,7 @@ rule-providers:
     <<: *pi
     url: 'https://github.com/MetaCubeX/meta-rules-dat/raw/meta/geo/geoip/cn.mrs'
 
-mixed-port: 7890
+mixed-port: 7893
 allow-lan: true
 ipv6: true
 mode: rule
@@ -216,5 +216,5 @@ dns:
     - RULE-SET,Geosite_private
     - RULE-SET,Geoip_cn
     - RULE-SET,Geoip_private
-    # - RULE-SET,ChinaCompanyIp
     - RULE-SET,ChinaIp
+    - geosite:cn
