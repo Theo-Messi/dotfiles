@@ -1,4 +1,4 @@
-# Updated: CST 2024-09-25 18:20:07
+# Updated: CST 2024-09-26 23:39:05
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -7,8 +7,8 @@ pc: &pc { type: http, behavior: classical, interval: 86400, format: yaml }
 pd: &pd { type: http, behavior: domain, interval: 86400, format: yaml }
 pdm: &pdm { type: http, behavior: domain, interval: 86400, format: mrs }
 pi: &pi { type: http, behavior: ipcidr, interval: 86400, format: mrs }
-o1: &o1 { type: select, proxies: [🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区, 🎯 全球直连], include-all-providers: true }
-o2: &o2 { type: select, proxies: [🎯 全球直连, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区] }
+o1: &o1 { type: select, proxies: [节点选择, 自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区, 全球直连], include-all-providers: true }
+o2: &o2 { type: select, proxies: [全球直连, 节点选择, 自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区] }
 
 # 订阅名称
 proxy-providers:
@@ -26,67 +26,67 @@ proxy-providers:
 
 #策略组
 proxy-groups:
-  - { name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 💠 其他地区], include-all-providers: true }
-  - { name: ♻️ 自动选择, type: url-test, interval: 600, tolerance: 100, lazy: true, url: https://www.gstatic.com/generate_204, include-all-providers: true }
-  - { name: 📲 电报信息, <<: *o1 }
-  - { name: 📱 Twitter, <<: *o1 }
-  - { name: ☣️ AI平台, <<: *o1 }
-  - { name: 🎬 油管视频, <<: *o1 }
-  - { name: 🎥 奈飞视频, <<: *o1 }
-  - { name: 🏰 Disney, <<: *o1 }
-  - { name: 📽️ 巴哈姆特, type: select, proxies: [🇨🇳 台湾节点, 🇭🇰 香港节点, 🚀 节点选择] }
-  - { name: 📺 哔哩哔哩, type: select, proxies: [🎯 全球直连, 🇨🇳 台湾节点, 🇭🇰 香港节点] }
-  - { name: 🌎 国外媒体, <<: *o1 }
-  - { name: 🌏 国内媒体, type: select, proxies: [🎯 全球直连, 🇨🇳 台湾节点, 🇭🇰 香港节点, 🚀 节点选择] }
-  - { name: Ⓜ️ 微软服务, <<: *o2 }
-  - { name: 🍎 苹果服务, <<: *o2 }
-  - { name: 🎮 游戏平台, <<: *o2 }
-  - { name: 🔰 下载平台, <<: *o2 }
-  - { name: 🎯 全球直连, type: select, proxies: [DIRECT, REJECT] }
-  - { name: 🐟 漏网之鱼, <<: *o1 }
+  - { name: 节点选择, type: select, proxies: [自动选择, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 其他地区], include-all-providers: true, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png' }
+  - { name: 自动选择, type: url-test, interval: 600, tolerance: 100, lazy: true, url: 'https://www.gstatic.com/generate_204', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png', include-all-providers: true }
+  - { name: 电报信息, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png' }
+  - { name: Twitter, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Twitter.png' }
+  - { name: AI平台, <<: *o1, icon: 'https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/OpenAI.png' }
+  - { name: 油管视频, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png' }
+  - { name: 奈飞视频, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png' }
+  - { name: Disney, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png' }
+  - { name: 巴哈姆特, type: select, proxies: [台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bahamut.png' }
+  - { name: 哔哩哔哩, type: select, proxies: [全球直连, 台湾节点, 香港节点], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png' }
+  - { name: 国外媒体, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png' }
+  - { name: 国内媒体, type: select, proxies: [全球直连, 台湾节点, 香港节点, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingCN.png' }
+  - { name: 微软服务, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png' }
+  - { name: 苹果服务, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png' }
+  - { name: 游戏平台, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png' }
+  - { name: 下载平台, <<: *o2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png' }
+  - { name: 全球直连, type: select, proxies: [DIRECT, REJECT], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png' }
+  - { name: 漏网之鱼, <<: *o1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png' }
 
   #地区策略组
-  - { name: 🇭🇰 香港节点, type: select, include-all-providers: true, filter: '(?i)港|hk|hong\s?kong' }
-  - { name: 🇨🇳 台湾节点, type: select, include-all-providers: true, filter: '(?i)台|tw|tai\s?wan' }
-  - { name: 🇸🇬 狮城节点, type: select, include-all-providers: true, filter: '(?i)新加坡|sg|singapore|狮城' }
-  - { name: 🇯🇵 日本节点, type: select, include-all-providers: true, filter: '(?i)日|jp|japan' }
-  - { name: 🇺🇸 美国节点, type: select, include-all-providers: true, filter: '(?i)美|us|united\s?states' }
-  - { name: 💠 其他地区, type: select, include-all-providers: true, filter: '(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hong\s?kong|台|tw|tai\s?wan|日|jp|japan|新|sg|singapore|狮城|美|us|united\s?states)).*' }
+  - { name: 香港节点, type: select, include-all-providers: true, filter: '(?i)港|hk|hong\s?kong', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png' }
+  - { name: 台湾节点, type: select, include-all-providers: true, filter: '(?i)台|tw|tai\s?wan', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png' }
+  - { name: 狮城节点, type: select, include-all-providers: true, filter: '(?i)新加坡|sg|singapore|狮城', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png' }
+  - { name: 日本节点, type: select, include-all-providers: true, filter: '(?i)日|jp|japan', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png' }
+  - { name: 美国节点, type: select, include-all-providers: true, filter: '(?i)美|us|united\s?states', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png' }
+  - { name: 其他地区, type: select, include-all-providers: true, filter: '(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hong\s?kong|台|tw|tai\s?wan|日|jp|japan|新|sg|singapore|狮城|美|us|united\s?states)).*', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png' }
 
 rules:
-  - RULE-SET,T-Direct,🎯 全球直连
-  - RULE-SET,T-Global,🚀 节点选择
-  - DOMAIN,search.iscrv.com,🎯 全球直连
-  - DOMAIN-SUFFIX,googleapis.cn,🚀 节点选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🚀 节点选择
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,Telegram,📲 电报信息
-  - RULE-SET,Twitter,📱 Twitter
-  - RULE-SET,OpenAI,☣️ AI平台
-  - RULE-SET,Copilot,☣️ AI平台
-  - RULE-SET,Gemini,☣️ AI平台
-  - RULE-SET,YouTube,🎬 油管视频
-  - RULE-SET,Disney,🏰 Disney
-  - RULE-SET,Netflix,🎥 奈飞视频
-  - RULE-SET,Bahamut,📽️ 巴哈姆特
-  - RULE-SET,ProxyMedia,🌎 国外媒体
-  - RULE-SET,Category-games,🎮 游戏平台
-  - RULE-SET,Bilibili,📺 哔哩哔哩
-  - RULE-SET,Download,🔰 下载平台
-  - RULE-SET,ChinaMedia,🌏 国内媒体
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Geosite_cn,🎯 全球直连
-  - RULE-SET,Geosite_private,🎯 全球直连
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,GitHub,🚀 节点选择
-  - RULE-SET,Geolocation-!cn,🚀 节点选择
-  - RULE-SET,Geoip_cn,🎯 全球直连,no-resolve
-  - RULE-SET,Geoip_private,🎯 全球直连,no-resolve
-  # - RULE-SET,ChinaCompanyIp,🎯 全球直连,no-resolve
-  - RULE-SET,ChinaIp,🎯 全球直连,no-resolve
-  - DST-PORT,22,🇸🇬 狮城节点
-  - MATCH,🐟 漏网之鱼
+  - RULE-SET,T-Direct,全球直连
+  - RULE-SET,T-Global,节点选择
+  - DOMAIN,search.iscrv.com,全球直连
+  - DOMAIN-SUFFIX,googleapis.cn,节点选择
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,节点选择
+  - RULE-SET,LocalAreaNetwork,全球直连
+  - RULE-SET,Telegram,电报信息
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,OpenAI,AI平台
+  - RULE-SET,Copilot,AI平台
+  - RULE-SET,Gemini,AI平台
+  - RULE-SET,YouTube,油管视频
+  - RULE-SET,Disney,Disney
+  - RULE-SET,Netflix,奈飞视频
+  - RULE-SET,Bahamut,巴哈姆特
+  - RULE-SET,ProxyMedia,国外媒体
+  - RULE-SET,Category-games,游戏平台
+  - RULE-SET,Bilibili,哔哩哔哩
+  - RULE-SET,Download,下载平台
+  - RULE-SET,ChinaMedia,国内媒体
+  - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Geosite_cn,全球直连
+  - RULE-SET,Geosite_private,全球直连
+  - RULE-SET,ChinaDomain,全球直连
+  - RULE-SET,GitHub,节点选择
+  - RULE-SET,Geolocation-!cn,节点选择
+  - RULE-SET,Geoip_cn,全球直连,no-resolve
+  - RULE-SET,Geoip_private,全球直连,no-resolve
+  # - RULE-SET,ChinaCompanyIp,全球直连,no-resolve
+  - RULE-SET,ChinaIp,全球直连,no-resolve
+  - DST-PORT,22,狮城节点
+  - MATCH,漏网之鱼
 
 rule-providers:
   T-Direct:
