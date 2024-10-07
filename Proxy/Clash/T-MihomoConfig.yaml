@@ -1,4 +1,4 @@
-# Updated: CST 2024-09-29 13:46:01
+# Updated: CST 2024-10-07 21:56:00
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -10,16 +10,15 @@ PProviders:
     health-check: { enable: true, url: 'https://www.gstatic.com/generate_204', interval: 300 },
     filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
   }
-
 # 锚点 - 筛选组
-FilterHK: &FilterHK '(?!)港|🇭🇰|HK|Hong|HKG|hk|hong\s?kong|香港'
-FilterTW: &FilterTW '(?i)台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH|tw|tai\s?wan|台湾'
-FilterSG: &FilterSG '(?i)新|🇸🇬|SG|Sing|SIN|XSP|新加坡|sg|singapore|狮城|新加坡'
-FilterJP: &FilterJP '(?i)日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK|jp|japan|日本'
-FilterKR: &FilterKR '(?i)韩|🇰🇷|韓|韩国|韓國|首尔|南朝鲜|KR|KOR|Korea|South'
-FilterUS: &FilterUS '(?i)美|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|us|united\s?states|美国'
+FilterHK: &FilterHK '(?i)港|香港|🇭🇰|HK|Hong|HKG'
+FilterTW: &FilterTW '(?i)台|台湾|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH'
+FilterSG: &FilterSG '(?i)新|新加坡|🇸🇬|SG|Sing|SIN|XSP'
+FilterJP: &FilterJP '(?i)日|日本|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK'
+FilterKR: &FilterKR '(?i)韩|韩国|🇰🇷|韓|韓國|首尔|南朝鲜|KR|KOR|Korea|South'
+FilterUS: &FilterUS '(?i)美|美国|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD'
 FilterEU: &FilterEU '(?i)(🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU)'
-FilterOther: &FilterOther '^(?!.*(直连|港|台|新|日|韩|美|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
+FilterOther: &FilterOther '^(?!.*(直连|港|台|新|日|韩|香港|台湾|新加坡|日本|韩国|美国|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAll: &FilterAll '^(?!.*(直连|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 锚点 - 策略组
@@ -108,8 +107,13 @@ sniffer:
   force-domain: # 强制嗅探 别乱加
     - '+.v2ex.com'
   skip-domain: # 忽略嗅探
+    - 'rule-set:cn_domain,private_domain'
     - 'Mijia Cloud'
     - '+.push.apple.com'
+    - '+.wechat.com'
+    - '+.qpic.cn'
+    - '+.qq.com'
+    - '+.wechatapp.com'
 
 # 虚拟网卡模式
 tun:
@@ -126,7 +130,7 @@ tun:
 dns:
   enable: true
   ipv6: true
-  respect-rules: true
+  respect-rules: false
   enhanced-mode: fake-ip
   fake-ip-filter-mode: blacklist
   # 配置不使用虚拟假 ip 列表
@@ -321,6 +325,7 @@ proxy-groups:
   - { name: 默认代理, <<: *SelectHK, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static.png }
   - { name: ChatGPT, <<: *SelectSG, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT.png }
   - { name: AI 平台, <<: *SelectSG, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png }
+  - { name: Emby, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png }
   - { name: YouTube, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/youtube.png }
   - { name: NetFlix, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png }
   - { name: TikTok, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png }
@@ -333,15 +338,16 @@ proxy-groups:
   - { name: 社交平台, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PBS.png }
   - { name: 货币平台, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Bitcloud.png }
   - { name: 游戏平台, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png }
+  - { name: 网速测试, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png }
   # 大公司
   - { name: Github, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github(1).png }
   - { name: 微软服务, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png }
   - { name: 谷歌服务, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png }
   - { name: 苹果服务, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png }
   - { name: 脸书服务, <<: *SelectProxy, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png }
-  # 国家策略
+  # 地区策略
   - { name: 香港策略, type: select, proxies: [香港自动, 香港均衡-散列, 香港均衡-轮询], include-all: true, filter: *FilterHK, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png }
-  - { name: 台湾策略, type: select, proxies: [台湾自动, 台湾均衡-散列, 台湾均衡-轮询], include-all: true, filter: *FilterTW, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png }
+  - { name: 台湾策略, type: select, proxies: [台湾自动, 台湾均衡-散列, 台湾均衡-轮询], include-all: true, filter: *FilterTW, icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png }
   - { name: 新加坡策略, type: select, proxies: [新加坡自动, 新加坡均衡-散列, 新加坡均衡-轮询], include-all: true, filter: *FilterSG, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png }
   - { name: 日本策略, type: select, proxies: [日本自动, 日本均衡-散列, 日本均衡-轮询], include-all: true, filter: *FilterJP, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png }
   - { name: 韩国策略, type: select, proxies: [韩国自动, 韩国均衡-散列, 韩国均衡-轮询], include-all: true, filter: *FilterKR, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png }
@@ -389,6 +395,15 @@ rule-providers:
   T-Global:
     <<: *ClassicalYmal
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
+  fix-direct:
+    <<: *ClassicalText
+    url: https://mirror.ghproxy.com/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.list
+  speedtest:
+    <<: *ClassicalText
+    url: https://mirror.ghproxy.com/https://github.com/666OS/YYDS/raw/main/mihomo/rules/speedtest.list
+  emby:
+    <<: *ClassicalText
+    url: https://mirror.ghproxy.com/https://github.com/666OS/YYDS/raw/main/mihomo/rules/emby.list
   openai:
     <<: *DomainMrs
     url: https://mirror.ghproxy.com/https://github.com/666OS/YYDS/raw/main/mihomo/rules/openai.mrs
@@ -513,24 +528,7 @@ rules:
   # 本地定制规则
   - RULE-SET,T-Direct,直连
   - RULE-SET,T-Global,默认代理
-  # 游戏下载
-  - DOMAIN,gst.prod.dl.playstation.net,直连
-  - DOMAIN-SUFFIX,steamcontent.com,直连
-  # BitTorrent
-  - DOMAIN-SUFFIX,bittorrent.com,直连
-  - DOMAIN-SUFFIX,bttrack.com,直连
-  - DOMAIN-SUFFIX,tracker,直连
-  # BitTorrent 常见端口范围
-  - SRC-PORT,6881-6889,直连
-  - SRC-PORT,6969,直连
-  - SRC-PORT,8080,直连
-  - SRC-PORT,8999,直连
-  - SRC-PORT,51413,直连
-  # Cloudflare
-  - DOMAIN-SUFFIX,cloudflare.com,直连
-
   # 拦截规则
-  - DOMAIN-SUFFIX,posthog.com,REJECT-DROP
   # 米家请求风暴
   - IP-CIDR,114.247.154.1/24,REJECT-DROP,no-resolve
   - IP-CIDR,106.120.178.6/24,REJECT-DROP,no-resolve
@@ -542,14 +540,16 @@ rules:
   # Adobe PJ
   - OR,((DOMAIN,lcs-cops.adobe.io), (DOMAIN,photo.adobe.io)),DIRECT
   - DOMAIN-SUFFIX,adobe.io,REJECT
-
-  # 远程域名规则
+  # 规则集域名规则
   - RULE-SET,category-public-tracker,REJECT-DROP # 拒绝公共行为跟踪
+  - RULE-SET,fix-direct,直连
   - RULE-SET,private_ip,国内网站,no-resolve
+  - RULE-SET,speedtest,网速测试
   - RULE-SET,openai,ChatGPT
   - RULE-SET,category-ai-chat-!cn,AI 平台
   - RULE-SET,telegram,Telegram
   - RULE-SET,twitter,Twitter
+  - RULE-SET,emby,Emby
   - RULE-SET,youtube,YouTube
   - RULE-SET,spotify,Spotify
   - RULE-SET,netflix,NetFlix
@@ -576,7 +576,7 @@ rules:
   - RULE-SET,category-social-media-!cn,社交平台
   - RULE-SET,cn_domain,国内网站
   - RULE-SET,geolocation-!cn,国外网站
-  # IP 规则
+  # 规则集IP规则
   - RULE-SET,facebook_ip,脸书服务,no-resolve
   - RULE-SET,google_ip,谷歌服务,no-resolve
   - RULE-SET,netflix_ip,NetFlix,no-resolve
