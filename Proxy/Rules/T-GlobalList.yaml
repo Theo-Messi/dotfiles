@@ -1,4 +1,4 @@
-# Updated: CST 2024-08-21 20:14:23
+# Updated: CST 2024-10-09 14:59:38
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -10,7 +10,6 @@ payload:
   # DOMAIN-SUFFIX 规则
   - DOMAIN-SUFFIX,theojs.cn
   - DOMAIN-SUFFIX,theovan.cn
-  - DOMAIN-SUFFIX,theovan.wiki
   - DOMAIN-SUFFIX,oracle.com
   - DOMAIN-SUFFIX,oraclecloud.com
   - DOMAIN-SUFFIX,alibabacloud.com
