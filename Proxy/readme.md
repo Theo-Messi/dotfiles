@@ -2,7 +2,7 @@
 
 ```sh
 # Meta + fakeip 模式
-https://dot.theojs.cn/Proxy/Clash/T-MetaConfig.yaml
+https://dot.theojs.cn/Proxy/Clash/T-MihomoConfig.yaml
 ```
 
 **QuantumultX**

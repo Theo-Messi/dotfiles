@@ -1,4 +1,4 @@
-# Updated: CST 2024-10-07 21:56:00
+# Updated: CST 2024-10-10 19:00:14
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -114,6 +114,11 @@ sniffer:
     - '+.qpic.cn'
     - '+.qq.com'
     - '+.wechatapp.com'
+    #  语音通信
+    - '+.vivox.com'
+    # 向日葵服务
+    - '+.oray.com'
+    - '+.sunlogin.net'
 
 # 虚拟网卡模式
 tun:
