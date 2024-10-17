@@ -62,8 +62,9 @@ source $ZSH/oh-my-zsh.sh
 # 设置 MANPATH（如果需要）
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# 设置语言环境（如果需要）
-# export LANG=en_US.UTF-8 
+# 设置语言环境（如果需要） 
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN.UTF-8
 
 # 配置首选编辑器
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -95,7 +96,7 @@ esac
 # 配置 nvm
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
-export PATH=$HOME/.nvm/versions/node/v22.3.0/bin:$PATH
+export PATH=$HOME/.nvm/versions/node/v22.9.0/bin:$PATH
 
 # 配置 GPG
 export GPG_TTY=$(tty)
