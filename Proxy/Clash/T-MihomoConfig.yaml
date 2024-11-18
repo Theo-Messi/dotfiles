@@ -1,4 +1,4 @@
-# Updated: CST 2024-10-27 13:36:47
+# Updated: CST 2024-11-18 16:27:14
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -37,6 +37,7 @@ SelectProxy: &SelectProxy { type: select, proxies: [默认代理, 故障转移, 
 # 锚点 - 规则集
 DomainMrs: &DomainMrs { type: http, interval: 86400, behavior: domain, format: mrs }
 DomainText: &DomainText { type: http, interval: 86400, behavior: domain, format: text }
+domainYaml: &domainYaml { type: http, interval: 86400, behavior: domain, format: yaml }
 IPcidrMrs: &IPcidrMrs { type: http, interval: 86400, behavior: ipcidr, format: mrs }
 IPcidrText: &IPcidrText { type: http, interval: 86400, behavior: ipcidr, format: text }
 ClassicalText: &ClassicalText { type: http, interval: 86400, behavior: classical, format: text }
@@ -123,7 +124,6 @@ dns:
   nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
   fake-ip-filter:
     - 'rule-set:cn_domain,private_domain,fix-direct'
-    - '*'
     - '*.lan'
     - '*.local'
     - '*.home.arpa'
@@ -132,6 +132,31 @@ dns:
     - '+.miwifi.com'
     - '+.safebrowsing.apple'
     - Mijia Cloud
+    #放行NTP服务
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - time1.cloud.tencent.com
 
 # 本地自建节点组
 proxies:
@@ -140,12 +165,12 @@ proxies:
 # 策略组
 proxy-groups:
   - { name: 默认代理, <<: *SelectFB, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static.png }
-  - { name: 故障转移, <<: *FallBack, proxies: [香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略, 冷门自选, 全球手动, 直连], icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ULB.png }
+  - { name: 故障转移, <<: *FallBack, proxies: [香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略, 全球手动, 冷门自选, 直连], icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ULB.png }
   - { name: 漏网之鱼, type: select, proxies: [默认代理, 直连], icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png }
   - { name: 全球手动, type: select, include-all: true, filter: *FilterAll, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png }
   - { name: 冷门自选, type: select, include-all: true, filter: *FilterOther, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/XD.png }
   - { name: ChatGPT, <<: *SelectSG, icon: https://ghp.ci/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png }
-  - { name: AI 平台, <<: *SelectSG, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png }
+  - { name: AI平台, <<: *SelectSG, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png }
   - { name: Emby, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png }
   - { name: YouTube, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/youtube.png }
   - { name: NetFlix, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png }
@@ -213,6 +238,9 @@ rule-providers:
   T-Global:
     <<: *ClassicalYmal
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
+  XPTV:
+    <<: *domainYaml
+    url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml
   fix-direct:
     <<: *ClassicalText
     url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.list
@@ -346,14 +374,17 @@ rules:
   # 本地定制规则
   - RULE-SET,T-Direct,直连
   - RULE-SET,T-Global,默认代理
+  # 常用必备
+  - DST-PORT,123,DIRECT
   # 防御
   - RULE-SET,category-public-tracker,REJECT-DROP
   # 域名路由
   - RULE-SET,fix-direct,直连
+  - RULE-SET,XPTV,直连
   - RULE-SET,private_ip,国内网站,no-resolve
   - RULE-SET,speedtest,网速测试
   - RULE-SET,openai,ChatGPT
-  - RULE-SET,category-ai-chat-!cn,AI 平台
+  - RULE-SET,category-ai-chat-!cn,AI平台
   - RULE-SET,telegram,Telegram
   - RULE-SET,twitter,Twitter
   - RULE-SET,emby,Emby
