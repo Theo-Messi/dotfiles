@@ -1,4 +1,4 @@
-# Updated: CST 2024-11-18 16:27:14
+# Updated: CST 2024-11-24 17:36:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -97,6 +97,7 @@ sniffer:
       ports: [443, 8443]
   skip-domain: # 忽略嗅探
     - 'rule-set:cn_domain,private_domain'
+    - '+.googlevideo.com'
     - 'Mijia Cloud'
     - '+.push.apple.com'
     - '+.wechat.com'
@@ -122,8 +123,11 @@ dns:
   fake-ip-range: 198.18.0.1/16
   default-nameserver: ['119.29.29.29', '180.184.1.1', '223.5.5.5']
   nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+  nameserver-policy:
+    '+.googlevideo.com': 'https://[2606:4700:4700::1111]/dns-query'
   fake-ip-filter:
     - 'rule-set:cn_domain,private_domain,fix-direct'
+    - '+.googlevideo.com'
     - '*.lan'
     - '*.local'
     - '*.home.arpa'
@@ -169,6 +173,7 @@ proxy-groups:
   - { name: 漏网之鱼, type: select, proxies: [默认代理, 直连], icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png }
   - { name: 全球手动, type: select, include-all: true, filter: *FilterAll, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Clubhouse.png }
   - { name: 冷门自选, type: select, include-all: true, filter: *FilterOther, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/XD.png }
+  - { name: 抖快书定位, type: select, proxies: [直连, 香港策略, 台湾策略, 新加坡策略, 日本策略, 韩国策略, 美国策略, 欧盟策略], icon: https://ghp.ci/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ip.png }
   - { name: ChatGPT, <<: *SelectSG, icon: https://ghp.ci/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png }
   - { name: AI平台, <<: *SelectSG, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png }
   - { name: Emby, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png }
@@ -374,10 +379,21 @@ rules:
   # 本地定制规则
   - RULE-SET,T-Direct,直连
   - RULE-SET,T-Global,默认代理
+  # >屏蔽QUIC
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT-DROP
   # 常用必备
   - DST-PORT,123,DIRECT
+  - IP-CIDR,95.161.76.100/31,REJECT-DROP,no-resolve
   # 防御
   - RULE-SET,category-public-tracker,REJECT-DROP
+  # 抖音修改IP
+  - DOMAIN-SUFFIX,amemv.com,抖快书定位
+  - DOMAIN-SUFFIX,douyinvod.com,抖快书定位
+  # 快手修改IP
+  - DOMAIN-SUFFIX,gifshow.com,抖快书定位
+  - DOMAIN-SUFFIX,apissl.ksapisrv.com,抖快书定位
+  # 小红书修改IP
+  - DOMAIN-SUFFIX,edith.xiaohongshu.com,抖快书定位
   # 域名路由
   - RULE-SET,fix-direct,直连
   - RULE-SET,XPTV,直连
