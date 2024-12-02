@@ -5,7 +5,7 @@
     "pull": "git fetch origin && git reset --hard origin/main"
   },
   "devDependencies": {
-    "prettier": "3.3.3"
+    "prettier": "3.4.1"
   },
   "dependencies": {
     "lint-staged": "^15.2.10",
@@ -25,5 +25,5 @@
       "prettier --write --ignore-unknown"
     ]
   },
-  "packageManager": "pnpm@9.12.0"
+  "packageManager": "pnpm@9.14.4"
 }
