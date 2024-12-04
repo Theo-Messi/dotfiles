@@ -1,4 +1,4 @@
-# Updated: CST 2024-12-04 20:10:38
+# Updated: CST 2024-12-04 20:29:50
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -70,6 +70,16 @@ proxy-groups:
 
 # 远程规则集
 rule-providers:
+  T-Direct:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: 'https://dot.theojs.cn/Proxy/Rules/T-DirectList.yaml'
+  T-Global:
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
   telegram:
     behavior: domain
     format: text
@@ -83,6 +93,8 @@ rule-providers:
 
 # 路由
 rules:
+  - RULE-SET,T-Direct,DIRECT
+  - RULE-SET,T-Global,一键连
   # 常用必备
   - DST-PORT,123,DIRECT
   - IP-CIDR,95.161.76.100/31,REJECT,no-resolve
