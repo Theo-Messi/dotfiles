@@ -4,19 +4,6 @@
     "format:cheak": "prettier --check .",
     "pull": "git fetch origin && git reset --hard origin/main"
   },
-  "devDependencies": {
-    "prettier": "3.4.2"
-  },
-  "dependencies": {
-    "lint-staged": "^15.2.10",
-    "simple-git-hooks": "^2.11.1"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "printWidth": 300,
-    "trailingComma": "none"
-  },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
@@ -25,5 +12,12 @@
       "prettier --write --ignore-unknown"
     ]
   },
-  "packageManager": "pnpm@9.14.4"
+  "devDependencies": {
+    "lint-staged": "^15.2.10",
+    "prettier": "3.4.2",
+    "prettier-plugin-packagejson": "^2.5.6",
+    "prettier-plugin-sort-json": "^4.0.0",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "packageManager": "pnpm@9.15.0"
 }
