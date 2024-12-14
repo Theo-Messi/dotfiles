@@ -1,4 +1,4 @@
-# Updated: CST 2024-11-24 17:36:46
+# Updated: CST 2024-12-14 20:33:35
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -41,8 +41,7 @@ domainYaml: &domainYaml { type: http, interval: 86400, behavior: domain, format:
 IPcidrMrs: &IPcidrMrs { type: http, interval: 86400, behavior: ipcidr, format: mrs }
 IPcidrText: &IPcidrText { type: http, interval: 86400, behavior: ipcidr, format: text }
 ClassicalText: &ClassicalText { type: http, interval: 86400, behavior: classical, format: text }
-ClassicalYmal: &ClassicalYmal { type: http, interval: 86400, behavior: classical, format: yaml }
-
+ClassicalYaml: &ClassicalYaml { type: http, interval: 86400, behavior: classical, format: yaml }
 ############################################## - ⚓️ 锚点区结束 - ##############################################
 # 远程订阅组❗️注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[sub1]为每个节点添加机场名称前缀，可自定义。
 
@@ -97,7 +96,6 @@ sniffer:
       ports: [443, 8443]
   skip-domain: # 忽略嗅探
     - 'rule-set:cn_domain,private_domain'
-    - '+.googlevideo.com'
     - 'Mijia Cloud'
     - '+.push.apple.com'
     - '+.wechat.com'
@@ -123,11 +121,8 @@ dns:
   fake-ip-range: 198.18.0.1/16
   default-nameserver: ['119.29.29.29', '180.184.1.1', '223.5.5.5']
   nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-  nameserver-policy:
-    '+.googlevideo.com': 'https://[2606:4700:4700::1111]/dns-query'
   fake-ip-filter:
     - 'rule-set:cn_domain,private_domain,fix-direct'
-    - '+.googlevideo.com'
     - '*.lan'
     - '*.local'
     - '*.home.arpa'
@@ -182,7 +177,7 @@ proxy-groups:
   - { name: TikTok, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png }
   - { name: Disney, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png }
   - { name: Spotify, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png }
-  - { name: 国际媒体, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png }
+  - { name: HBO, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HBO.png }
   - { name: 国际新闻, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png }
   - { name: Telegram, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png }
   - { name: Twitter, <<: *SelectProxy, icon: https://ghp.ci/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/twitter(2).png }
@@ -238,20 +233,20 @@ proxy-groups:
 # 远程规则集
 rule-providers:
   T-Direct:
-    <<: *ClassicalYmal
+    <<: *ClassicalYaml
     url: 'https://dot.theojs.cn/Proxy/Rules/T-DirectList.yaml'
   T-Global:
-    <<: *ClassicalYmal
+    <<: *ClassicalYaml
     url: 'https://dot.theojs.cn/Proxy/Rules/T-GlobalList.yaml'
   XPTV:
-    <<: *domainYaml
+    <<: *ClassicalYaml
     url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/XPTV.yaml
   fix-direct:
-    <<: *ClassicalText
-    url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.list
+    <<: *ClassicalYaml
+    url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/fix-direct.yaml
   speedtest:
-    <<: *ClassicalText
-    url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/speedtest.list
+    <<: *ClassicalYaml
+    url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/speedtest.yaml
   emby:
     <<: *ClassicalText
     url: https://ghp.ci/https://github.com/666OS/YYDS/raw/main/mihomo/rules/emby.list
@@ -408,7 +403,7 @@ rules:
   - RULE-SET,spotify,Spotify
   - RULE-SET,netflix,NetFlix
   - RULE-SET,disney,Disney
-  - RULE-SET,hbo,国际媒体
+  - RULE-SET,hbo,HBO
   - RULE-SET,tiktok,TikTok
   - RULE-SET,github,Github
   - RULE-SET,onedrive,微软服务
