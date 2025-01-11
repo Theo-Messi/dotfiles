@@ -1,4 +1,4 @@
-# Updated: CST 2024-12-24 12:10:53
+# Updated: CST 2025-01-11 14:25:29
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -45,28 +45,28 @@ proxies:
 
 # 代理策略
 proxy-groups:
-  - { name: 一键连, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/image/mihomo.png', type: select, proxies: [故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
-  - { name: 故障转移, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ULB.png', type: select, proxies: [香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
-  - { name: 抖快书定位, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(3).png', type: select, proxies: [直连, 一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: Speedtest, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png', type: select, include-all: true }
-  - { name: AI平台, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png', type: select, proxies: [新加坡自动, 一键连, 故障转移, 香港自动, 美国自动, 日本自动, 台湾自动] }
-  - { name: 电报消息, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 推特消息, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 游戏平台, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
-  - { name: Spotify, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 国际媒体, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 微软服务, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 谷歌服务, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 苹果服务, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png', type: select, proxies: [直连, 一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 一键连, icon: 'https://ghfast.top/https://raw.githubusercontent.com/666OS/YYDS/main/mihomo/image/mihomo.png', type: select, proxies: [故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
+  - { name: 故障转移, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ULB.png', type: select, proxies: [香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
+  - { name: 抖快书定位, icon: 'https://ghfast.top/https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(3).png', type: select, proxies: [直连, 一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: Speedtest, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png', type: select, include-all: true }
+  - { name: AI平台, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png', type: select, proxies: [新加坡自动, 一键连, 故障转移, 香港自动, 美国自动, 日本自动, 台湾自动] }
+  - { name: 电报消息, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 推特消息, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 游戏平台, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动, 直连] }
+  - { name: Spotify, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 国际媒体, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 微软服务, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 谷歌服务, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
+  - { name: 苹果服务, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png', type: select, proxies: [直连, 一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
   - { name: 国外网站, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png', type: select, proxies: [一键连, 故障转移, 香港自动, 新加坡自动, 日本自动, 美国自动, 韩国自动, 台湾自动] }
-  - { name: 漏网之鱼, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png', type: select, proxies: [一键连, 直连] }
+  - { name: 漏网之鱼, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png', type: select, proxies: [一键连, 直连] }
   # 地区
-  - { name: 香港自动, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png', type: url-test, interval: 300, include-all: true, filter: '(?i)港|香港|🇭🇰|HK|Hong|HKG' }
-  - { name: 新加坡自动, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png', type: url-test, interval: 300, include-all: true, filter: '(?i)坡|新加坡|🇸🇬|SG|Sing|SIN|XSP' }
-  - { name: 日本自动, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png', type: url-test, interval: 300, include-all: true, filter: '(?i)日|日本|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK' }
+  - { name: 香港自动, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png', type: url-test, interval: 300, include-all: true, filter: '(?i)港|香港|🇭🇰|HK|Hong|HKG' }
+  - { name: 新加坡自动, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png', type: url-test, interval: 300, include-all: true, filter: '(?i)坡|新加坡|🇸🇬|SG|Sing|SIN|XSP' }
+  - { name: 日本自动, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png', type: url-test, interval: 300, include-all: true, filter: '(?i)日|日本|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK' }
   - { name: 韩国自动, icon: 'https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png', type: url-test, interval: 300, include-all: true, filter: '(?i)韩|韩国|🇰🇷|韓|韓國|首尔|南朝鲜|KR|KOR|Korea|South' }
-  - { name: 美国自动, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png', type: url-test, interval: 300, include-all: true, filter: '(?i)美|美国|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD' }
-  - { name: 台湾自动, icon: 'https://ghgo.xyz/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png', type: url-test, interval: 300, include-all: true, filter: '(?i)台|台湾|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH' }
+  - { name: 美国自动, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png', type: url-test, interval: 300, include-all: true, filter: '(?i)美|美国|🇺🇸|US|USA|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD' }
+  - { name: 台湾自动, icon: 'https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png', type: url-test, interval: 300, include-all: true, filter: '(?i)台|台湾|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH' }
 
 # 远程规则集
 rule-providers:
@@ -84,12 +84,12 @@ rule-providers:
     behavior: domain
     format: text
     interval: 86400
-    url: https://ghgo.xyz/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.list
+    url: https://ghfast.top/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram.list
   telegram_ip:
     behavior: ipcidr
     format: text
     interval: 86400
-    url: https://ghgo.xyz/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram_ip.list
+    url: https://ghfast.top/https://github.com/666OS/YYDS/raw/main/mihomo/rules/telegram_ip.list
 
 # 路由
 rules:
