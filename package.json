@@ -13,11 +13,11 @@
     ]
   },
   "devDependencies": {
-    "lint-staged": "^15.4.3",
-    "prettier": "3.5.0",
-    "prettier-plugin-packagejson": "^2.5.8",
+    "lint-staged": "^15.5.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10",
     "prettier-plugin-sort-json": "^4.1.1",
-    "simple-git-hooks": "^2.11.1"
+    "simple-git-hooks": "^2.12.1"
   },
   "packageManager": "pnpm@9.15.0"
 }
