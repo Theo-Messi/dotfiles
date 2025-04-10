@@ -1,4 +1,4 @@
-# Updated: CST 2025-04-10 11:57:25
+# Updated: CST 2025-04-10 12:50:46
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -12,12 +12,6 @@ payload:
   - DOMAIN,router.theovan.cn
   - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
-
-  # IP TEST
-  # - DOMAIN,api.myip.la
-  # - DOMAIN,api.ip.sb
-  # - DOMAIN,ipapi.co
-  # - DOMAIN,Ip-api.com
 
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
