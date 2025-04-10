@@ -1,4 +1,4 @@
-# Updated: CST 2025-04-10 11:55:15
+# Updated: CST 2025-04-10 11:57:25
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -12,8 +12,6 @@ payload:
   - DOMAIN,router.theovan.cn
   - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
-  - DOMAIN,fuchenjingji.com
-  - DOMAIN,dailianmama.com
 
   # IP TEST
   # - DOMAIN,api.myip.la
@@ -25,6 +23,8 @@ payload:
   - DOMAIN-SUFFIX,dogness.com
   - DOMAIN-SUFFIX,tntmax.top
   - DOMAIN-SUFFIX,istoreos.com
+  - DOMAIN-SUFFIX,fuchenjingji.com
+  - DOMAIN-SUFFIX,dailianmama.com
 
   # 阿里系直连
   - DOMAIN-SUFFIX,tanx.com
