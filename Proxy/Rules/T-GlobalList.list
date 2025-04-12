@@ -1,4 +1,4 @@
-# Updated: CST 2024-10-09 14:59:38
+# Updated: CST 2025-04-12 11:30:33
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -10,3 +10,4 @@ HOST-SUFFIX,oracle.com,T-GlobalList
 HOST-SUFFIX,oraclecloud.com,T-GlobalList
 HOST-SUFFIX,alibabacloud.com,T-GlobalList
 HOST-SUFFIX,igoutu.cn,T-GlobalList
+HOST-SUFFIX,nf.video,T-GlobalList
