@@ -1,4 +1,4 @@
-# Updated: CST 2025-04-12 11:30:33
+# Updated: CST 2025-04-17 13:23:34
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -9,7 +9,6 @@ payload:
   - DOMAIN,cloud.ugreengroup.com
   - DOMAIN,i.theojs.cn
   - DOMAIN,metshop.vip
-  - DOMAIN,router.theovan.cn
   - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
 
