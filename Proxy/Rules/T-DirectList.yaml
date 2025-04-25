@@ -1,4 +1,4 @@
-# Updated: CST 2024-12-08 22:02:23
+# Updated: CST 2025-04-25 22:51:44
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -9,20 +9,15 @@ payload:
   - DOMAIN,cloud.ugreengroup.com
   - DOMAIN,i.theojs.cn
   - DOMAIN,metshop.vip
-  - DOMAIN,router.theovan.cn
   - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
-
-  # IP TEST
-  # - DOMAIN,api.myip.la
-  # - DOMAIN,api.ip.sb
-  # - DOMAIN,ipapi.co
-  # - DOMAIN,Ip-api.com
 
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
   - DOMAIN-SUFFIX,tntmax.top
   - DOMAIN-SUFFIX,istoreos.com
+  - DOMAIN-SUFFIX,fuchenjingji.com
+  - DOMAIN-SUFFIX,dailianmama.com
 
   # 阿里系直连
   - DOMAIN-SUFFIX,tanx.com
