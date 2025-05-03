@@ -87,11 +87,7 @@ export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # 配置 pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+export PATH="/usr/local/bin:$PATH"
 
 # 配置 nvm
 export NVM_DIR="$HOME/.nvm"
