@@ -1,4 +1,4 @@
-# Updated: CST 2025-04-25 22:51:44
+# Updated: CST 2025-05-03 21:56:35
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -6,8 +6,8 @@ HOST,api.xhofe.top,T-DirectListList
 HOST,cloud.ugnas.com,T-DirectList
 HOST,cloud.ugreengroup.com,T-DirectList
 HOST,i.theojs.cn,T-DirectList
+HOST,r.theojs.cn,T-DirectList
 HOST,metshop.vip,T-DirectList
-HOST,router.theojs.cn,T-DirectList
 HOST,tail9a8bbe.ts.net,T-DirectList
 HOST-SUFFIX,dogness.com,T-DirectList
 HOST-SUFFIX,tntmax.top,T-DirectList

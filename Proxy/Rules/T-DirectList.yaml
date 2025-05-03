@@ -1,4 +1,4 @@
-# Updated: CST 2025-04-25 22:51:44
+# Updated: CST 2025-05-03 21:56:35
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -8,8 +8,8 @@ payload:
   - DOMAIN,cloud.ugnas.com
   - DOMAIN,cloud.ugreengroup.com
   - DOMAIN,i.theojs.cn
+  - DOMAIN,r.theojs.cn
   - DOMAIN,metshop.vip
-  - DOMAIN,router.theojs.cn
   - DOMAIN,tail9a8bbe.ts.net
 
   # DOMAIN-SUFFIX
