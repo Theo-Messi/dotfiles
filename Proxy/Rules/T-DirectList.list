@@ -1,14 +1,15 @@
-# Updated: CST 2025-05-03 21:56:35
+# Updated: CST 2025-05-09 13:05:25
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
-HOST,api.xhofe.top,T-DirectListList
+HOST,api.xhofe.top,T-DirectList
 HOST,cloud.ugnas.com,T-DirectList
 HOST,cloud.ugreengroup.com,T-DirectList
 HOST,i.theojs.cn,T-DirectList
 HOST,r.theojs.cn,T-DirectList
 HOST,metshop.vip,T-DirectList
 HOST,tail9a8bbe.ts.net,T-DirectList
+HOST,www.goofish.com,T-DirectList
 HOST-SUFFIX,dogness.com,T-DirectList
 HOST-SUFFIX,tntmax.top,T-DirectList
 HOST-SUFFIX,istoreos.com,T-DirectList

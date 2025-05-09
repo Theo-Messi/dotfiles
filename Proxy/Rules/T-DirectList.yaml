@@ -1,4 +1,4 @@
-# Updated: CST 2025-05-03 21:56:35
+# Updated: CST 2025-05-09 13:05:25
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -11,6 +11,7 @@ payload:
   - DOMAIN,r.theojs.cn
   - DOMAIN,metshop.vip
   - DOMAIN,tail9a8bbe.ts.net
+  - DOMAIN,www.goofish.com
 
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
