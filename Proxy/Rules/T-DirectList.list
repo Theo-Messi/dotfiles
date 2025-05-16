@@ -1,4 +1,4 @@
-# Updated: CST 2025-05-16 22:28:00
+# Updated: CST 2025-05-16 22:31:50
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -10,6 +10,7 @@ HOST,r.theojs.cn,T-DirectList
 HOST,metshop.vip,T-DirectList
 HOST,tail9a8bbe.ts.net,T-DirectList
 HOST,www.goofish.com,T-DirectList
+HOST,www.autohanding.com,T-DirectList
 HOST-SUFFIX,dogness.com,T-DirectList
 HOST-SUFFIX,tntmax.top,T-DirectList
 HOST-SUFFIX,istoreos.com,T-DirectList
@@ -19,4 +20,3 @@ HOST-SUFFIX,tanx.com,T-DirectList
 HOST-SUFFIX,mmstat.com,T-DirectList
 HOST-SUFFIX,effirst.com,T-DirectList
 HOST-SUFFIX,aliapp.org,T-DirectList
-HOST-SUFFIX,autohanding.com,T-DirectList
