@@ -1,4 +1,4 @@
-# Updated: CST 2025-05-09 13:05:25
+# Updated: CST 2025-05-16 22:28:00
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -19,6 +19,7 @@ payload:
   - DOMAIN-SUFFIX,istoreos.com
   - DOMAIN-SUFFIX,fuchenjingji.com
   - DOMAIN-SUFFIX,dailianmama.com
+  - DOMAIN-SUFFIX,autohanding.com
 
   # 阿里系直连
   - DOMAIN-SUFFIX,tanx.com

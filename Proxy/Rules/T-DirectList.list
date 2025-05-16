@@ -1,4 +1,4 @@
-# Updated: CST 2025-05-09 13:05:25
+# Updated: CST 2025-05-16 22:28:00
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -19,3 +19,4 @@ HOST-SUFFIX,tanx.com,T-DirectList
 HOST-SUFFIX,mmstat.com,T-DirectList
 HOST-SUFFIX,effirst.com,T-DirectList
 HOST-SUFFIX,aliapp.org,T-DirectList
+HOST-SUFFIX,autohanding.com,T-DirectList
