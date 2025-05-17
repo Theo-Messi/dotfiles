@@ -77,25 +77,27 @@ export LANGUAGE=zh_CN.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # 设置个人别名，覆盖 oh-my-zsh 库的别名
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pn=pnpm
-
-# 配置 Ruby
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+alias pn="pnpm"
+alias cz="git-cz"
 
 # 配置 pnpm
-export PATH="/usr/local/bin:$PATH"
+export PNPM_HOME="/Users/theo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 
 # 配置 nvm
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
-export PATH=$HOME/.nvm/versions/node/v22.9.0/bin:$PATH
+export PATH=$HOME/.nvm/versions/node/v23.11.0/bin:$PATH
 
 # 配置 GPG
 export GPG_TTY=$(tty)
 
 # 配置 autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# 配置nano
+export PATH="/opt/homebrew/opt/nano/bin:$PATH"
