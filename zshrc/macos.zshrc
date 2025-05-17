@@ -80,11 +80,6 @@ export LANGUAGE=zh_CN.UTF-8
 alias pn="pnpm"
 alias cz="git-cz"
 
-# 配置 Ruby
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
 # 配置 pnpm
 export PNPM_HOME="/Users/theo/Library/pnpm"
 case ":$PATH:" in
@@ -103,3 +98,6 @@ export GPG_TTY=$(tty)
 
 # 配置 autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# 配置nano
+export PATH="/opt/homebrew/opt/nano/bin:$PATH"
