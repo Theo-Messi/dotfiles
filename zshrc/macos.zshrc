@@ -79,6 +79,10 @@ export LANGUAGE=zh_CN.UTF-8
 # 设置个人别名，覆盖 oh-my-zsh 库的别名
 alias pn="pnpm"
 alias cz="git-cz"
+alias gs="git status"
+alias ga="git add -A"
+alias gc="git commit -m"
+alias gp="git push origin HEAD"
 
 # 配置 pnpm
 export PNPM_HOME="/Users/theo/Library/pnpm"

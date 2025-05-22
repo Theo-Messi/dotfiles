@@ -1,4 +1,4 @@
-# Updated: CST 2025-05-16 22:31:50
+# Updated: CST 2025-05-22 14:50:21
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -7,7 +7,6 @@ payload:
   - DOMAIN,api.xhofe.top
   - DOMAIN,cloud.ugnas.com
   - DOMAIN,cloud.ugreengroup.com
-  - DOMAIN,i.theojs.cn
   - DOMAIN,r.theojs.cn
   - DOMAIN,metshop.vip
   - DOMAIN,tail9a8bbe.ts.net
