@@ -81,7 +81,6 @@ jobs:
                     "body": "${{ github.repository }}于${{ env.DATE }}运行${{ env.translated_status }}",
                     "title": "Github Actions",
                     "badge": 1,
-                    "category": "Github Actions",
                     "sound": "multiwayinvitation.caf",
                     "icon": "https://i.theojs.cn/logo/vercel-light.webp",
                     "group": "Github Actions"

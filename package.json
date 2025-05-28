@@ -13,9 +13,9 @@
     ]
   },
   "devDependencies": {
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^16.1.0",
     "prettier": "3.5.3",
-    "prettier-plugin-packagejson": "^2.5.13",
+    "prettier-plugin-packagejson": "^2.5.14",
     "prettier-plugin-sort-json": "^4.1.1",
     "simple-git-hooks": "^2.13.0"
   },
