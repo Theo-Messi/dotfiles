@@ -1,4 +1,4 @@
-# Updated: 2025-06-06 13:37:29
+# Updated: 2025-06-08 20:21:27
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -16,7 +16,6 @@ payload:
   # DOMAIN-SUFFIX
   - DOMAIN-SUFFIX,dogness.com
   - DOMAIN-SUFFIX,tntmax.top
-  - DOMAIN-SUFFIX,istoreos.com
   - DOMAIN-SUFFIX,fuchenjingji.com
   - DOMAIN-SUFFIX,dailianmama.com
 
