@@ -1,5 +1,5 @@
 plugins: ['prettier-plugin-packagejson', 'prettier-plugin-sort-json']
-printWidth: 300
+printWidth: 120
 semi: false
 singleQuote: true
 trailingComma: 'none'
@@ -7,3 +7,6 @@ overrides:
   - files: ['*.json']
     options:
       jsonRecursiveSort: true
+  - files: ['*.yaml']
+    options:
+      printWidth: 300
