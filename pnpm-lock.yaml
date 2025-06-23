@@ -12,14 +12,14 @@ importers:
         specifier: ^16.1.2
         version: 16.1.2
       prettier:
-        specifier: 3.5.3
-        version: 3.5.3
+        specifier: 3.6.0
+        version: 3.6.0
       prettier-plugin-packagejson:
         specifier: ^2.5.15
-        version: 2.5.15(prettier@3.5.3)
+        version: 2.5.15(prettier@3.6.0)
       prettier-plugin-sort-json:
         specifier: ^4.1.1
-        version: 4.1.1(prettier@3.5.3)
+        version: 4.1.1(prettier@3.6.0)
       simple-git-hooks:
         specifier: ^2.13.0
         version: 2.13.0
@@ -190,8 +190,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.0:
+    resolution: {integrity: sha512-ujSB9uXHJKzM/2GBuE0hBOUgC77CN3Bnpqa+g80bkv3T3A93wL/xlzDATHhnhkzifz/UE2SNOvmbTz5hSkDlHw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -385,18 +385,18 @@ snapshots:
 
   pidtree@0.6.0: {}
 
-  prettier-plugin-packagejson@2.5.15(prettier@3.5.3):
+  prettier-plugin-packagejson@2.5.15(prettier@3.6.0):
     dependencies:
       sort-package-json: 3.2.1
       synckit: 0.11.8
     optionalDependencies:
-      prettier: 3.5.3
+      prettier: 3.6.0
 
-  prettier-plugin-sort-json@4.1.1(prettier@3.5.3):
+  prettier-plugin-sort-json@4.1.1(prettier@3.6.0):
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.0
 
-  prettier@3.5.3: {}
+  prettier@3.6.0: {}
 
   restore-cursor@5.1.0:
     dependencies:
