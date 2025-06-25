@@ -1,0 +1,17 @@
+# Updated: 2025-06-06 13:37:29
+# Author: Theo-Messi
+# GitHub Source: https://github.com/Theo-Messi/dotfiles
+
+payload:
+  # DOMAIN-KEYWORD 规则
+  - DOMAIN-KEYWORD,theojs
+  - DOMAIN-KEYWORD,itheo
+
+  # DOMAIN-SUFFIX 规则
+  - DOMAIN-SUFFIX,theojs.cn
+  - DOMAIN-SUFFIX,itheo.top
+  - DOMAIN-SUFFIX,oracle.com
+  - DOMAIN-SUFFIX,oraclecloud.com
+  - DOMAIN-SUFFIX,alibabacloud.com
+  - DOMAIN-SUFFIX,igoutu.cn
+  - DOMAIN-SUFFIX,nf.video

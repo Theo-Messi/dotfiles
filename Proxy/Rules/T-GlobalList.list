@@ -1,0 +1,13 @@
+# Updated: 2025-06-06 13:37:29
+# Author: Theo-Messi
+# GitHub Source: https://github.com/Theo-Messi/dotfiles
+
+HOST-KEYWORD,theojs,T-GlobalList
+HOST-KEYWORD,itheo,T-GlobalList
+HOST-SUFFIX,theojs.cn,T-GlobalList
+HOST-SUFFIX,oracle.com,T-GlobalList
+HOST-SUFFIX,oraclecloud.com,T-GlobalList
+HOST-SUFFIX,alibabacloud.com,T-GlobalList
+HOST-SUFFIX,igoutu.cn,T-GlobalList
+HOST-SUFFIX,nf.video,T-GlobalList
+HOST-SUFFIX,itheo.top,T-GlobalList
