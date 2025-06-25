@@ -1,3 +1,3 @@
 {
-  "extends": ["github>Theo-Messi/renovate-config"]
+  "extends": ["github>Theo-Messi/dotfiles"]
 }

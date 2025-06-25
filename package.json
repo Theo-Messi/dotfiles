@@ -1,16 +1,14 @@
 {
   "scripts": {
-    "format": "prettier --write .",
-    "format:cheak": "prettier --check .",
+    "format": "prettier --experimental-cli --write .",
+    "format:cheak": "prettier --experimental-cli --check .",
     "pull": "git fetch origin && git reset --hard origin/main"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": [
-      "prettier --write --ignore-unknown"
-    ]
+    "*": "prettier --experimental-cli --ignore-unknown --write"
   },
   "devDependencies": {
     "lint-staged": "^16.1.2",
