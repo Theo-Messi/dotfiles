@@ -1,14 +1,3 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "labels": ["dependencies"],
-  "packageRules": [
-    {
-      "groupName": "deps",
-      "matchPackageNames": ["/.*/"]
-    }
-  ],
-  "rangeStrategy": "bump",
-  "semanticCommits": "enabled",
-  "timezone": "Asia/Shanghai"
+  "extends": ["github>Theo-Messi/renovate-config"]
 }
