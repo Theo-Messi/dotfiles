@@ -95,7 +95,7 @@ esac
 # 配置 nvm
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
-export PATH=$HOME/.nvm/versions/node/v23.11.0/bin:$PATH
+export PATH=$HOME/.nvm/versions/node/v24.2.0/bin:$PATH
 
 # 配置 GPG
 export GPG_TTY=$(tty)
