@@ -7,11 +7,11 @@ update_system() {
     echo -e "\n\e[1;34m系统更新完成!\e[0m"
 }
 
-# 函数：安装 vim
-install_vim() {
-    echo -e "\n\e[1;34m正在安装 vim...\e[0m"
-    sudo apt install -y vim
-    echo -e "\n\e[1;34mvim 安装完成!\e[0m"
+# 函数：安装 nano
+install_nano() {
+    echo -e "\n\e[1;34m正在安装 nano...\e[0m"
+    sudo apt install -y nano
+    echo -e "\n\e[1;34mnano 安装完成!\e[0m"
 }
 
 # 函数：安装 htop
@@ -65,7 +65,7 @@ install_git() {
 
 # 函数：安装所有常用软件
 install_all_common_software() {
-    install_vim
+    install_nano
     install_htop
     install_sudo
     install_curl
@@ -79,7 +79,7 @@ install_all_common_software() {
 # 函数：卸载所有常用软件
 uninstall_all_common_software() {
     echo -e "\n\e[1;34m正在卸载所有常用软件...\e[0m"
-    sudo apt remove -y vim htop sudo curl docker.io lrzsz openssh-server git
+    sudo apt remove -y nano htop sudo curl docker.io lrzsz openssh-server git
     echo -e "\n\e[1;34m所有常用软件卸载完成!\e[0m"
 }
 
@@ -88,7 +88,7 @@ install_common_software() {
     while true; do
         clear
         echo -e "\e[1;34m安装常用软件\e[0m"
-        echo -e "1. 安装 vim"
+        echo -e "1. 安装 nano"
         echo -e "2. 安装 htop"
         echo -e "3. 安装 sudo"
         echo -e "4. 安装 curl"
@@ -102,7 +102,7 @@ install_common_software() {
 
         read -p "请选择操作 [0-10]: " software_choice
         case $software_choice in
-            1) install_vim ;;
+            1) install_nano ;;
             2) install_htop ;;
             3) install_sudo ;;
             4) install_curl ;;
