@@ -1,4 +1,4 @@
-# Updated: 2025-06-06 13:37:29
+# Updated: 2025-07-31 11:52:02
 # Author: Theo-Messi
 # GitHub Source: https://github.com/Theo-Messi/dotfiles
 
@@ -15,3 +15,4 @@ payload:
   - DOMAIN-SUFFIX,alibabacloud.com
   - DOMAIN-SUFFIX,igoutu.cn
   - DOMAIN-SUFFIX,nf.video
+  - DOMAIN-SUFFIX,guzzoni.smoot.apple.com # Apple intelligence
