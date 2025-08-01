@@ -245,8 +245,8 @@ setup_zsh_environment() {
 while true; do
     clear
     echo -e "\e[1;34m「Debian/Ubuntu」 系统优化选项\e[0m"
-    echo -e "脚本作者: Theo-Messi"
-    echo -e "GitHub 仓库: https://github.com/Theo-Messi/dotfiles"
+    echo -e "脚本作者: Theo"
+    echo -e "GitHub 仓库: https://github.com/s-theo/dotfiles"
         
     echo  # 空一行
     
